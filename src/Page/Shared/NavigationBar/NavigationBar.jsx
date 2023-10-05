@@ -16,7 +16,7 @@ const NavigationBar = () => {
     } = useForm()
 
     const location = useLocation()
-    // console.log(location);
+   
 
     const onSubmit = (data) => console.log(data)
 
