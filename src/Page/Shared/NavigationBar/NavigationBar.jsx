@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IoIosHeart } from "react-icons/io";
 import { HiShoppingCart, HiChevronRight, HiOutlineClock } from "react-icons/hi2";
 import { IoMdSearch } from "react-icons/io";
@@ -15,11 +15,14 @@ const NavigationBar = () => {
         formState: { errors },
     } = useForm()
 
+    const location = useLocation()
+    console.log(location);
+
     const onSubmit = (data) => console.log(data)
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const [dropdownOpen, setDropdownOpen] = useState(true);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const [deptName, setDeptName] = useState("")
     console.log(deptName);
@@ -103,11 +106,12 @@ const NavigationBar = () => {
                 </nav>
             </div>
             <div className="hidden lg:block bg-primary px-4 py-2">
-                <nav className="hidden lg:flex items-center justify-between gap-8 h-[80px] relative max-w-7xl mx-auto">
+                 <nav className="hidden lg:flex items-center justify-between gap-8 h-[80px] relative max-w-7xl mx-auto">
                     <div className="w-1/4">
-                        <div className="dropdown dropdown-open">
+                        <div className="dropdown dropdown-open" onMouseEnter={()=>setDropdownOpen(true)}>
                             <label tabIndex={0} className="inline-flex items-center justify-between text-white bg-[#4d4d4f] px-4 py-2 rounded-md text-[13px] w-56">Shop by Department <FaAngleDown className="w-4 h-4" /></label>
-                            <ul tabIndex={0} className="dropdown-content z-[1]  shadow bg-white w-56 pt-2 border-r">
+                            {
+                                dropdownOpen && <ul tabIndex={0} className="dropdown-content z-[1]  shadow bg-white w-56 pt-2 border-r">
 
                                 <li className="categoryNav w-full" onMouseEnter={() => setDeptName("Virtual Shopping Assistants")} onMouseLeave={() => setDeptName("")}>Virtual Shopping Assistants <HiChevronRight className="h-4 w-4" /></li>
 
@@ -149,6 +153,7 @@ const NavigationBar = () => {
                                 <Link className="inline-flex  items-center justify-center w-full py-2 gap-2 bg-green-500 mt-1 text-base-100"><HiOutlineClock className="h-7 w-7" /> <span className="text-xl font-bold">Daily Deals</span></Link>
 
                             </ul>
+                            }
                         </div>
                     </div>
                     <div className="w-full relative">
@@ -185,94 +190,94 @@ const NavigationBar = () => {
                     </div>
 
                     {
-                        deptName === "Virtual Shopping Assistants" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Virtual Shopping Assistants")} onMouseLeave={() => setDeptName("")}>
-                            <div className="bg-gray-100 px-3 py-4">
-                                <p className="text-primary font-bold text-[13px] ">Virtual Shopping Assistants</p>
+                        deptName === "Virtual Shopping Assistants" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Virtual Shopping Assistants")} onMouseLeave={() => setDeptName("")}>
+                        <div className="bg-gray-100 px-3 py-4">
+                            <p className="text-primary font-bold text-[13px] ">Virtual Shopping Assistants</p>
 
-                                <div className="my-3">
-                                    <ul>
-                                        <span className="text-[13px] text-gray-600 font-bold pl-2">Featured</span>
+                            <div className="my-3">
+                                <ul>
+                                    <span className="text-[13px] text-gray-600 font-bold pl-2">Featured</span>
 
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Backup Power Finder</Link>
-                                        </li>
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Canon Printer Finder</Link>
-                                        </li>
-                                    </ul>
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Backup Power Finder</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Canon Printer Finder</Link>
+                                    </li>
+                                </ul>
 
-                                    <ul className="mt-2">
-                                        <span className="text-[13px] text-gray-600 font-bold pl-2">Appliances</span>
+                                <ul className="mt-2">
+                                    <span className="text-[13px] text-gray-600 font-bold pl-2">Appliances</span>
 
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Fridges &amp; Freezers Finder</Link>
-                                        </li>
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Fridges &amp; Freezers Finder</Link>
+                                    </li>
 
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Washing Machine Finder</Link>
-                                        </li>
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Washing Machine Finder</Link>
+                                    </li>
 
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Coffee Machine Finder</Link>
-                                        </li>
-                                    </ul>
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Coffee Machine Finder</Link>
+                                    </li>
+                                </ul>
 
-                                    <ul className="mt-2">
-                                        <span className="text-[13px] text-gray-600 font-bold pl-2">Sport</span>
+                                <ul className="mt-2">
+                                    <span className="text-[13px] text-gray-600 font-bold pl-2">Sport</span>
 
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Running Shoes Finder</Link>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Running Shoes Finder</Link>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div className="">
+                            <div className="mt-12">
+                                <ul>
+                                    <span className="text-[13px] text-gray-600 font-bold pl-2">Beauty &amp; Health</span>
+
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Skin Care Finder</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Dermatologist Recommended</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Vitamins Finder</Link>
+                                    </li>
+                                </ul>
+
+                                <ul className="mt-2">
+                                    <span className="text-[13px] text-gray-600 font-bold pl-2">Electronics</span>
+
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Laptop Finder</Link>
+                                    </li>
+
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Cellphone Finder</Link>
+                                    </li>
+
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">TV Finder</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Smart Watch Finder</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="categorySubNav w-full" to="/advisor?id=">Headphones Finder</Link>
+                                    </li>
+                                </ul>
 
                             </div>
-                            <div className="">
-                                <div className="mt-12">
-                                    <ul>
-                                        <span className="text-[13px] text-gray-600 font-bold pl-2">Beauty &amp; Health</span>
-
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Skin Care Finder</Link>
-                                        </li>
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Dermatologist Recommended</Link>
-                                        </li>
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Vitamins Finder</Link>
-                                        </li>
-                                    </ul>
-
-                                    <ul className="mt-2">
-                                        <span className="text-[13px] text-gray-600 font-bold pl-2">Electronics</span>
-
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Laptop Finder</Link>
-                                        </li>
-
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Cellphone Finder</Link>
-                                        </li>
-
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">TV Finder</Link>
-                                        </li>
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Smart Watch Finder</Link>
-                                        </li>
-                                        <li>
-                                            <Link className="categorySubNav w-full" to="/advisor?id=">Headphones Finder</Link>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                            <div className="bg-slate-400">
-                                <Link to="/virtual-shopping-assistants">
-                                    <img src="https://media.takealot.com/b/2/cms/original_images/a01712e2bebeb2f786ae96398a8c19d946053e05.png" alt="Virtual Assistant" className="h-full" />
-                                </Link>
-                            </div>
-                        </div> : deptName === "Automotive & DIY" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Automotive & DIY")} onMouseLeave={() => setDeptName("")}>
+                        </div>
+                        <div className="bg-slate-400">
+                            <Link to="/virtual-shopping-assistants">
+                                <img src="https://media.takealot.com/b/2/cms/original_images/a01712e2bebeb2f786ae96398a8c19d946053e05.png" alt="Virtual Assistant" className="h-full" />
+                            </Link>
+                        </div>
+                    </div></div> : deptName === "Automotive & DIY" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Automotive & DIY")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Automotive &amp; DIY</p>
 
@@ -400,7 +405,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/8b287bbc0bcc5c08472bf8ed090a158cf3c50cbb.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Baby & toddle" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Baby & toddle")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Baby & toddle" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Baby & toddle")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Baby & toddle</p>
 
@@ -505,7 +510,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/3c18c2c4139a23fdbb6f5c736537f5f011171070.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Beauty" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Beauty")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Beauty" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Beauty")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Beauty</p>
 
@@ -630,7 +635,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/6fc92d69a98edc6312f07e33e536e7292e1e1a6b.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Books & Course" ? <div className="department-container absolute left-[220px] bg-white w-[434px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-2" onMouseEnter={() => setDeptName("Books & Course")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Books & Course" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[434px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-2" onMouseEnter={() => setDeptName("Books & Course")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Books &amp; Courses</p>
 
@@ -686,7 +691,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/a23694e871d37ea8a9a2581c3066e312123ad85b.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Camping & Outdoor" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Camping & Outdoor")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Camping & Outdoor" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Camping & Outdoor")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Camping &amp; Outdoor</p>
 
@@ -765,7 +770,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/54c69246cbcd84f4e82b96b7f859b08674cc1f90.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Clothing, Shoes & Accessories" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Clothing, Shoes & Accessories")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Clothing, Shoes & Accessories" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Clothing, Shoes & Accessories")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Clothing, Shoes & Accessories</p>
 
@@ -873,7 +878,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/a7b7e8869e09b0e7e81f47451896cd18b92c7836.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Electronics" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Electronics")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Electronics" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Electronics")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Electronics</p>
 
@@ -996,7 +1001,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/f000b70bf30e40bb5a61cf6d393b2a4ac1256082.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Gaming & Media" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Gaming & Media")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Gaming & Media" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Gaming & Media")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Gaming & Media</p>
 
@@ -1077,7 +1082,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/6cdfc48087781917fbd7e60bfc53cd23f8510b56.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Garden, Pool & Patio" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Garden, Pool & Patio")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Garden, Pool & Patio" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Garden, Pool & Patio")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Garden, Pool & Patio</p>
 
@@ -1188,7 +1193,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/0b6e9ef1cf931383e5a2698bcbb0784d6098e5b1.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Groceries & Household" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Groceries & Household")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Groceries & Household" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Groceries & Household")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Groceries & Household</p>
 
@@ -1285,7 +1290,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/68b04714e7c65944b092b38f254f02094ed7494b.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Health & Personal Care" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Health & Personal Care")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Health & Personal Care" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Health & Personal Care")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Health & Personal Care</p>
 
@@ -1392,7 +1397,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/f9ce0e39009dfc966643b8abb6be4a76f145e76d.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Home & Appliances" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Home & Appliances")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Home & Appliances" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Home & Appliances")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Home & Appliances</p>
 
@@ -1517,7 +1522,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/389a29fbdcb9de8a8c15dfe8964d84aed398d16a.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Liquor" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Liquor")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Liquor" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Liquor")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Liquor</p>
 
@@ -1602,7 +1607,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/d9cfef88beeae4e08a41377047725c9c1005a4d9.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Office & Stationery" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Office & Stationery")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Office & Stationery" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Office & Stationery")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Office & Stationery</p>
 
@@ -1701,7 +1706,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/dba9b6a0df1c35e3258a3523bd4da17d3c795afb.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Pets" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Pets")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Pets" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Pets")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Pets</p>
 
@@ -1793,7 +1798,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/d3367214eda5c622ed56516c7788d6cfce331db0.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Sport & Training" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Sport & Training")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Sport & Training" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Sport & Training")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Sport & Training</p>
 
@@ -1914,7 +1919,7 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/a01653fe7fb00e4a67808011d6a1b3e8359055b8.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : deptName === "Toys" ? <div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Toys")} onMouseLeave={() => setDeptName("")}>
+                        </div></div> : deptName === "Toys" ? <div onMouseLeave={()=>setDropdownOpen(false)}><div className="department-container absolute left-[220px] bg-white w-[650px] h-[550px] top-0.5 mt-14 z-50 grid lg:grid-cols-3" onMouseEnter={() => setDeptName("Toys")} onMouseLeave={() => setDeptName("")}>
                             <div className="bg-gray-100 px-3 py-4">
                                 <p className="text-primary font-bold text-[14px] ">Toys</p>
 
@@ -2005,14 +2010,18 @@ const NavigationBar = () => {
                                     <img src="https://media.takealot.com/b/2/cms/original_images/d0806c42396da07149736010505df24759f5343e.png" alt="Virtual Assistant" className="h-full" />
                                 </Link>
                             </div>
-                        </div> : ""
+                        </div></div> : ""
                     }
 
                 </nav>
-            </div>
-<div className="max-w-5xl mx-auto  lg:absolute lg:left-[20%]  2xl:left-[28%] w-full">
+                
+            </div> 
+{
+    location.pathname === "/" ? 
+    <div className="max-w-5xl mx-auto  lg:absolute lg:left-[20%]  2xl:left-[28%] w-full">
     <Banner />
-</div>
+</div> : ""
+}
 
         </header>
     );
