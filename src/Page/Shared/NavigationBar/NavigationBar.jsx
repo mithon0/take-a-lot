@@ -19,12 +19,14 @@ const NavigationBar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
+    const [dropdownOpen, setDropdownOpen] = useState(true);
+
     const [deptName, setDeptName] = useState("")
     console.log(deptName);
 
 
     return (
-        <header className="z-50 nav-top">
+        <header className="z-50 nav-top lg:min-h-screen bg-white">
             <div className="bg-white">
                 <nav className="hidden lg:flex justify-between w-full px-4 py-4 max-w-7xl mx-auto">
                     <div className="w-full inline-flex items-center space-x-2">
@@ -2008,9 +2010,9 @@ const NavigationBar = () => {
 
                 </nav>
             </div>
-{/* <div className="max-w-7xl mx-auto lg:absolute lg:left-[20%]">
+<div className="max-w-5xl mx-auto  lg:absolute lg:left-[20%]  2xl:left-[28%] w-full">
     <Banner />
-</div> */}
+</div>
 
         </header>
     );
