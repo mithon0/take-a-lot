@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import NavigationBar from "../Pages/Shared/NavigationBar/NavigationBar";
-import Footer from "../Pages/Shared/Footer/Footer";
+import NavigationBar from "../Page/Shared/NavigationBar/NavigationBar";
+import Footer from "../Page/Shared/Footer/Footer";
 
  
 
@@ -8,8 +8,11 @@ const Main = () => {
     return (
         <div>
             <NavigationBar></NavigationBar>
+            <div className="max-w-7xl mx-auto">
             <Outlet></Outlet>
+            </div>
             <Footer></Footer>
+            
         </div>
     );
 };
