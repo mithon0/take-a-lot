@@ -22,7 +22,7 @@ const NavigationBar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const [dropdownOpen, setDropdownOpen] = useState(true);
+    const [dropdownOpen, setDropdownOpen] = useState(location.pathname === "/" ? true : false);
 
     const [deptName, setDeptName] = useState("")
     const [mSearchPage, setMSearchPage] = useState(false)
