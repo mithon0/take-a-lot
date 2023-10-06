@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { HiMiniChevronDoubleLeft, HiMiniChevronDoubleRight, HiMiniMagnifyingGlass, HiStar } from 'react-icons/hi2';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import Product from './Product';
 
 
 const AllProducts = () => {
@@ -39,6 +40,7 @@ const [searchBrands, setSearchBrand] = useState("");
     const [totalProducts, setTotalProducts] = useState(0);
     const [categoryList, setCategoryList] = useState([]);
     const [demoBrandList, setDemoBrandList] = useState([]);
+    const [view , setView] = useState("grid")
     const [filterOpen1, setFilterOpen1] = useState(true);
     const [filterOpen2, setFilterOpen2] = useState(true);
     const [filterOpen3, setFilterOpen3] = useState(true);
@@ -47,7 +49,7 @@ const [searchBrands, setSearchBrand] = useState("");
     const [showList, setShowList] = useState(false)
     // console.log(totalProducts);
     const [products, setProducts] = useState([]);
-    console.log(products);
+    // console.log(products);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -76,7 +78,7 @@ const [searchBrands, setSearchBrand] = useState("");
     // const pageNumbers = [...Array(totalPage).keys()]
 
 
-    const [currentPage, setCurrentPage] = useState(0);
+    const [currentPage, setCurrentPage] = useState(1);
     const itemPerPage = 100;
     const totalPage = Math.ceil(totalProducts / itemPerPage);
     const pagesToShow = 5;
@@ -272,12 +274,12 @@ const [searchBrands, setSearchBrand] = useState("");
         setSelectedMax(maxOption || initialMax);
     };
     return (
-        <section className='p-8'>
+        <section className='p-2'>
             <div className='banner'>
                 <img src="https://static.takealot.com/images/sda/sda-fb-lg.png" alt="Banner" className='h-32' />
             </div>
 
-            <div className='flex items-start justify-center gap-12 my-10'>
+            <div className='flex items-start justify-center gap-5 my-10'>
                 <div className='hidden lg:block lg:w-2/6'>
                     <div className='category-list bg-white shadow w-full rounded'>
                         <p className='font-semibold text-black px-3 pt-4 pb-3 border-b text-[14px]'>Refine by Category</p>
@@ -308,7 +310,7 @@ const [searchBrands, setSearchBrand] = useState("");
                         <p className='font-semibold text-black px-3 pt-4 pb-3 border-b text-[14px]'>Filter</p>
 
                         <div className="collapse collapse-plus" >
-                            <input type="checkbox" checked={filterOpen1 ? true : false} onClick={() => setFilterOpen1(!filterOpen1)} />
+                            <input type="checkbox" defaultChecked={filterOpen1 ? true : false} onClick={() => setFilterOpen1(!filterOpen1)} />
                             <div className="collapse-title text-sm font-semibold border-b border-b-gray-200">
                                 Price
                             </div>
@@ -368,7 +370,7 @@ const [searchBrands, setSearchBrand] = useState("");
                         </div>
 
                         <div className="collapse collapse-plus" >
-                            <input type="checkbox" checked={filterOpen2 ? true : false} onClick={() => setFilterOpen2(!filterOpen2)} />
+                            <input type="checkbox" defaultChecked={filterOpen2 ? true : false} onClick={() => setFilterOpen2(!filterOpen2)} />
                             <div className="collapse-title text-sm font-semibold border-b border-b-gray-200">
                                 Brand
                                 <div className='py-2'>
@@ -382,7 +384,7 @@ const [searchBrands, setSearchBrand] = useState("");
                            </div>
                                 {
                                     demoBrandList.map(brand=><label key={brand?.id} className="cursor-pointer label relative" onClick={() => setSelectedBrand([...selectedBrand, brand?.Brand])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedBrand.find(br => br === brand?.Brand) ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedBrand.find(br => br === brand?.Brand) ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">{brand?.Brand}</span>
                                 </label>)
                                 }
@@ -391,37 +393,37 @@ const [searchBrands, setSearchBrand] = useState("");
 
 
                         <div className="collapse collapse-plus" >
-                            <input type="checkbox" checked={filterOpen3 ? true : false} onClick={() => setFilterOpen3(!filterOpen3)} />
+                            <input type="checkbox" defaultChecked={filterOpen3 ? true : false} onClick={() => setFilterOpen3(!filterOpen3)} />
                             <div className="collapse-title text-sm font-semibold border-b border-b-gray-200">
                                 Availability
                             </div>
                             <div className="collapse-content py-2">
                                 <label className="cursor-pointer label relative" onClick={() => setAvailability([...selectedAvailability, "In Stock"])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedAvailability.find(able => able === "In Stock") ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedAvailability.find(able => able === "In Stock") ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">In Stock</span>
                                 </label>
                                 <label className="cursor-pointer label relative" onClick={() => setAvailability([...selectedRating, "3 Days"])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(able => able === "3 Days") ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(able => able === "3 Days") ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">Up to 3 days</span>
                                 </label>
 
                                 <label className="cursor-pointer label relative" onClick={() => setAvailability([...selectedRating, "5 Days"])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(able => able === "5 Days") ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(able => able === "5 Days") ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">Up to 5 days</span>
                                 </label>
 
                                 <label className="cursor-pointer label relative" onClick={() => setAvailability([...selectedRating, "7 Days"])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(able => able === "7 Days") ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(able => able === "7 Days") ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">Up to 7 days</span>
                                 </label>
 
                                 <label className="cursor-pointer label relative" onClick={() => setAvailability([...selectedRating, "12 Days"])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(able => able === "12 Days") ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(able => able === "12 Days") ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">Up to 12 days</span>
                                 </label>
 
                                 <label className="cursor-pointer label relative" onClick={() => setAvailability([...selectedRating, "15 Days"])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(able => able === "15 Days") ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(able => able === "15 Days") ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">Up to 15 days</span>
                                 </label>
 
@@ -430,25 +432,25 @@ const [searchBrands, setSearchBrand] = useState("");
 
 
                         <div className="collapse collapse-plus" >
-                            <input type="checkbox" checked={filterOpen4 ? true : false} onClick={() => setFilterOpen4(!filterOpen4)} />
+                            <input type="checkbox" defaultChecked={filterOpen4 ? true : false} onClick={() => setFilterOpen4(!filterOpen4)} />
                             <div className="collapse-title text-sm font-semibold border-b border-b-gray-200">
                                 Rating
                             </div>
                             <div className="collapse-content py-2">
                                 <label className="cursor-pointer label relative" onClick={() => setRating([...selectedRating, 4])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(rat => rat === 4) ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(rat => rat === 4) ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm"><span>4</span> <HiStar className='h-5 w-5 text-yellow-400' /> <span> and up</span></span>
                                 </label>
                                 <label className="cursor-pointer label relative" onClick={() => setRating([...selectedRating, 3])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(rat => rat === 3) ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(rat => rat === 3) ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm"><span>3</span> <HiStar className='h-5 w-5 text-yellow-400' /> <span> and up</span></span>
                                 </label>
                                 <label className="cursor-pointer label relative" onClick={() => setRating([...selectedRating, 2])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(rat => rat === 2) ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(rat => rat === 2) ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm"><span>2</span> <HiStar className='h-5 w-5 text-yellow-400' /> <span> and up</span></span>
                                 </label>
                                 <label className="cursor-pointer label relative" onClick={() => setRating([...selectedRating, 1])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(rat => rat === 1) ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(rat => rat === 1) ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm"><span>1</span> <HiStar className='h-5 w-5 text-yellow-400' /> <span> and up</span></span>
                                 </label>
                             </div>
@@ -456,25 +458,25 @@ const [searchBrands, setSearchBrand] = useState("");
 
 
                         <div className="collapse collapse-plus" >
-                            <input type="checkbox" checked={filterOpen5 ? true : false} onClick={() => setFilterOpen5(!filterOpen5)} />
+                            <input type="checkbox" defaultChecked={filterOpen5 ? true : false} onClick={() => setFilterOpen5(!filterOpen5)} />
                             <div className="collapse-title text-sm font-semibold">
                                 Deal
                             </div>
                             <div className="collapse-content py-2">
                                 <label className="cursor-pointer label relative" onClick={() => setDeals([...selectedDeals, "Featured Deals"])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(deal => deal === "Featured Deals") ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(deal => deal === "Featured Deals") ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">Featured Deals</span>
                                 </label>
                                 <label className="cursor-pointer label relative" onClick={() => setDeals([...selectedDeals, "Bundle Deals"])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(deal => deal === "Bundle Deals") ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(deal => deal === "Bundle Deals") ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">Bundle Deals</span>
                                 </label>
                                 <label className="cursor-pointer label relative" onClick={() => setDeals([...selectedDeals, "App Only Deals"])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(deal => deal === "App Only Deals") ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(deal => deal === "App Only Deals") ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">App Only Deals</span>
                                 </label>
                                 <label className="cursor-pointer label relative" onClick={() => setDeals([...selectedDeals, "Daily Deals"])}>
-                                    <input type="checkbox" className="checkbox checkbox-primary" checked={selectedRating.find(deal => deal === "Daily Deals") ? true : false} />
+                                    <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(deal => deal === "Daily Deals") ? true : false} />
                                     <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">Daily Deals</span>
                                 </label>
                             </div>
@@ -483,10 +485,47 @@ const [searchBrands, setSearchBrand] = useState("");
 
 
                 </div>
-                <div className='w-full'>
+                <div className='w-full px-2'>
                  
+                 <div className='w-full mb-5 flex flex-col lg:flex-row items-center lg:justify-between'>
+<div className='text-sm  font-medium text-gray-600'>
+    <p>{totalProducts}+ result</p>
+</div>
+
+<div className='justify-end'>
+    <div className='flex items-center gap-5'>
+<div>
+    <span className='text-[13px] font-medium'>Sort by:</span>
+    <select className='border px-2 py-2 rounded bg-white text-xs font-semibold'
+                                        
+                                        >
+                                            <option defaultValue="Relevance">Relevance</option>
+                                            <option value="Descending">Price: High to Low</option>
+                                            <option value="Ascending">Price: Low to High</option>
+                                            <option value="New">Newest Arrivals</option>
+                                            
+                                        </select>
+
+</div>
+
+<div className='inline-flex items-center gap-1'>
+    <button onClick={()=>setView("grid")} className={`${view === "grid" ? "bg-gray-300" :"bg-transparent"} p-2`}><img src="data:image/svg+xml,%3Csvg version=%221.1%22 viewBox=%220 0 17 13%22 xmlns=%22http://www.w3.org/2000/svg%22 width=%2218%22 height=%2218%22%3E%3Cpath d=%22m0 6h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z%22 fill=%22rgb(112,112,114)%22/%3E%3C/svg%3E" alt="Grid View" className='w-6'/></button>
+    <button onClick={()=>setView("list")} className={`${view === "list" ? "bg-gray-300" :"bg-transparent"} p-2`}><img src="data:image/svg+xml,%3Csvg version=%221.1%22 viewBox=%220 0 17 14%22 xmlns=%22http://www.w3.org/2000/svg%22 width=%2218%22 height=%2218%22%3E%3Cpath d=%22m0 9h4v-4h-4v4zm0 5h4v-4h-4v4zm0-10h4v-4h-4v4zm5 5h12v-4h-12v4zm0 5h12v-4h-12v4zm0-14v4h12v-4h-12z%22 fill=%22rgb(112,112,114)%22/%3E%3C/svg%3E" alt="List View" className='w-6'/></button>
+</div>
+    </div>
+</div>
+                 </div>
 
 
+<div className={`product-container w-full grid ${view === "grid" ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-4" : "grid-cols-1"} items-center justify-center gap-5 overflow-hidden`}>
+{
+    products?.map(prod=><Product
+    prod={prod}
+    key={prod?._id}
+    view={view}
+    ></Product>)
+}
+</div>
 
 
 
