@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import Chart from 'chart.js/auto'; // Import Chart.js
 import { Link } from 'react-router-dom';
-import { HiMiniMagnifyingGlass, HiStar } from 'react-icons/hi2';
+import { HiMiniChevronDoubleLeft, HiMiniChevronDoubleRight, HiMiniMagnifyingGlass, HiStar } from 'react-icons/hi2';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
@@ -34,7 +34,7 @@ const AllProducts = () => {
     const [selectedDeals, setDeals] = useState([]);
     const [selectedBrand, setSelectedBrand] = useState([]);
 const [searchBrands, setSearchBrand] = useState("");
-console.log(searchBrands);
+// console.log(searchBrands);
 
     const [totalProducts, setTotalProducts] = useState(0);
     const [categoryList, setCategoryList] = useState([]);
@@ -47,7 +47,7 @@ console.log(searchBrands);
     const [showList, setShowList] = useState(false)
     // console.log(totalProducts);
     const [products, setProducts] = useState([]);
-    // console.log(products);
+    console.log(products);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -70,10 +70,24 @@ console.log(searchBrands);
           });
       }, [searchBrands]);
 
+    // const [currentPage, setCurrentPage] = useState(0);
+    // const itemPerPage = 100;
+    // const totalPage = Math.ceil(totalProducts / itemPerPage);
+    // const pageNumbers = [...Array(totalPage).keys()]
+
+
     const [currentPage, setCurrentPage] = useState(0);
     const itemPerPage = 100;
     const totalPage = Math.ceil(totalProducts / itemPerPage);
-    const pageNumbers = [...Array(totalPage).keys()]
+    const pagesToShow = 5;
+
+    const pageRangeStart = Math.max(1, currentPage - Math.floor(pagesToShow / 2));
+    const pageRangeEnd = Math.min(totalPage, pageRangeStart + pagesToShow - 1);
+  
+    const handlePageChange = (newPage) => {
+      setCurrentPage(newPage);
+    };
+   
 
     useEffect(() => {
         fetchHouses();
@@ -264,7 +278,7 @@ console.log(searchBrands);
             </div>
 
             <div className='flex items-start justify-center gap-12 my-10'>
-                <div className='lg:w-2/6'>
+                <div className='hidden lg:block lg:w-2/6'>
                     <div className='category-list bg-white shadow w-full rounded'>
                         <p className='font-semibold text-black px-3 pt-4 pb-3 border-b text-[14px]'>Refine by Category</p>
 
@@ -361,7 +375,7 @@ console.log(searchBrands);
 
                                 </div>
                             </div>
-                            <div className="collapse-content py-2 h-64 overflow-y-auto">
+                            <div className={`collapse-content py-2 overflow-y-auto ${filterOpen2 ? "h-64" : ""}`}>
                            <div className='py-2 relative inline-flex w-full items-center'>
                            <input type="text" onChange={(e)=>setSearchBrand(e.target.value)} className='border w-full px-4 py-2 placeholder:text-sm font-normal outline-none focus:outline' placeholder='Search by Brand'/>
                            <span className='absolute right-2'><HiMiniMagnifyingGlass /></span>
@@ -470,7 +484,40 @@ console.log(searchBrands);
 
                 </div>
                 <div className='w-full'>
-                    asdsa
+                 
+
+
+
+
+
+
+
+                <div className="pagination inline-flex items-center justify-center w-full my-10">
+        {currentPage > 5 && (
+          <button onClick={() => handlePageChange(currentPage - 5)} className='border border-primary rounded-md hover:bg-primary hover:text-white font-semibold px-3 py-1 inline-flex items-center gap-1 mr-2'><HiMiniChevronDoubleLeft className='h-6 w-6'/> <span>prev</span></button>
+        )}
+
+        {Array.from({ length: pageRangeEnd - pageRangeStart + 1 }).map((_, index) => {
+          const page = pageRangeStart + index;
+          return (
+            <button
+              key={page}
+              onClick={() => handlePageChange(page)}
+              className={`border py-1 px-3 mr-2 rounded-md hover:bg-primary hover:text-white font-semibold my-5 ${
+                page  === currentPage ? "bg-primary text-white" : ""
+              }`}
+            >
+              {page}
+            </button>
+          );
+        })}
+
+        {currentPage < totalPage - 4 && (
+          <button onClick={() => handlePageChange(currentPage + 5)} className='border border-primary rounded-md hover:bg-primary hover:text-white font-semibold px-3 py-1 inline-flex items-center gap-1'><span>Next</span> <HiMiniChevronDoubleRight className='h-6 w-6'/></button>
+        )}
+      </div>
+
+             
                 </div>
             </div>
 
