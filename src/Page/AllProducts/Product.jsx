@@ -47,8 +47,8 @@ sd
   </div>
  <div className={`${view === "list" ? "w-1/4" : ""}`}>
  {
-        view === "grid" ? <div className="absolute mx-auto text-center bottom-4 left-0 right-0 px-4">
-        <button className="inline-flex items-center justify-center text-green-700 w-full border-green-700 hover:bg-green-700 hover:text-white transition-all duration-500 border px-3 py-2 gap-1 font-medium"><HiOutlinePlusSmall className='w-5 h-5'/> <HiShoppingCart className='w-5 h-5'/> Add to Cart</button>
+        view === "grid" ? <div className="absolute mx-auto text-center bottom-2 lg:bottom-4 left-0 right-0 px-2 lg:px-4">
+        <button className="inline-flex items-center justify-center text-green-700 w-full border-green-700 hover:bg-green-700 hover:text-white transition-all duration-500 border py-2 lg:px-3 lg:py-2 gap-1 font-medium"><HiOutlinePlusSmall className='w-5 h-5'/> <HiShoppingCart className='w-5 h-5'/> Add to Cart</button>
       </div> :<div className="">
       <p className='font-semibold text-base text-right p-3'>R 50</p> 
 <div className='absolute mx-auto text-center bottom-4 right-0 px-4 lg:flex flex-col gap-3 hidden '>
