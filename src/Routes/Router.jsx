@@ -3,6 +3,9 @@ import Main from "../Layout/Main";
 import Home from "../Page/Home/Home/Home";
 import AllProducts from "../Page/AllProducts/AllProducts";
 import HelpCenter from "../Page/TopNav/HelpCenter/HelpCenter";
+import SellOnTakeLot from "../Page/TopNav/SellOnTakeLot/SellOnTakeLot";
+import LogIn from "../Page/TopNav/LogIn/LogIn";
+import Register from "../Page/TopNav/Register/Register";
 
 
 
@@ -22,6 +25,18 @@ export const router = createBrowserRouter([
         {
           path:"/help-center",
           element:<HelpCenter/>
+        },
+        {
+          path:"/sell-on-take-a-lot",
+          element:<SellOnTakeLot/>
+        },
+        {
+          path:"/login",
+          element:<LogIn/>
+        },
+        {
+          path:"/register",
+          element:<Register/>
         },
       ]
     },
