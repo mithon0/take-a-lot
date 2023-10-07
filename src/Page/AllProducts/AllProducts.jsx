@@ -37,7 +37,7 @@ const AllProducts = () => {
     const [selectedAvailability, setAvailability] = useState([]);
     const [selectedDeals, setDeals] = useState([]);
     const [selectedBrand, setSelectedBrand] = useState([]);
-    const [selectedSort, setSelectedSort] = useState(["Relevance"]);
+    const [selectedSort, setSelectedSort] = useState([]);
     // console.log(selectedSort);
     const [searchBrands, setSearchBrand] = useState("");
     // console.log(searchBrands);
@@ -201,6 +201,7 @@ const AllProducts = () => {
         renderChart('mobile-chart', generateChartData());
       }, [selectedMin, selectedMax]);
 
+ 
 
 
     const handleRangeChange = (newRange) => {
@@ -462,19 +463,19 @@ const AllProducts = () => {
                                             Deal
                                         </div>
                                         <div className="collapse-content py-2">
-                                            <label className="cursor-pointer label relative" onClick={() => setDeals([...selectedDeals, "Featured Deals"])}>
+                                            <label className="cursor-pointer label relative" onChange={() => setDeals([...selectedDeals, "Featured Deals"])}>
                                                 <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(deal => deal === "Featured Deals") ? true : false} />
                                                 <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">Featured Deals</span>
                                             </label>
-                                            <label className="cursor-pointer label relative" onClick={() => setDeals([...selectedDeals, "Bundle Deals"])}>
+                                            <label className="cursor-pointer label relative" onChange={() => setDeals([...selectedDeals, "Bundle Deals"])}>
                                                 <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(deal => deal === "Bundle Deals") ? true : false} />
                                                 <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">Bundle Deals</span>
                                             </label>
-                                            <label className="cursor-pointer label relative" onClick={() => setDeals([...selectedDeals, "App Only Deals"])}>
+                                            <label className="cursor-pointer label relative" onChange={() => setDeals([...selectedDeals, "App Only Deals"])}>
                                                 <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(deal => deal === "App Only Deals") ? true : false} />
                                                 <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">App Only Deals</span>
                                             </label>
-                                            <label className="cursor-pointer label relative" onClick={() => setDeals([...selectedDeals, "Daily Deals"])}>
+                                            <label className="cursor-pointer label relative" onChange={() => setDeals([...selectedDeals, "Daily Deals"])}>
                                                 <input type="checkbox" className="checkbox checkbox-primary" defaultChecked={selectedRating.find(deal => deal === "Daily Deals") ? true : false} />
                                                 <span className="label-text absolute left-10 inline-flex items-center gap-1 text-sm">Daily Deals</span>
                                             </label>
@@ -721,7 +722,7 @@ const AllProducts = () => {
                                 <div className='sort-menu'>
                                     <span className=' text-[13px] font-medium'>Sort by:</span>
                                     <select className='border px-2 py-2 rounded bg-white text-xs font-semibold'
-                                        onChange={(e) => setSelectedSort(e.target.value)}
+                                        onChange={(e) => setSelectedSort([...selectedSort,e.target.value])}
 
                                     >
                                         <option defaultValue="Relevance">Relevance</option>
