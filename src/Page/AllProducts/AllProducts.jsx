@@ -35,7 +35,7 @@ const AllProducts = () => {
     const [selectedDeals, setDeals] = useState([]);
     const [selectedBrand, setSelectedBrand] = useState([]);
     const [selectedSort, setSelectedSort] = useState(["Relevance"]);
-    console.log(selectedSort);
+    // console.log(selectedSort);
     const [searchBrands, setSearchBrand] = useState("");
     // console.log(searchBrands);
 
@@ -189,6 +189,27 @@ const AllProducts = () => {
             },
         });
 
+        const cty = document.getElementById('chart2')
+        chartInstance = new Chart(cty, {
+            type: 'bar',
+            data: generateChartData(),
+            options: {
+                scales: {
+                    x: {
+                        display: false, // Hide X-axis labels
+                    },
+                    y: {
+                        display: false, // Hide Y-axis labels
+                        beginAtZero: true,
+                    },
+                },
+                plugins: {
+                    legend: {
+                        display: false, // Hide the legend
+                    },
+                },
+            },
+        });
         return () => {
             if (chartInstance) {
                 chartInstance.destroy();
@@ -268,16 +289,16 @@ const AllProducts = () => {
 
 
 
-                <div className="filter-drawer drawer">
+              <div className="filter-drawer drawer">
                     <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                     <div className="drawer-content">
-                        {/* Page content here */}
+                       
                         <label htmlFor="my-drawer" className="px-12 py-3 bg-gray-200 rounded-md drawer-button text-sm font-semibold text-gray-700">Filter</label>
                     </div>
                     <div className="drawer-side z-50">
                         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                         <ul className="menu w-[340px] min-h-full bg-white text-base-content">
-                            {/* Sidebar content here */}
+                       
                             <div className='min-w-full mx-auto'>
                                 <div className='category-list bg-white shadow w-full rounded'>
                                     <p className='font-semibold text-black px-3 pt-4 pb-3 border-b text-[14px]'>Refine by Category</p>
@@ -285,9 +306,7 @@ const AllProducts = () => {
                                     <Link to="/all" className='  text-primary font-normal text-[14px] inline-block w-full px-3 py-2 bg-primary bg-opacity-10'>All Category</Link>
 
                                     <ul className='w-full'>
-                                        {/* <li>
-    <Link to="/all/books" className='py-3 px-7 text-black font-normal text-[14px] inline-block w-full hover:text-primary hover:bg-primary hover:bg-opacity-10 transition-all duration-500'>Books</Link>
-</li> */}
+ 
                                         {
                                             categoryList.slice(0, showList ? categoryList.length : 4).map(listItem => <li key={listItem?.id}>
                                                 <Link to={listItem?.path} className='py-3 px-7 text-black font-normal text-[14px] inline-block w-full hover:text-primary hover:bg-primary hover:bg-opacity-10 transition-all duration-500'>{listItem?.category}</Link>
@@ -316,7 +335,7 @@ const AllProducts = () => {
                                             <div>
 
                                                 <div className="chart bg-gray-100 rounded">
-                                                    <canvas id="chart" />
+                                                    <canvas id="chart2" />
                                                 </div>
 
                                                 <div className="range-selector">
@@ -486,7 +505,7 @@ const AllProducts = () => {
 
                         </ul>
                     </div>
-                </div>
+                </div> 
 
 
                 <div className='view-container'>
