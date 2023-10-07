@@ -208,13 +208,13 @@ const AllProducts = () => {
         console.log(newRange);
         // Update selectedMin and selectedMax based on the new range values
         const minOption = priceOptions.find((option) => option.value <= newRange.min);
-        console.log(minOption);
+        // console.log(minOption);
         const maxOption = priceOptions.find((option) => option.value >= newRange.max);
-        console.log(maxOption);
+        // console.log(maxOption);
         setSelectedMin(minOption || 150);
         setSelectedMax(maxOption || 50000);
     };
-    console.log(selectedMax, selectedMin);
+    // console.log(selectedMax, selectedMin);
     return (
         <section>
             <div className='lg:hidden grid grid-cols-3 bg-white items-center gap-24 justify-center py-4 px-3 mb-3'>
