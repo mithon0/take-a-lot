@@ -7,6 +7,7 @@ import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import { useForm } from "react-hook-form";
 import Banner from "../../Home/Banner/Banner";
 import Register from "../../Register/Register";
+import Login from "../../Login/Login";
 
 const NavigationBar = () => {
     const {
@@ -114,7 +115,8 @@ const NavigationBar = () => {
                     </div>
                     <div className="w-full text-right">
                         <div className="inline-flex items-center justify-center">
-                            <Link to="/login" className="smallLink">Login</Link>
+                            {/* <Link to="/login" className="smallLink">Login</Link> */}
+                            <label htmlFor="logIn_modal" className="smallLink cursor-pointer">Login</label>
                             <div className="divider divider-horizontal"></div>
                             {/* <Link to="/register" className="smallLink">Register</Link> */}
                             {/* <button className="smallLink">Register</button> */}
@@ -2097,6 +2099,7 @@ const NavigationBar = () => {
 
 <div>
 <Register />
+<Login />
 </div>
 
 
