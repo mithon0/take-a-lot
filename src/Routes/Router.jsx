@@ -6,6 +6,7 @@ import HelpCenter from "../Page/TopNav/HelpCenter/HelpCenter";
 import SellOnTakeLot from "../Page/TopNav/SellOnTakeLot/SellOnTakeLot";
 import LogIn from "../Page/TopNav/LogIn/LogIn";
 import Register from "../Page/TopNav/Register/Register";
+import Orders from "../Page/TopNav/Orders/Orders";
 
 
 
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
         {
           path:"/register",
           element:<Register/>
+        },
+        {
+          path:"/orders",
+          element:<Orders/>
         },
       ]
     },
