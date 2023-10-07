@@ -117,7 +117,7 @@ const NavigationBar = () => {
                             <div className="divider divider-horizontal"></div>
                             <Link to="/register" className="smallLink">Register</Link>
                             <div className="divider divider-horizontal"></div>
-                            <Link to="/account/orders" className="smallLink">Orders</Link>
+                            <Link to="/orders" className="smallLink">Orders</Link>
                             <div className="divider divider-horizontal"></div>
 
 
