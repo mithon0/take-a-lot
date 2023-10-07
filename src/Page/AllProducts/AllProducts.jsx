@@ -23,13 +23,16 @@ const AllProducts = () => {
         { id: 11, value: 25000, label: 'R 25,000' },
         { id: 13, value: 50000, label: 'R 5,0000' },
     ];
-    const initialMin = { label: 'Min', value: -1 }; // Initial value for Min dropdown
-    const initialMax = { label: 'Max', value: -2 }; // Initial value for Max dropdown
+    const initialMin = { label: 'Min', value: -1 };
+    const initialMax = { label: 'Max', value: -2 };
+  
+    const [selectedMin, setSelectedMin] = useState(initialMin);
+    const [selectedMax, setSelectedMax] = useState(initialMax); // Initial value for Max dropdown
 
     const [range, setRange] = useState({ min: 150, max: 50000 }); // Initial range values
 
-    const [selectedMin, setSelectedMin] = useState(initialMin);
-    const [selectedMax, setSelectedMax] = useState(initialMax);
+    // const [selectedMin, setSelectedMin] = useState(initialMin);
+    // const [selectedMax, setSelectedMax] = useState(initialMax);
     const [selectedRating, setRating] = useState([]);
     const [selectedAvailability, setAvailability] = useState([]);
     const [selectedDeals, setDeals] = useState([]);
@@ -117,122 +120,101 @@ const AllProducts = () => {
 
 
 
+    
 
     useEffect(() => {
-        let chartInstance = null;
-
         const generateChartData = () => {
-            if (
-                selectedMin.value === initialMin.value ||
-                selectedMax.value === initialMax.value
-            ) {
-                // If "Min" or "Max" is selected, return the full price range
-                return {
-                    labels: priceOptions.map((option) => option.label),
-                    datasets: [
-                        {
-                            label: 'Price Range',
-                            backgroundColor: '#0B7ABF36',
-                            borderColor: '#0B79BF',
-                            borderWidth: 1,
-                            data: priceOptions.map((option) => option.value),
-                        },
-                    ],
-                };
+            // Check if "Min" or "Max" is selected
+            if (selectedMin.value === initialMin.value || selectedMax.value === initialMax.value) {
+              // Handle the case when "Min" or "Max" is selected
+              // For example, you can return the full price range data
+              return {
+                labels: priceOptions.map((option) => option.label),
+                datasets: [
+                  {
+                    label: 'Price Range',
+                    backgroundColor: '#0B7ABF36',
+                    borderColor: '#0B79BF',
+                    borderWidth: 1,
+                    data: priceOptions.map((option) => option.value),
+                  },
+                ],
+              };
             }
-
-            const minIndex = priceOptions.findIndex(
-                (option) => option.value === selectedMin.value
-            );
-            const maxIndex = priceOptions.findIndex(
-                (option) => option.value === selectedMax.value
-            );
+          
+            // Handle other cases where specific price ranges are selected
+            const minIndex = priceOptions.findIndex((option) => option.value === selectedMin.value);
+            const maxIndex = priceOptions.findIndex((option) => option.value === selectedMax.value);
             const chartData = priceOptions.slice(minIndex, maxIndex + 1);
             const reversedLabels = chartData.map((option) => option.label).reverse(); // Reverse the labels
+          
             return {
-                labels: reversedLabels,
-                datasets: [
-                    {
-                        label: 'Price Range',
-                        backgroundColor: '#0B7ABF36',
-                        borderColor: '#0B79BF',
-                        borderWidth: 1,
-                        data: chartData.map((option) => option.value),
-                    },
-                ],
+              labels: reversedLabels,
+              datasets: [
+                {
+                  label: 'Price Range',
+                  backgroundColor: '#0B7ABF36',
+                  borderColor: '#0B79BF',
+                  borderWidth: 1,
+                  data: chartData.map((option) => option.value),
+                },
+              ],
             };
-        };
-
-        if (chartInstance) {
-            chartInstance.destroy();
-        }
-
-        const ctx = document.getElementById('chart');
-        chartInstance = new Chart(ctx, {
-            type: 'bar',
-            data: generateChartData(),
-            options: {
+          };
+    
+        const renderChart = (chartId, data) => {
+          const ctx = document.getElementById(chartId);
+          let chartInstance = null;
+    
+          if (ctx) {
+            // Destroy the previous chart instance if it exists
+            Chart.getChart(chartId)?.destroy();
+    
+            // Create a new chart instance
+            chartInstance = new Chart(ctx, {
+              type: 'bar',
+              data: data,
+              options: {
                 scales: {
-                    x: {
-                        display: false, // Hide X-axis labels
-                    },
-                    y: {
-                        display: false, // Hide Y-axis labels
-                        beginAtZero: true,
-                    },
+                  x: {
+                    display: false,
+                  },
+                  y: {
+                    display: false,
+                    beginAtZero: true,
+                  },
                 },
                 plugins: {
-                    legend: {
-                        display: false, // Hide the legend
-                    },
+                  legend: {
+                    display: false,
+                  },
                 },
-            },
-        });
-
-        const cty = document.getElementById('chart2')
-        chartInstance = new Chart(cty, {
-            type: 'bar',
-            data: generateChartData(),
-            options: {
-                scales: {
-                    x: {
-                        display: false, // Hide X-axis labels
-                    },
-                    y: {
-                        display: false, // Hide Y-axis labels
-                        beginAtZero: true,
-                    },
-                },
-                plugins: {
-                    legend: {
-                        display: false, // Hide the legend
-                    },
-                },
-            },
-        });
-        return () => {
-            if (chartInstance) {
-                chartInstance.destroy();
-            }
+              },
+            });
+          }
         };
-    }, [selectedMin, selectedMax]);
+    
+        // Render the LG chart
+        renderChart('lg-chart', generateChartData());
+    
+        // Render the mobile chart
+        renderChart('mobile-chart', generateChartData());
+      }, [selectedMin, selectedMax]);
 
-    // const handleRatingChange = (e) =>{
-    //     let rating = e;
-    //     const oldRating = selectedRating;
-    //     const updatedRating = [...oldRating , rating];
-    //     setRating(updatedRating)
-    // }
-    // console.log(selectedRating);
+
 
     const handleRangeChange = (newRange) => {
         setRange(newRange);
+        console.log(newRange);
         // Update selectedMin and selectedMax based on the new range values
         const minOption = priceOptions.find((option) => option.value <= newRange.min);
+        console.log(minOption);
         const maxOption = priceOptions.find((option) => option.value >= newRange.max);
-        setSelectedMin(minOption || initialMin);
-        setSelectedMax(maxOption || initialMax);
+        console.log(maxOption);
+        setSelectedMin(minOption || 150);
+        setSelectedMax(maxOption || 50000);
     };
+    console.log(selectedMax, selectedMin);
     return (
         <section>
             <div className='lg:hidden grid grid-cols-3 bg-white items-center gap-24 justify-center py-4 px-3 mb-3'>
@@ -289,16 +271,16 @@ const AllProducts = () => {
 
 
 
-              <div className="filter-drawer drawer">
+                <div className="filter-drawer drawer">
                     <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                     <div className="drawer-content">
-                       
+
                         <label htmlFor="my-drawer" className="px-12 py-3 bg-gray-200 rounded-md drawer-button text-sm font-semibold text-gray-700">Filter</label>
                     </div>
                     <div className="drawer-side z-50">
                         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                         <ul className="menu w-[340px] min-h-full bg-white text-base-content">
-                       
+
                             <div className='min-w-full mx-auto'>
                                 <div className='category-list bg-white shadow w-full rounded'>
                                     <p className='font-semibold text-black px-3 pt-4 pb-3 border-b text-[14px]'>Refine by Category</p>
@@ -306,7 +288,7 @@ const AllProducts = () => {
                                     <Link to="/all" className='  text-primary font-normal text-[14px] inline-block w-full px-3 py-2 bg-primary bg-opacity-10'>All Category</Link>
 
                                     <ul className='w-full'>
- 
+
                                         {
                                             categoryList.slice(0, showList ? categoryList.length : 4).map(listItem => <li key={listItem?.id}>
                                                 <Link to={listItem?.path} className='py-3 px-7 text-black font-normal text-[14px] inline-block w-full hover:text-primary hover:bg-primary hover:bg-opacity-10 transition-all duration-500'>{listItem?.category}</Link>
@@ -335,7 +317,7 @@ const AllProducts = () => {
                                             <div>
 
                                                 <div className="chart bg-gray-100 rounded">
-                                                    <canvas id="chart2" />
+                                                <canvas id="lg-chart" />
                                                 </div>
 
                                                 <div className="range-selector">
@@ -357,7 +339,7 @@ const AllProducts = () => {
                                                             )
                                                         }
                                                     >
-                                                        <option value={initialMin.value}>{initialMin.label}</option>
+                                                        <option value={initialMin.value} disabled={true}>{initialMin.label}</option>
                                                         {priceOptions.map((option) => (
                                                             <option key={option.value} value={option.value}>
                                                                 {option.label}
@@ -373,7 +355,7 @@ const AllProducts = () => {
                                                             )
                                                         }
                                                     >
-                                                        <option value={initialMax.value}>{initialMax.label}</option>
+                                                        <option value={initialMax.value} disabled={true}>{initialMax.label}</option>
                                                         {priceOptions.map((option) => (
                                                             <option key={option.value} value={option.value}>
                                                                 {option.label}
@@ -505,7 +487,7 @@ const AllProducts = () => {
 
                         </ul>
                     </div>
-                </div> 
+                </div>
 
 
                 <div className='view-container'>
@@ -560,7 +542,7 @@ const AllProducts = () => {
                                 <div>
 
                                     <div className="chart bg-gray-100 rounded">
-                                        <canvas id="chart" />
+                                    <canvas id="mobile-chart" />
                                     </div>
 
                                     <div className="range-selector">
@@ -582,7 +564,7 @@ const AllProducts = () => {
                                                 )
                                             }
                                         >
-                                            <option value={initialMin.value}>{initialMin.label}</option>
+                                            <option value={initialMin.value} disabled={true}>{initialMin.label}</option>
                                             {priceOptions.map((option) => (
                                                 <option key={option.value} value={option.value}>
                                                     {option.label}
@@ -598,7 +580,7 @@ const AllProducts = () => {
                                                 )
                                             }
                                         >
-                                            <option value={initialMax.value}>{initialMax.label}</option>
+                                            <option value={initialMax.value} disabled={true}>{initialMax.label}</option>
                                             {priceOptions.map((option) => (
                                                 <option key={option.value} value={option.value}>
                                                     {option.label}
