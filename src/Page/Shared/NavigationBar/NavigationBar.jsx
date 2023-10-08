@@ -6,6 +6,8 @@ import { useEffect, useRef, useState } from "react";
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import { useForm } from "react-hook-form";
 import Banner from "../../Home/Banner/Banner";
+import Register from "../../Register/Register";
+import Login from "../../Login/Login";
 
 const NavigationBar = () => {
     const {
@@ -44,7 +46,7 @@ const NavigationBar = () => {
       };
 
     return (
-        <header className={`z-50 nav-top  bg-white relative ${location.pathname === "/" && "lg:min-h-screen"}`}>
+        <header className={`z-50 nav-top overflow-hidden  bg-white relative ${location.pathname === "/" && "lg:min-h-screen"}`}>
 
             {/* Mobile menu */}
             <div className={`absolute  lg:hidden bg-white min-h-screen transition-all duration-700 ${mSearchPage ? "top-0 right-0 left-0 z-50" : "-top-[1000px]  -right-[1000px] -left-[1000px]"}`} onClick={handleModalContentClick}>
@@ -113,9 +115,13 @@ const NavigationBar = () => {
                     </div>
                     <div className="w-full text-right">
                         <div className="inline-flex items-center justify-center">
-                            <Link to="/login" className="smallLink">Login</Link>
+                            {/* <Link to="/login" className="smallLink">Login</Link> */}
+                            <label htmlFor="logIn_modal" className="smallLink cursor-pointer">Login</label>
                             <div className="divider divider-horizontal"></div>
-                            <Link to="/register" className="smallLink">Register</Link>
+                            {/* <Link to="/register" className="smallLink">Register</Link> */}
+                            {/* <button className="smallLink">Register</button> */}
+                            <label htmlFor="register_modal" className="smallLink cursor-pointer">Register</label>
+                            
                             <div className="divider divider-horizontal"></div>
                             <Link to="/orders" className="smallLink">Orders</Link>
                             <div className="divider divider-horizontal"></div>
@@ -2091,7 +2097,10 @@ const NavigationBar = () => {
                     </div> : ""
             }
 
-
+<div>
+<Register />
+<Login />
+</div>
 
 
         </header>
