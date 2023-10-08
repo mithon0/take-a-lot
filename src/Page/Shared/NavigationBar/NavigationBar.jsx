@@ -46,7 +46,7 @@ const NavigationBar = () => {
       };
 
     return (
-        <header className={`z-50 nav-top overflow-hidden  bg-white relative ${location.pathname === "/" && "lg:min-h-screen"}`}>
+        <header className={`z-50 nav-top overflow-hidden  bg-white relative ${location.pathname === "/" && "lg:h-[720px]"}`}>
 
             {/* Mobile menu */}
             <div className={`absolute  lg:hidden bg-white min-h-screen transition-all duration-700 ${mSearchPage ? "top-0 right-0 left-0 z-50" : "-top-[1000px]  -right-[1000px] -left-[1000px]"}`} onClick={handleModalContentClick}>
@@ -2092,7 +2092,7 @@ const NavigationBar = () => {
             </div>
             {
                 location.pathname === "/" ?
-                    <div className="max-w-5xl mx-auto  lg:absolute lg:left-[20%]  2xl:left-[28%] w-full">
+                    <div className="max-w-5xl mx-auto  lg:absolute lg:left-[20%] 2xl:left-[28%] w-full">
                         <Banner />
                     </div> : ""
             }
