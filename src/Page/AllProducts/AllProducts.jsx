@@ -217,7 +217,7 @@ const AllProducts = () => {
     };
     // console.log(selectedMax, selectedMin);
     return (
-        <section>
+        <section className='-z-30'>
             <div className='lg:hidden grid grid-cols-3 bg-white items-center gap-24 justify-center py-4 px-3 mb-3'>
 
                 <div className="sort-drawer drawer">
@@ -500,7 +500,7 @@ const AllProducts = () => {
 
             </div>
 
-            <div className='banner p-2'>
+            <div className='banner p-2 z-0'>
                 <img src="https://static.takealot.com/images/sda/sda-fb-lg.png" alt="Banner" className='h-32' />
             </div>
 
