@@ -84,7 +84,7 @@ const AllProducts = () => {
 
 
     const [currentPage, setCurrentPage] = useState(1);
-    const itemPerPage = 100;
+    const itemPerPage = 20;
     const totalPage = Math.ceil(totalProducts / itemPerPage);
     const pagesToShow = 5;
 

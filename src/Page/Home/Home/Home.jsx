@@ -28,9 +28,10 @@ const Home = () => {
     },
   };
     const [allProducts , setAllProducts] = useState([]);
+    console.log(allProducts);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/all-products?page=${1}&limit=${1000}`)
+        fetch(`http://localhost:5000/all-products`)
         .then(res=>res.json())
         .then(data=>setAllProducts(data))
     },[])
@@ -64,7 +65,7 @@ const Home = () => {
       >
  
         {
-allProducts.splice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -113,7 +114,7 @@ allProducts.splice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(11,20).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(11,20).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -162,7 +163,7 @@ allProducts.splice(11,20).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(20,30).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(21,30).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -212,7 +213,7 @@ allProducts.splice(20,30).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(31,40).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(31,40).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -262,7 +263,7 @@ allProducts.splice(31,40).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(41,50).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(41,50).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -356,7 +357,7 @@ allProducts.splice(41,50).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -425,7 +426,7 @@ allProducts.splice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(11,20).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(11,20).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -487,7 +488,7 @@ allProducts.splice(11,20).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(21,30).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(21,30).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -549,7 +550,7 @@ allProducts.splice(21,30).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(31,40).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(31,40).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -611,7 +612,7 @@ allProducts.splice(31,40).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(41, 45).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(41, 45).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -673,7 +674,7 @@ allProducts.splice(41, 45).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(46, 50).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(46, 50).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -735,7 +736,7 @@ allProducts.splice(46, 50).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(51, 55).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(51, 55).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
@@ -797,7 +798,7 @@ allProducts.splice(51, 55).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.splice(55, 60).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(55, 60).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
