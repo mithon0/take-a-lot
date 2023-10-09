@@ -31,7 +31,7 @@ const Home = () => {
     console.log(allProducts);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/all-products`)
+        fetch(`https://take-a-lot-server-two.vercel.app/all-products`)
         .then(res=>res.json())
         .then(data=>setAllProducts(data))
     },[])

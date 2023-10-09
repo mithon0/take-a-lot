@@ -58,7 +58,7 @@ const AllProducts = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:5000/total-products")
+        fetch("https://take-a-lot-server-two.vercel.app/total-products")
             .then(res => res.json())
             .then(data => setTotalProducts(data.totalProduct))
     }, [])
@@ -103,7 +103,7 @@ const AllProducts = () => {
     const fetchHouses = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:5000/all-products?page=${currentPage}&limit=${itemPerPage}`);
+            const response = await axios.get(`https://take-a-lot-server-two.vercel.app/all-products?page=${currentPage}&limit=${itemPerPage}`);
             setProducts(response.data);
             setLoading(false);
         } catch (error) {
