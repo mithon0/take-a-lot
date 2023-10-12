@@ -6,42 +6,42 @@ import { Link } from 'react-router-dom';
 const Product = ({ prod, view }) => {
   // console.log(prod);
   return (
-    <div className={`${view === "list" ? "card card-side h-fit lg:h-64 flex justify-center" : "card lg:w-[200px] h-[375px]"}  shadow hover:shadow-lg rounded-none relative`}>
+    <Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className={`${view === "list" ? "card card-side h-fit lg:h-64 flex justify-center" : "card lg:w-[200px] h-[375px]"}  shadow hover:shadow-lg rounded-none relative`}>
 
-     <div className={`${view === "list" ? "h-36 lg:h-64 w-40 lg:w-60 my-auto relative" : "h-[135px] w-full relative"}`}>
-     <img src={prod?.Image_Url} alt="Product" className={`${view === "list" ? "h-36 lg:h-64 w-40 lg:w-60 my-auto" : "h-[135px] w-full"}`} />
-    <button className={`${view === "list" ?"hidden" : "flex absolute top-2 right-2 bg-gray-100 px-1 py-1 rounded-full hover:text-red-400"}`}><IoMdHeartEmpty className='w-5 h-5' /></button>
-     </div>
+      <div className={`${view === "list" ? "h-36 lg:h-64 w-40 lg:w-60 my-auto relative" : "h-[135px] w-full relative"}`}>
+        <img src={prod?.Image_URL} alt="Product" className={`${view === "list" ? "h-36 lg:h-64 w-40 lg:w-60 my-auto" : "h-[135px] w-full"}`} />
+        <button className={`${view === "list" ? "hidden" : "flex absolute top-2 right-2 bg-gray-100 px-1 py-1 rounded-full hover:text-red-400"}`}><IoMdHeartEmpty className='w-5 h-5' /></button>
+      </div>
 
       <div className={`${view === "grid" ? "px-3" : "px-6 py-3 space-y-10"} items-center w-full`}>
         <div className={`${view === "grid" ? "h-14 my-1" : "h-0 my-3"} `}>
-          <p className='text-[13px] font-medium h-9'>{prod?.Name.slice(0, 20)}{prod?.Name.length > 20 ? "...." : ""}</p>
+          <p className='text-[13px] font-medium h-9'>{prod?.Product_Name.slice(0, 20)}{prod?.Product_Name.length > 20 ? "...." : ""}</p>
 
           {
             view === "list" ? <div>
-              <Link to={`/all/brand/${prod?.Brand}`} className='text-[13px] text-primary'>{prod?.Brand}</Link>
+              <Link to={`/all/brand/${prod?.Brand_Name}`} className='text-[13px] text-primary'>{prod?.Brand_Name}</Link>
             </div> : ""
           }
         </div>
         <div className='hidden lg:flex'>
-        {
-          view === "list" ? <div className='mt-5'>{prod?.Short_description ? prod?.Short_description : prod?.Description.slice(0, 50)}</div> : ""
-        }
+          {
+            view === "list" ? <div className='mt-5'>{prod?.Short_Description ? prod?.Short_Description : prod?.Description.slice(0, 50)}</div> : ""
+          }
         </div>
 
-        
+
 
         <div className='text-left flex flex-col space-y-2'>
           {
             view === "grid" ? <div>
-              <Link to={`/all/brand/${prod?.Brand}`} className='text-[13px] text-primary'>{prod?.Brand}</Link>
+              <Link to={`/all/brand/${prod?.Brand_Name}`} className='text-[13px] text-primary'>{prod?.Brand_Name}</Link>
             </div> : ""
           }
           {
             view === "grid" ? <p className='font-semibold'>R 50</p> : <div className='lg:hidden'>
-            {
-              view === "list" ? <div className='mt-8'>{prod?.Short_description ? prod?.Short_description.slice(0, 50) : prod?.Description.slice(0, 50)}...</div> : ""
-            }
+              {
+                view === "list" ? <div className='mt-8'>{prod?.Short_Description ? prod?.Short_Description.slice(0, 50) : prod?.Description.slice(0, 50)}...</div> : ""
+              }
             </div>
           }
           <div className='inline-flex items-center gap-2'>
@@ -58,7 +58,7 @@ sd
     </div> */}
       </div>
 
-      
+
       <div className={` ${view === "list" ? "w-1/4" : ""}`}>
         {
           view === "grid" ? <div className="absolute mx-auto text-center bottom-2 lg:bottom-4 left-0 right-0 px-2 lg:px-4">
@@ -74,7 +74,7 @@ sd
           </div>
         }
       </div>
-    </div>
+    </Link>
   );
 };
 

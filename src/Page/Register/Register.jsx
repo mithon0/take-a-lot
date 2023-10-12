@@ -14,7 +14,7 @@ const Register = () => {
     const [allCodes, setAllCodes] = useState([]);
 
     useEffect(()=>{
-        fetch("countryCode.json")
+        fetch("./countryCode.json")
         .then(res=>res.json())
         .then(data=>setAllCodes(data))
     },[])
