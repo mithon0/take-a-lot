@@ -9,7 +9,8 @@ import { HelmetProvider } from 'react-helmet-async';
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <div className='overflow-hidden'>
+    <React.StrictMode>
     <HelmetProvider>
       <Auth>
         <QueryClientProvider client={queryClient}>
@@ -18,4 +19,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Auth>
     </HelmetProvider>
   </React.StrictMode>
+  </div>
 )

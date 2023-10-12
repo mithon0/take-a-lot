@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import useProducts from '../../hooks/useProducts';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
-import { HiOutlinePlusSmall, HiShoppingCart, HiStar, HiXMark } from 'react-icons/hi2';
+import { HiOutlinePlusSmall, HiOutlineShare, HiShoppingCart, HiStar, HiXMark } from 'react-icons/hi2';
 import { IoIosArrowDown, IoIosHelpCircle, IoIosInformationCircle, IoMdHeartEmpty } from 'react-icons/io';
 import { FaThumbsUp } from "react-icons/fa";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -33,7 +33,24 @@ const ProductDetails = () => {
     console.log(selectedProducts);
     // console.log(selectedRating);
     return (
-        <section className='flex flex-col lg:flex-row items-start gap-10 my-10 px-5'>
+<section className='px-5'>
+
+<div className='my-5 w-full flex items-center justify-between text-xs'>
+<div>
+<p className='inline-flex gap-2 items-center'>
+                    <Link className='hover:underline text-primary' to={`/all/${selectedProducts?.Main_Category}`}>{selectedProducts?.Main_Category}</Link>
+
+                    <span>/</span> 
+
+                    <Link className='hover:underline text-primary' to={`/all/${selectedProducts?.Main_Category}/${selectedProducts?.Sub_Category}`}>{selectedProducts?.Sub_Category}</Link>
+                </p>
+</div>
+<div>
+<p className='inline-flex gap-1 items-center text-sm'><HiOutlineShare className='h-4 w-4'/> <span className='font-medium'>Share</span></p>
+</div>
+</div>
+
+<div className='flex flex-col lg:flex-row items-start gap-10 mt-5 mb-10 overflow-hidden relative'>
 <div className='w-full lg:w-3/4'>
 <div className='prod-image w-full h-fit flex flex-col lg:flex-row gap-5 bg-white shadow rounded p-10'>
     
@@ -517,13 +534,166 @@ allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
 
 </div>
 
-<div className='all-modal'>
+<div className='all-modal absolute top-0'>
     {/* When do I get it? */}
 <input type="checkbox" id="When_I_get_it" className="modal-toggle" />
 <div className="modal">
   <div className="modal-box">
-    <h3 className="font-bold text-lg">Hello!</h3>
-    <p className="py-4">This modal works with a hidden checkbox!</p>
+  <h2 className='text-center text-lg font-bold'>When do I get it?</h2>
+    <div className='text-xs text-left my-5'>
+<p>Our picking, packing and delivery is linked to what you order, where you want it delivered and how you choose to pay, so delivery times can vary. Estimates are provided below to help you shop, but always check your order’s Estimated Delivery Date during checkout for the most accurate delivery information.</p>
+
+<div className='mt-2'>
+<p className='font-semibold text-[#4d4d4f] text-sm'>Standard Delivery</p>
+<div className="overflow-x-auto border my-2">
+  <table className="table">
+    {/* head */}
+    <thead>
+      <tr>
+        <th className='text-sm text-black'>
+Delivery destination</th>
+        <th className='text-sm text-black'>	Delivery time</th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      <tr>
+        <td>Cape Town, Johannesburg, Pretoria</td>
+        <td>	2-5 working days</td>
+      </tr>
+      <tr>
+        <td>Regional Area</td>
+        <td>2-6 working days</td>
+      </tr>
+      <tr>
+        <td>Remote Area</td>
+        <td>3-7 working days</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+<div className='mt-3'>
+<p className='font-semibold text-[#4d4d4f] text-sm'>Premium Delivery Options</p>
+<p>Only available in Main Centres (Cape Town, Johannesburg & Pretoria)</p>
+<div className="overflow-x-auto border my-2">
+  <table className="table">
+    {/* head */}
+    <thead>
+      <tr>
+        <th className='text-sm text-black'>
+
+        Delivery type</th>
+        <th className='text-sm text-black'>	Delivery time</th>
+        <th className='text-sm text-black'>	Cut off time</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      <tr>
+        <td>Same Day Delivery</td>
+        <td>	Same Day between 3pm - 7pm</td>
+        <td>Pay before 10:30am weekdays</td>
+      </tr>
+      <tr>
+        <td>Next Business Day Delivery</td>
+        <td>Next Working Day between 7am - 7pm</td>
+        <td>Pay before 11:59pm previous day</td>
+      </tr>
+      <tr>
+        <td>Saturday Delivery</td>
+        <td>Saturday between 11am - 7pm</td>
+        <td>Pay before 11:59pm Friday</td>
+      </tr>
+      <tr>
+        <td>Sunday Delivery</td>
+        <td>Sunday between 11am - 7pm	</td>
+        <td>Pay before 11am Saturday</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+<div className='mt-2'>
+<p className='font-semibold text-[#4d4d4f] text-sm'>Standard Collect</p>
+<div className="overflow-x-auto border my-2">
+  <table className="table">
+    {/* head */}
+    <thead>
+      <tr>
+        <th className='text-sm text-black'>
+
+        Collect location</th>
+        <th className='text-sm text-black'>		Collect time</th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      <tr>
+        <td>Pickup Point: Cape Town, Johannesburg, Pretoria</td>
+        <td>		2-5 working days</td>
+      </tr>
+      <tr>
+        <td>Pickup Point: Regional Area</td>
+        <td>2-6 working days</td>
+      </tr>
+      <tr>
+        <td>Pickup Point: Remote Area</td>
+        <td>3-7 working days</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+<div className='mt-3'>
+<p className='font-semibold text-[#4d4d4f] text-sm'>Premium Collect Options</p>
+<p className='mb-1'>Only available in Main Centres (Cape Town, Johannesburg & Pretoria)</p>
+<div className="overflow-x-auto border my-2">
+  <table className="table">
+    {/* head */}
+    <thead>
+      <tr>
+        <th className='text-sm text-black'>
+
+        Collect type</th>
+        <th className='text-sm text-black'>	Collect time</th>
+        <th className='text-sm text-black'>		Cut off time</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      <tr>
+        <td>Same Day Collect</td>
+        <td>Same Day from 3pm</td>
+        <td>Pay before 10:30am Mon-Sat</td>
+      </tr>
+      <tr>
+        <td>Next Day Collect</td>
+        <td>Next Day from 10am	</td>
+        <td>Pay before 11:59pm previous day</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<p>Collection times vary, please wait for your Ready to Collect email before visiting the pickup point.</p>
+</div>
+   <div>
+
+   </div>
     <div className="modal-action">
     <label htmlFor="When_I_get_it" className="absolute top-3 right-3 cursor-pointer hover:text-error">
                             <HiXMark className='w-7 h-7' />
@@ -536,8 +706,35 @@ allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
 <input type="checkbox" id="next_day_delivery" className="modal-toggle" />
 <div className="modal">
   <div className="modal-box">
-    <h3 className="font-bold text-lg">Hello!</h3>
-    <p className="py-4">next-day delivery or collection</p>
+  <h2 className='text-center text-lg font-bold'>What does this mean?</h2>
+    <div className='text-xs text-left my-5'>
+<p>If your order is eligible for next business day delivery, it will be displayed as a delivery option during checkout. <span className='font-semibold text-[#4d4d4f]'>A ‘Next Day’ badge seen on the product details page does not guarantee next day delivery.</span></p>
+
+<div className='py-3'>
+<p className='font-semibold mb-2 text-[#4d4d4f] text-sm'>We offer next business day delivery during checkout if all products in the order meet the following criteria:</p>
+<ul className='list-disc pl-4 space-y-2'>
+  <li>All products in the order must be in-stock
+    <ul className='list-disc pl-5 space-y-1'>
+      <li>For Cape Town Metro customers, all products must be in-stock at the Cape Town distribution centre</li>
+      <li>For Johannesburg, Pretoria and Durban customers, all products must be in-stock at the Johannesburg distribution centre</li>
+      <li>For all other areas, all products must be in-stock at the nearest distribution centre
+</li>
+    </ul>
+  </li>
+
+  <li>No products longer than 1.4 meters in length and width</li>
+
+  <li>No bulky products (35 kg volumetric or more)</li>
+</ul>
+</div>
+
+<p className='font-semibold text-[#4d4d4f] text-sm'>In addition, please note:</p>
+
+<ul className='list-disc pl-4 space-y-2 mt-2'>
+  <li>Eligibility is subject to available courier capacity at the time the order is placed</li>
+  <li>Alcoholic products are limited to delivery only and cannot be collected</li>
+</ul>
+</div>
     <div className="modal-action">
     <label htmlFor="next_day_delivery" className="absolute top-3 right-3 cursor-pointer hover:text-error">
                             <HiXMark className='w-7 h-7' />
@@ -549,8 +746,35 @@ allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
 <input type="checkbox" id="COD" className="modal-toggle" />
 <div className="modal">
   <div className="modal-box">
-    <h3 className="font-bold text-lg">Hello!</h3>
-    <p className="py-4">Eligible for Cash on Delivery</p>
+  <h2 className='text-center text-lg font-bold'>What does this mean?</h2>
+    <div className='text-xs text-left my-5'>
+<p>You can pay for this item with cash when your driver delivers your order.</p>
+
+<div className='mt-2'>
+<p className='font-semibold text-[#4d4d4f] text-sm'>How does it work?</p>
+<p>Select Cash On Delivery (COD) as your payment option when you checkout. Have the exact amount of cash ready for our friendly delivery driver when he arrives.</p>
+</div>
+
+<div className='py-3'>
+<p className='font-semibold mb-2 text-[#4d4d4f] text-sm'>Is COD available on every order?</p>
+<p>No. We don’t offer COD for:</p>
+<ul className='list-disc pl-4 space-y-2'>
+  <li>Digital products (e.g. eBooks, gift vouchers or airtime)
+</li>
+
+
+  <li>Customised products (e.g. a sports shirt printed with a personalised name)</li>
+
+  <li>Orders totalling R3,000 or more
+</li>
+  <li>Orders being collected from Takealot pickup points</li>
+  <li>Delivery addresses falling outside of our Takealot Delivery Team area</li>
+</ul>
+</div>
+
+<p className='font-semibold text-[#4d4d4f] text-sm'>If your order is eligible for COD, it will be displayed as a payment option at checkout.</p>
+
+</div>
     <div className="modal-action">
     <label htmlFor="COD" className="absolute top-3 right-3 cursor-pointer hover:text-error">
                             <HiXMark className='w-7 h-7' />
@@ -563,8 +787,42 @@ allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
 <input type="checkbox" id="Exchanges&Returns" className="modal-toggle" />
 <div className="modal">
   <div className="modal-box">
-    <h3 className="font-bold text-lg">Hello!</h3>
-    <p className="py-4">Hassle-Free Exchanges & Returns for 30 Days.</p>
+  <h2 className='text-center text-lg font-bold'>Hassle-Free Exchanges & Returns for 30 Days</h2>
+    <div className='text-xs text-left my-5'>
+      <p className='font-semibold text-[#4d4d4f] text-sm'>Returns</p>
+<p>If you are not completely satisfied, simply return the items to us in their original condition and packaging within 30 days of receipt and we will issue a credit which can be used to place a new order.</p>
+
+<div className='mt-2'>
+<p className='font-semibold text-[#4d4d4f] text-sm'>Exchanges (Fashion, sportswear and shoes only)</p>
+<p>The item must be unworn and unused (other than trials) with the original tags still attached. Packaging should be returned in an undamaged condition with the item./</p>
+</div>
+
+<div className='py-3'>
+<p className='font-semibold mb-2 text-[#4d4d4f] text-sm'>When does this policy not apply?</p>
+<p>If the item is:</p>
+<ul className='list-disc pl-4 space-y-2'>
+  <li>older than 30 days
+</li>
+
+
+  <li>opened, unsealed, used or missing any accessories</li>
+
+  <li>a digital product such as an eBook, electronic voucher, gaming code or other digital downloads;
+</li>
+  <li>an audio or video recording or computer software that has been unsealed;</li>
+  <li>a newspaper, periodical or magazine;</li>
+  <li>a foodstuff, beverage, or other product intended for everyday consumption;</li>
+  <li>a nursing or maternity product that has been unsealed, including (but not limited to) breast pumps, bottles, formula, maternity underwear, nappies and wipes;</li>
+  <li>a beauty product or fragrance which has been used;</li>
+  <li>a product which has been personalised or made to your specifications.</li>
+</ul>
+</div>
+
+<p className='font-medium text-[#4d4d4f] text-xs'>Find out more about <Link to="/help-center" className='text-primary hover:un'>Exchanges & Returns.</Link>
+
+</p>
+
+</div>
     <div className="modal-action">
     <label htmlFor="Exchanges&Returns" className="absolute top-3 right-3 cursor-pointer hover:text-error">
                             <HiXMark className='w-7 h-7' />
@@ -628,7 +886,10 @@ allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
 </div>
 
 
-        </section>
+
+
+        </div>
+</section>
     );
 };
 
