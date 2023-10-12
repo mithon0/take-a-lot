@@ -110,7 +110,7 @@ const NavigationBar = () => {
                         </div>
                         <div className="divider divider-horizontal"></div>
                         <div>
-                            <Link to="/sell" className="smallLink">Sell on Takealot</Link>
+                            <Link to="/sell-on-take-a-lot" className="smallLink">Sell on Takealot</Link>
                         </div>
                     </div>
                     <div className="w-full text-right">
@@ -123,7 +123,7 @@ const NavigationBar = () => {
                             <label htmlFor="register_modal" className="smallLink cursor-pointer">Register</label>
                             
                             <div className="divider divider-horizontal"></div>
-                            <Link to="/account/orders" className="smallLink">Orders</Link>
+                            <Link to="/orders" className="smallLink">Orders</Link>
                             <div className="divider divider-horizontal"></div>
 
 
