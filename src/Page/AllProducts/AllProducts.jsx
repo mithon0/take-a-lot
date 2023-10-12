@@ -58,13 +58,13 @@ const AllProducts = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:5000/total-products")
+        fetch("https://take-a-lot-server-two.vercel.app/total-products")
             .then(res => res.json())
             .then(data => setTotalProducts(data.totalProduct))
     }, [])
 
     useEffect(() => {
-        fetch('brands.json')
+        fetch('./brands.json')
             .then((res) => res.json())
             .then((data) => {
                 // Filter the brands based on the search input or show all when search is empty
@@ -84,7 +84,7 @@ const AllProducts = () => {
 
 
     const [currentPage, setCurrentPage] = useState(1);
-    const itemPerPage = 100;
+    const itemPerPage = 20;
     const totalPage = Math.ceil(totalProducts / itemPerPage);
     const pagesToShow = 5;
 
@@ -103,7 +103,7 @@ const AllProducts = () => {
     const fetchHouses = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:5000/all-products?page=${currentPage}&limit=${itemPerPage}`);
+            const response = await axios.get(`https://take-a-lot-server-two.vercel.app/all-products?page=${currentPage}&limit=${itemPerPage}`);
             setProducts(response.data);
             setLoading(false);
         } catch (error) {
@@ -113,7 +113,7 @@ const AllProducts = () => {
     };
 
     useEffect(() => {
-        fetch("categoryList.json")
+        fetch("./categoryList.json")
             .then(res => res.json())
             .then(data => setCategoryList(data))
     }, [])
@@ -217,7 +217,7 @@ const AllProducts = () => {
     };
     // console.log(selectedMax, selectedMin);
     return (
-        <section>
+        <section className='-z-30'>
             <div className='lg:hidden grid grid-cols-3 bg-white items-center gap-24 justify-center py-4 px-3 mb-3'>
 
                 <div className="sort-drawer drawer">
@@ -500,7 +500,7 @@ const AllProducts = () => {
 
             </div>
 
-            <div className='banner p-2'>
+            <div className='banner p-2 z-0'>
                 <img src="https://static.takealot.com/images/sda/sda-fb-lg.png" alt="Banner" className='h-32' />
             </div>
 

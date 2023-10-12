@@ -26,21 +26,21 @@ const Banner = () => {
 
 <div className='pb-3 w-full'>
   <p className='pt-1 pb-3 font-semibold text-lg text-gray-700 text-left'>Featured Brands</p>
-<Marquee speed={30}>
+<Marquee speed={30} className='z-0'>
   <Link to="/">
-  <img src="https://media.takealot.com/b/2/cms/p/fit-in/180x120/original_images/HealthBeauty_Brand15.png" alt="Nivea" className='w-40 mx-4'/>
+  <img src="https://media.takealot.com/b/2/cms/p/fit-in/180x120/original_images/HealthBeauty_Brand15.png" alt="Nivea" className='w-40 mx-4 z-10'/>
   </Link>
 
   <Link to="/">
-  <img src="https://media.takealot.com/b/2/cms/p/fit-in/160x70/original_images/b21ee0fbe4eeff9f534cc0be7bde5deb301584de.png" alt="Asus" className='w-40 mx-4'/>
+  <img src="https://media.takealot.com/b/2/cms/p/fit-in/160x70/original_images/b21ee0fbe4eeff9f534cc0be7bde5deb301584de.png" alt="Asus" className='w-40 mx-4 z-10'/>
   </Link>
 
   <Link to="/">
-  <img src="https://media.takealot.com/b/2/cms/p/fit-in/180x120/original_images/Computers_Brand4.png" alt="Canon" className='w-40 mx-4'/>
+  <img src="https://media.takealot.com/b/2/cms/p/fit-in/180x120/original_images/Computers_Brand4.png" alt="Canon" className='w-40 mx-4 z-10'/>
   </Link>
 
   <Link to="/">
-  <img src="https://media.takealot.com/b/2/cms/p/fit-in/160x70/original_images/398bc48815c135c0f074174a2a5d4acdb36534ea_dRbMDMz.png" alt="Samsung" className='w-40 mx-4'/>
+  <img src="https://media.takealot.com/b/2/cms/p/fit-in/160x70/original_images/398bc48815c135c0f074174a2a5d4acdb36534ea_dRbMDMz.png" alt="Samsung" className='w-40 mx-4 z-10'/>
   </Link>
 
   <Link to="/">
@@ -48,15 +48,15 @@ const Banner = () => {
   </Link>
 
   <Link to="/">
-  <img src="https://media.takealot.com/b/2/cms/p/fit-in/160x90/original_images/george_mason.png" alt="George" className='w-40 mx-4'/>
+  <img src="https://media.takealot.com/b/2/cms/p/fit-in/160x90/original_images/george_mason.png" alt="George" className='w-40 mx-4 z-10'/>
   </Link>
 
   <Link to="/">
-  <img src="https://media.takealot.com/b/2/cms/p/fit-in/160x90/filters:focal(52x32:159x66)/original_images/powerup.png" alt="Powerup" className='w-40 mx-4'/>
+  <img src="https://media.takealot.com/b/2/cms/p/fit-in/160x90/filters:focal(52x32:159x66)/original_images/powerup.png" alt="Powerup" className='w-40 mx-4 z-10'/>
   </Link>
 
   <Link to="/">
-  <img src="https://media.takealot.com/b/2/cms/p/fit-in/450x140/original_images/Campground_logo-01.png" alt="Campground" className='w-40 mx-4'/>
+  <img src="https://media.takealot.com/b/2/cms/p/fit-in/450x140/original_images/Campground_logo-01.png" alt="Campground" className='w-40 mx-4 z-10'/>
   </Link>
 </Marquee>
 
