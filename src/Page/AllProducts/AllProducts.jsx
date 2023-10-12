@@ -64,7 +64,7 @@ const AllProducts = () => {
     }, [])
 
     useEffect(() => {
-        fetch('brands.json')
+        fetch('./brands.json')
             .then((res) => res.json())
             .then((data) => {
                 // Filter the brands based on the search input or show all when search is empty
@@ -113,7 +113,7 @@ const AllProducts = () => {
     };
 
     useEffect(() => {
-        fetch("categoryList.json")
+        fetch("./categoryList.json")
             .then(res => res.json())
             .then(data => setCategoryList(data))
     }, [])

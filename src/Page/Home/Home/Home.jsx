@@ -67,14 +67,14 @@ const Home = () => {
         {
 allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -116,14 +116,14 @@ allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
         {
 allProducts.slice(11,20).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -163,16 +163,16 @@ allProducts.slice(11,20).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.slice(21,30).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(21,28).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -213,16 +213,16 @@ allProducts.slice(21,30).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.slice(31,40).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -263,16 +263,16 @@ allProducts.slice(31,40).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.slice(41,50).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(11,20).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -357,16 +357,16 @@ allProducts.slice(41,50).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(0,5).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -428,14 +428,14 @@ allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
         {
 allProducts.slice(11,20).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -490,14 +490,14 @@ allProducts.slice(11,20).map(prod=><SwiperSlide key={prod?._id} className="">
         {
 allProducts.slice(21,30).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -550,16 +550,16 @@ allProducts.slice(21,30).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.slice(31,40).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(0,5).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -612,16 +612,16 @@ allProducts.slice(31,40).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.slice(41, 45).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(6, 10).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -674,16 +674,16 @@ allProducts.slice(41, 45).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.slice(46, 50).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(11, 16).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -736,16 +736,16 @@ allProducts.slice(46, 50).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.slice(51, 55).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(17, 21).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
@@ -798,16 +798,16 @@ allProducts.slice(51, 55).map(prod=><SwiperSlide key={prod?._id} className="">
       >
  
         {
-allProducts.slice(55, 60).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(22, 28).map(prod=><SwiperSlide key={prod?._id} className="">
 
-<Link to={`/product-details/${prod?.Name}/${prod?._id}`} className="w-[200px] h-[300px] flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
 <div className="w-[150px] h-[120px] mx-auto">
-<img src={prod?.Image_Url} alt={prod?.Name} />
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
 </div>
 
 <div className="h-[40px] mt-8">
-  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Name.slice(0,45)}{prod?.Name.length > 50 ? "..." : ""}</p>
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
 </div>
 
 <div className="mt-3 flex flex-col space-y-2">
