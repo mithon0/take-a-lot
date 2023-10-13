@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { IoIosHeart, IoMdClose } from "react-icons/io";
+import { IoIosHeart, IoMdArrowBack, IoMdArrowForward, IoMdClose } from "react-icons/io";
 import { HiShoppingCart, HiChevronRight, HiOutlineClock } from "react-icons/hi2";
 import { IoMdSearch } from "react-icons/io";
 import { useEffect, useRef, useState } from "react";
@@ -20,7 +20,9 @@ const NavigationBar = () => {
     const location = useLocation()
    
 
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = (data) => console.log(data);
+    const [shopPhoneMenu, setShopPhoneMenu] = useState(false);
+    console.log(shopPhoneMenu);
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -66,16 +68,210 @@ const NavigationBar = () => {
                 <nav>
                     <div className="navbar">
                         <div className="navbar-start">
-                            <div className="dropdown">
-                                <label tabIndex={0} className="btn btn-ghost btn-circle">
-                                    <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
+                            <div className="drawer">
+                            <input id="my-drawer-3" type="checkbox" className="drawer-toggle" /> 
+                            <div className="flex-none lg:hidden">
+        <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </label>
+      </div> 
+                                <div className="drawer-side">
+    <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label> 
+    <ul className="menu py-0 pl-0 pr-0 w-72 h-full bg-white text-base-content">
+      <li className="shadow mb-2 py-2">
+      <Link to="/"><img src="https://shopfront.takealot.com/aed55792c2c96c6c4f665ee46aa6ff6e20f41112/static/media/src/images/logo.svg-f6ccb489b85bbddf97d6.svg" alt="Takealot" className="w-28" /></Link>
+      </li>
+      
+        <ul className="px-0 shadow my-3">
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/">Home</Link>
+</li>
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200" onClick={()=>setShopPhoneMenu(true)}>
+    
+    <p className="flex items-center justify-between">Shop by Category <IoMdArrowForward className="h-5 w-5"/></p>
+</li>
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/deals">Deal</Link>
+</li>
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/orders">Orders</Link>
+</li>
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/" className="flex items-center justify-between">My Account <IoMdArrowForward className="h-5 w-5"/></Link>
+</li>
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/help-center">Help Center</Link>
+</li>
 
-                                </label>
-                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><a>Homepage</a></li>
-                                    <li><a>Portfolio</a></li>
-                                    <li><a>About</a></li>
-                                </ul>
+        </ul>
+
+
+        <ul className="px-0 shadow my-3">
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/cart" className="inline-flex items-center gap-2"> <HiShoppingCart className="w-5 h-5 text-success" /> Cart</Link>
+</li>
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/" className="inline-flex items-center gap-2"><IoIosHeart className="w-5 h-5 text-error" /> Lists</Link>
+</li>
+
+        </ul>
+
+    </ul>
+
+{
+    shopPhoneMenu && <ul className="menu py-0 pl-0 pr-0 w-72 h-full bg-white text-base-content">
+    <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+  <p className="flex items-center text-primary" onClick={()=>setShopPhoneMenu(false)}><IoMdArrowBack className="h-5 w-5"/> Main Menu</p>
+ <span className="text-lg">Shop by category</span>
+</li>
+    
+      <ul className="px-0 shadow my-3">
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200" onClick={() => setDeptName("Virtual Shopping Assistants")}>
+  <span to="/" className="flex items-center justify-between">Virtual Shopping Assistants <IoMdArrowForward className="h-4 w-4" /></span>
+</li>
+      </ul>
+
+{/* <ul className="shadow bg-white w-56 pt-2">
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Virtual Shopping Assistants")} onMouseLeave={() => setDeptName("")}>Virtual Shopping Assistants <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Automotive & DIY")} onMouseLeave={() => setDeptName("")}>Automotive & DIY <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Baby & toddle")} onMouseLeave={() => setDeptName("")}>Baby & toddle <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Beauty")} onMouseLeave={() => setDeptName("")}>Beauty <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Books & Course")} onMouseLeave={() => setDeptName("")}>Books & Course <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Camping & Outdoor")} onMouseLeave={() => setDeptName("")}>Camping & Outdoor <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Clothing, Shoes & Accessories")} onMouseLeave={() => setDeptName("")}>Clothing, Shoes & Accessories <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Electronics")} onMouseLeave={() => setDeptName("")}>Electronics <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Gaming & Media")} onMouseLeave={() => setDeptName("")}>Gaming & Media <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Garden, Pool & Patio")} onMouseLeave={() => setDeptName("")}>Garden, Pool & Patio <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Groceries & Household")} onMouseLeave={() => setDeptName("")}>Groceries & Household <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Health & Personal Care")} onMouseLeave={() => setDeptName("")}>Health & Personal Care <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Home & Appliances")} onMouseLeave={() => setDeptName("")}>Home & Appliances <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Liquor")} onMouseLeave={() => setDeptName("")}>Liquor <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Office & Stationery")} onMouseLeave={() => setDeptName("")}>Office & Stationery <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Pets")} onMouseLeave={() => setDeptName("")}>Pets <HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Sport & Training")} onMouseLeave={() => setDeptName("")}>Sport & Training<HiChevronRight className="h-4 w-4" /></li>
+
+<li className="categoryNav w-full" onMouseEnter={() => setDeptName("Toys")} onMouseLeave={() => setDeptName("")}>Toys <HiChevronRight className="h-4 w-4" /></li>
+
+
+<Link className="inline-flex  items-center justify-center w-full py-2 gap-2 bg-green-500 mt-1 text-base-100"><HiOutlineClock className="h-7 w-7" /> <span className="text-xl font-bold">Daily Deals</span></Link>
+
+</ul> */}
+
+  </ul>
+}
+
+{
+    deptName === "Virtual Shopping Assistants" ? <div className="department-container bg-gray-100  z-50 grid grid-cols-1 w-72">
+    <div className="py-4 px-3">
+    <p className="flex items-center text-primary" onClick={() => setDeptName("")}>
+        <IoMdArrowBack className="h-5 w-5"/> Category Menu
+        </p>
+        <p className="text-primary font-bold text-sm mt-5">Virtual Shopping Assistants</p>
+
+        <div className="my-3">
+        <span className="text-[13px] text-gray-600 font-bold pl-2">Featured</span>
+            <ul className="shadow bg-white">
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Backup Power Finder</Link>
+                </li>
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Canon Printer Finder</Link>
+                </li>
+            </ul>
+
+            <div className="mt-6">
+            <span className="text-[13px] text-gray-600 font-bold pl-2">Appliances</span>
+            <ul className="bg-white shadow">
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Fridges &amp; Freezers Finder</Link>
+                </li>
+
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Washing Machine Finder</Link>
+                </li>
+
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Coffee Machine Finder</Link>
+                </li>
+            </ul>
+            </div>
+
+            <div className="mt-6">
+            <span className="text-[13px] text-gray-600 font-bold pl-2">Sport</span>
+            <ul className="bg-white shadow">
+                
+
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Running Shoes Finder</Link>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+    </div>
+    <div className="px-3">
+        <div className="mb-10">
+        <div>
+        <span className="text-[13px] text-gray-600 font-bold pl-2">Beauty &amp; Health</span>
+            <ul className="shadow bg-white">
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Skin Care Finder</Link>
+                </li>
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Dermatologist Recommended</Link>
+                </li>
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Vitamins Finder</Link>
+                </li>
+            </ul>
+        </div>
+        <div className="mt-6">
+        <span className="text-[13px] text-gray-600 font-bold pl-2">Electronics</span>
+            <ul className="shadow bg-white">
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Laptop Finder</Link>
+                </li>
+
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Cellphone Finder</Link>
+                </li>
+
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">TV Finder</Link>
+                </li>
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Smart Watch Finder</Link>
+                </li>
+                <li className="py-2 border-b border-b-gray-200">
+                    <Link className="categorySubNav w-full" to="/advisor?id=">Headphones Finder</Link>
+                </li>
+            </ul>
+        </div>
+
+        </div>
+    </div>
+</div>: ""
+} 
+
+
+  </div>
                             </div>
                         </div>
                         <div className="navbar-center">
