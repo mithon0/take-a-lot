@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { IoIosHeart, IoMdArrowBack, IoMdArrowForward, IoMdClose } from "react-icons/io";
-import { HiShoppingCart, HiChevronRight, HiOutlineClock } from "react-icons/hi2";
+import { HiShoppingCart, HiChevronRight, HiOutlineClock,HiUser } from "react-icons/hi2";
 import { IoMdSearch } from "react-icons/io";
 import { useEffect, useRef, useState } from "react";
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
@@ -22,7 +22,8 @@ const NavigationBar = () => {
 
     const onSubmit = (data) => console.log(data);
     const [shopPhoneMenu, setShopPhoneMenu] = useState(false);
-    console.log(shopPhoneMenu);
+    const [PhoneAccountMenu, setPhoneAccountMenu] = useState(false);
+   
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -78,7 +79,7 @@ const NavigationBar = () => {
       </div> 
                                 <div className="drawer-side">
     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label> 
-    <ul className="menu py-0 pl-0 pr-0 w-72 h-full bg-white text-base-content">
+    <ul className="menu py-0 pl-0 pr-0 w-72 h-full bg-white text-base-content relative">
       <li className="shadow mb-2 py-2">
       <Link to="/"><img src="https://shopfront.takealot.com/aed55792c2c96c6c4f665ee46aa6ff6e20f41112/static/media/src/images/logo.svg-f6ccb489b85bbddf97d6.svg" alt="Takealot" className="w-28" /></Link>
       </li>
@@ -97,7 +98,7 @@ const NavigationBar = () => {
 <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
     <Link to="/orders">Orders</Link>
 </li>
-<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200" onClick={()=>setPhoneAccountMenu(true)}>
     <Link to="/" className="flex items-center justify-between">My Account <IoMdArrowForward className="h-5 w-5"/></Link>
 </li>
 <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
@@ -115,6 +116,11 @@ const NavigationBar = () => {
     <Link to="/" className="inline-flex items-center gap-2"><IoIosHeart className="w-5 h-5 text-error" /> Lists</Link>
 </li>
 
+        </ul>
+
+        <ul className="w-full px-0 my-4 absolute bottom-0 flex items-center justify-around">
+        <label htmlFor="logIn_modal" className="px-3 py-1 inline-flex items-center gap-2 cursor-pointer border border-primary bg-primary rounded-3xl text-white font-semibold"><HiUser className="h-5 w-5"/> Login</label>
+<label htmlFor="register_modal" className="px-3 py-1 inline-flex items-center gap-2 cursor-pointer text-primary font-semibold">Register</label>
         </ul>
 
     </ul>
@@ -199,6 +205,60 @@ const NavigationBar = () => {
 <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200" onClick={() => setDeptName("Toys")}>
   <span to="/" className="flex items-center justify-between">Toys <IoMdArrowForward className="h-4 w-4" /></span>
 </li>
+      </ul>
+
+
+
+  </ul>
+}
+
+{
+    PhoneAccountMenu && <ul className="menu py-0 pl-0 pr-0 w-72 min-h-screen bg-white text-base-content">
+    <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+  <p className="flex items-center text-primary" onClick={()=>setPhoneAccountMenu(false)}><IoMdArrowBack className="h-5 w-5"/> Main Menu</p>
+ <span className="text-lg">My Account</span>
+</li>
+    
+      <ul className="px-0 shadow my-4">
+      <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/orders">Orders</Link>
+</li>
+      <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/account/returns">Returns</Link>
+</li>
+
+      </ul>
+
+      <ul className="px-0 shadow my-4">
+      <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/account/personal-details">Personal Details</Link>
+</li>
+      <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/account/address-book">Address Book</Link>
+</li>
+
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/account/invoices">Invoices</Link>
+</li>
+
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/account/reviews">Product Reviews</Link>
+</li>
+
+<li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/account/newsletter">Newsletter Subscriptions</Link>
+</li>
+
+      </ul>
+
+      <ul className="px-0 shadow my-4">
+      <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/account/credits">Credit & Refunds</Link>
+</li>
+      <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
+    <Link to="/account/voucher">Redeem Gift Voucher</Link>
+</li>
+
       </ul>
 
 
