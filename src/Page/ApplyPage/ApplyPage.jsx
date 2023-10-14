@@ -14,7 +14,7 @@ const ApplyPage = () => {
     }
 
     useEffect(()=>{
-        fetch("http://localhost:5000/all-category")
+        fetch("https://take-a-lot-server-two.vercel.app/all-category")
         .then(res=>res.json())
         .then(data=>setCategory(data))
     },[])

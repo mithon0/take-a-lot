@@ -14,7 +14,7 @@ const Register = () => {
     const [allCodes, setAllCodes] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/all-country-code")
+        fetch("https://take-a-lot-server-two.vercel.app/all-country-code")
         .then(res=>res.json())
         .then(data=>setAllCodes(data))
     },[])
