@@ -9,6 +9,7 @@ import LogIn from "../Page/TopNav/LogIn/LogIn";
 import Register from "../Page/TopNav/Register/Register";
 import Orders from "../Page/TopNav/Orders/Orders";
 import ApplyPage from "../Page/ApplyPage/ApplyPage";
+import MyAccountPage from "../Page/MyAccountPage/MyAccountPage";
 
 
 
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
         {
           path: "/sell/apply",
           element: <ApplyPage />
+        },
+        {
+          path: "/my-account",
+          element:<MyAccountPage />
         }
       ]
     },
