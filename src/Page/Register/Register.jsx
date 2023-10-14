@@ -14,7 +14,7 @@ const Register = () => {
     const [allCodes, setAllCodes] = useState([]);
 
     useEffect(()=>{
-        fetch("./countryCode.json")
+        fetch("http://localhost:5000/all-country-code")
         .then(res=>res.json())
         .then(data=>setAllCodes(data))
     },[])
@@ -109,7 +109,7 @@ aria-invalid={errors.password ? "true" : "false"}/>
         <label className='text-xs text-[#999]'>Code</label>
     <select {...register("countryCode", { required: true })} className='py-2 px-2 border-b-2 border-[#c9c7c7] text-sm font-medium text-gray-500 bg-transparent' aria-invalid={errors.countryCode ? "true" : "false"}>
         {
-            allCodes.map(cCode=><option key={cCode?.name} value={cCode?.dial_code }>{cCode?.code} ({cCode?.dial_code})</option>)
+            allCodes.map(cCode=><option key={cCode?._id} value={cCode?.dial_code }>{cCode?.code} ({cCode?.dial_code})</option>)
         }
       </select>
     </div>

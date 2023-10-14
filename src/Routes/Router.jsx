@@ -8,6 +8,7 @@ import HelpCenter from "../Page/TopNav/HelpCenter/HelpCenter";
 import LogIn from "../Page/TopNav/LogIn/LogIn";
 import Register from "../Page/TopNav/Register/Register";
 import Orders from "../Page/TopNav/Orders/Orders";
+import ApplyPage from "../Page/ApplyPage/ApplyPage";
 
 
 
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
         {
           path:"/sell-on-takealot",
           element:<SellOn />
+        },
+        {
+          path: "/sell/apply",
+          element: <ApplyPage />
         }
       ]
     },
