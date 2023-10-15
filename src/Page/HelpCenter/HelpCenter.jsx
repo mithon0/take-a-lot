@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Marquee from 'react-fast-marquee';
-import { HiShoppingCart } from 'react-icons/hi2';
+import { HiChevronRight, HiShoppingCart } from 'react-icons/hi2';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
@@ -162,7 +162,7 @@ const HelpCenter = () => {
 
 <div className='px-2 lg:px-4 my-10'>
 
-<h1 className='text-[#4d4d4f] text-xl font-semibold mb-6'>
+<h1 className='hidden lg:block text-[#4d4d4f] text-xl font-semibold mb-6'>
 Popular Topics
 </h1>
 
@@ -266,6 +266,52 @@ How do I get a refund instead of a credit?
         </SwiperSlide>
 
       </Swiper>
+</div>
+
+{/* Phone */}
+
+<div className='my-5 bg-white shadow lg:hidden'>
+
+<ul className='space-y-2 px-3 py-4'>
+
+<li className='border-b pb-2 text-[#4d4d4f] font-medium text-sm'>Popular Topics</li>
+
+
+<li className='border-b py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-centre/orders-cancellations" className='w-full text-xs inline-flex items-center justify-between'>
+    <span>How do I cancel an order?</span> <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+
+<li className='border-b py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-centre/delivery" className='w-full text-xs inline-flex items-center justify-between'>
+    <span>Track your order</span> <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+
+<li className='border-b py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-centre/returns" className='w-full text-xs inline-flex items-center justify-between'>
+    <span>Reschedule my return collection</span> <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+
+<li className='border-b py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-centre/delivery" className='w-full text-xs inline-flex items-center justify-between'>
+    <span>Split delivery requests</span> <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+
+<li className='py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-centre/refunds" className='w-full text-xs inline-flex items-center justify-between'>
+    <span>How do I get a refund instead of a credit?</span> <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+</ul>
+
 </div>
 
 </div>
