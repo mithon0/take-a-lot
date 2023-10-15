@@ -99,7 +99,7 @@ const NavigationBar = () => {
     <Link to="/orders">Orders</Link>
 </li>
 <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200" onClick={()=>setPhoneAccountMenu(true)}>
-    <Link to="/" className="flex items-center justify-between">My Account <IoMdArrowForward className="h-5 w-5"/></Link>
+    <Link to="/my-account" className="flex items-center justify-between">My Account <IoMdArrowForward className="h-5 w-5"/></Link>
 </li>
 <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
     <Link to="/help-center">Help Center</Link>
@@ -2128,7 +2128,7 @@ const NavigationBar = () => {
                                     onMouseLeave={() => setIsOpen(false)}
                                 >
 
-                                    <Link to="/" className="smallLink">My Account</Link>
+                                    <Link to="/my-account" className="smallLink">My Account</Link>
                                     <Link to="/account/orders" className="smallLink">Track Order</Link>
                                     <Link to="/account/returns" className="smallLink">Returns</Link>
                                     <Link to="/account/credits" className="smallLink">Credits & Refunds</Link>
