@@ -160,7 +160,7 @@ const HelpCenter = () => {
 
 {/* Popular Topics */}
 
-<div className='px-2 lg:px-4 my-10'>
+<div className='lg:px-4 my-10'>
 
 <h1 className='hidden lg:block text-[#4d4d4f] text-xl font-semibold mb-6'>
 Popular Topics
@@ -318,12 +318,12 @@ How do I get a refund instead of a credit?
 
 {/*All Help Topics  */}
 
-<div className='px-2 lg:px-4 my-10'>
+<div className='lg:px-4 my-10'>
 
 {/*Large*/}
 <div className='hidden lg:block'>
 <h1 className='text-[#4d4d4f] text-xl font-semibold mb-6'>
-Popular Topics
+All Help Topics
 </h1>
 
 <div className='grid grid-cols-2 w-full gap-5'>
@@ -551,6 +551,127 @@ Popular Topics
 
 </div>
 
+{/* Phone */}
+
+<div className='my-5 bg-white shadow lg:hidden'>
+
+<ul className='space-y-2 px-3 py-4'>
+
+<li className='border-b pb-2 text-[#4d4d4f] font-medium text-sm'>All Help Topics</li>
+
+
+<li className='border-b py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-center/delivery" className='w-full text-xs inline-flex items-center justify-between'>
+    <div className='w-full flex items-center gap-3'>
+    <div className='px-2 py-2 bg-gray-200 rounded-sm'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__a74a26dd212b3806eab80d2441241e0d6cc629b9.png" alt="Icon" className='w-4'/>
+</div>
+<p className='text-[#4d4d4f] text-sm font-semibold'>Delivery</p>
+    </div>
+    
+    <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+<li className='border-b py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-center/returns" className='w-full text-xs inline-flex items-center justify-between'>
+    <div className='w-full flex items-center gap-3'>
+    <div className='px-2 py-2 bg-gray-200 rounded-sm'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__affabfdc620808dbe89a48147eb8edfb71bc8486.png" alt="Icon" className='w-4'/>
+</div>
+<p className='text-[#4d4d4f] text-sm font-semibold'>Returns</p>
+    </div>
+    
+    <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+
+
+<li className='border-b py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-center/orders-cancellations" className='w-full text-xs inline-flex items-center justify-between'>
+    <div className='w-full flex items-center gap-3'>
+    <div className='px-2 py-2 bg-gray-200 rounded-sm'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__e21cd38f7bff0bd13c2f3cd965a3696f4fed75f5.png" alt="Icon" className='w-4'/>
+</div>
+<p className='text-[#4d4d4f] text-sm font-semibold'>Orders & Cancellations</p>
+    </div>
+    
+    <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+
+<li className='border-b py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-center/collection" className='w-full text-xs inline-flex items-center justify-between'>
+    <div className='w-full flex items-center gap-3'>
+    <div className='px-2 py-2 bg-gray-200 rounded-sm'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__55a9e2e4e311872fc8b64a2871cf9e2725ac3bb4.png" alt="Icon" className='w-4'/>
+</div>
+<p className='text-[#4d4d4f] text-sm font-semibold'>Collection</p>
+    </div>
+    
+    <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+<li className='border-b py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-center/refunds" className='w-full text-xs inline-flex items-center justify-between'>
+    <div className='w-full flex items-center gap-3'>
+    <div className='px-2 py-2 bg-gray-200 rounded-sm'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__d61d99a83f753a99d72de8d47bb8e9e06c9b21c6.png" alt="Icon" className='w-4'/>
+</div>
+<p className='text-[#4d4d4f] text-sm font-semibold'>Refunds</p>
+    </div>
+    
+    <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+
+<li className='border-b py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-center/payments-promos-gift-vouchers" className='w-full text-xs inline-flex items-center justify-between'>
+    <div className='w-full flex items-center gap-3'>
+    <div className='px-2 py-2 bg-gray-200 rounded-sm'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__7339770cba87798856f927ef85ae2e8fa7c2d279.png" alt="Icon" className='w-4'/>
+</div>
+<p className='text-[#4d4d4f] text-sm font-semibold'>Payments, Promos & Gift Vouchers</p>
+    </div>
+    
+    <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+<li className='border-b py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-center/product-stock" className='w-full text-xs inline-flex items-center justify-between'>
+    <div className='w-full flex items-center gap-3'>
+    <div className='px-2 py-2 bg-gray-200 rounded-sm'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__1f1f54addf8751b42cd0fa4d63cde55a67a6c7d5.png" alt="Icon" className='w-4'/>
+</div>
+<p className='text-[#4d4d4f] text-sm font-semibold'>Product & Stock</p>
+    </div>
+    
+    <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+<li className='py-2 text-[#4d4d4f] font-medium text-sm w-full'>
+    <Link to="/help-center/data-privacy" className='w-full text-xs inline-flex items-center justify-between'>
+    <div className='w-full flex items-center gap-3'>
+    <div className='px-2 py-2 bg-gray-200 rounded-sm'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__22d8e2ac641292318ff89859e8baa89e2628c1be.png" alt="Icon" className='w-4'/>
+</div>
+<p className='text-[#4d4d4f] text-sm font-semibold'>Data & Privacy</p>
+    </div>
+    
+    <span><HiChevronRight className='h-5 w-5'/></span>
+    </Link>
+</li>
+
+
+</ul>
+
+</div>
 </div>
 
         </section>
