@@ -5,7 +5,18 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
+// import required modules
+import { Pagination,Navigation } from 'swiper/modules';
+
 const HelpCenter = () => {
+ 
     const [topicCatalog , setTopicCatalog] = useState(false)
     return (
         <section className='lg:px-4'>
@@ -146,6 +157,119 @@ const HelpCenter = () => {
 </div>
 
 </div>
+
+{/* Popular Topics */}
+
+<div className='px-2 lg:px-4 my-10'>
+
+<h1 className='text-[#4d4d4f] text-xl font-semibold mb-6'>
+Popular Topics
+</h1>
+
+{/* Large style */}
+<div className='hidden lg:block w-full'>
+<Swiper
+        slidesPerView={4}
+        spaceBetween={20}
+        // pagination={{
+        //   clickable: true,
+        // }}
+        navigation={true}
+        modules={[Pagination,Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide className='w-[300px]'>
+<Link to="/help-centre/orders-cancellations" className='w-[300px] h-[160px] overflow-visible flex flex-col gap-2 bg-white shadow hover:shadow-xl hover:border-b-4 hover:border-b-primary transition-all duration-300 px-4 py-6'>
+<div className='w-full flex items-center gap-2'>
+    <div className='bg-gray-200 px-2 py-2 rounded-md'>
+    <img src="https://media.takealot.com/help-cms/original_images/____CMS__e21cd38f7bff0bd13c2f3cd965a3696f4fed75f5.png" alt="icon" className='w-5'/>
+    </div>
+
+<h1 className='text-sm font-medium'>Orders & Cancellations</h1>
+</div>
+
+<div className='my-5 font-bold text-lg text-[#4d4d4f]'>
+How do I cancel an order?
+</div>
+</Link>
+        </SwiperSlide>
+
+
+        <SwiperSlide className='w-[300px]'>
+<Link to="/help-centre/delivery" className='w-[300px] h-[160px] overflow-visible flex flex-col gap-2 bg-white shadow hover:shadow-xl hover:border-b-4 hover:border-b-primary transition-all duration-300 px-4 py-6'>
+<div className='w-full flex items-center gap-2'>
+    <div className='bg-gray-200 px-2 py-2 rounded-md'>
+    <img src="https://media.takealot.com/help-cms/original_images/____CMS__a74a26dd212b3806eab80d2441241e0d6cc629b9.png" alt="icon" className='w-5'/>
+    </div>
+
+<h1 className='text-sm font-medium'>Delivery</h1>
+</div>
+
+<div className='my-5 font-bold text-lg text-[#4d4d4f]'>
+Track your order
+</div>
+</Link>
+        </SwiperSlide>
+
+
+
+        <SwiperSlide className='w-[300px]'>
+<Link to="/help-centre/returns" className='w-[300px] h-[160px] overflow-visible flex flex-col gap-2 bg-white shadow hover:shadow-xl hover:border-b-4 hover:border-b-primary transition-all duration-300 px-4 py-6'>
+<div className='w-full flex items-center gap-2'>
+    <div className='bg-gray-200 px-2 py-2 rounded-md'>
+    <img src="https://media.takealot.com/help-cms/original_images/____CMS__affabfdc620808dbe89a48147eb8edfb71bc8486.png" alt="icon" className='w-5'/>
+    </div>
+
+<h1 className='text-sm font-medium'>Returns</h1>
+</div>
+
+<div className='my-5 font-bold text-lg text-[#4d4d4f]'>
+Reschedule my return collection
+</div>
+</Link>
+        </SwiperSlide>
+
+
+
+        <SwiperSlide className='w-[300px]'>
+<Link to="/help-centre/delivery" className='w-[300px] h-[160px] overflow-visible flex flex-col gap-2 bg-white shadow hover:shadow-xl hover:border-b-4 hover:border-b-primary transition-all duration-300 px-4 py-6'>
+<div className='w-full flex items-center gap-2'>
+    <div className='bg-gray-200 px-2 py-2 rounded-md'>
+    <img src="https://media.takealot.com/help-cms/original_images/____CMS__a74a26dd212b3806eab80d2441241e0d6cc629b9.png" alt="icon" className='w-5'/>
+    </div>
+
+<h1 className='text-sm font-medium'>Delivery</h1>
+</div>
+
+<div className='my-5 font-bold text-lg text-[#4d4d4f]'>
+Split delivery requests
+</div>
+</Link>
+        </SwiperSlide>
+
+
+
+        <SwiperSlide className='w-[300px]'>
+<Link to="/help-centre/refunds" className='w-[300px] h-[160px] overflow-visible flex flex-col gap-2 bg-white shadow hover:shadow-xl hover:border-b-4 hover:border-b-primary transition-all duration-300 px-4 py-6'>
+<div className='w-full flex items-center gap-2'>
+    <div className='bg-gray-200 px-2 py-2 rounded-md'>
+    <img src="https://media.takealot.com/help-cms/original_images/____CMS__d61d99a83f753a99d72de8d47bb8e9e06c9b21c6.png" alt="icon" className='w-5'/>
+    </div>
+
+<h1 className='text-sm font-medium'>Refunds</h1>
+</div>
+
+<div className='my-5 font-bold text-lg text-[#4d4d4f]'>
+How do I get a refund instead of a credit?
+</div>
+</Link>
+        </SwiperSlide>
+
+      </Swiper>
+</div>
+
+</div>
+
         </section>
     );
 };
