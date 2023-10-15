@@ -4,12 +4,10 @@ import Home from "../Page/Home/Home/Home";
 import AllProducts from "../Page/AllProducts/AllProducts";
 import ProductDetails from "../Page/ProductDetails/ProductDetails";
 import SellOn from "../Page/SellOn/SellOn";
-import HelpCenter from "../Page/TopNav/HelpCenter/HelpCenter"; 
-import LogIn from "../Page/TopNav/LogIn/LogIn";
-import Register from "../Page/TopNav/Register/Register";
-import Orders from "../Page/TopNav/Orders/Orders";
 import ApplyPage from "../Page/ApplyPage/ApplyPage";
 import MyAccountPage from "../Page/MyAccountPage/MyAccountPage";
+import HelpCenter from "../Page/HelpCenter/HelpCenter";
+import Orders from "../Page/Orders/Orders";
 
 
 
@@ -32,18 +30,6 @@ export const router = createBrowserRouter([
           element:<ProductDetails />
         }, 
         {
-          path:"/help-center",
-          element:<HelpCenter/>
-        },
-        {
-          path:"/login",
-          element:<LogIn/>
-        },
-        {
-          path:"/register",
-          element:<Register/>
-        },
-        {
           path:"/orders",
           element:<Orders/>
         },
@@ -58,6 +44,10 @@ export const router = createBrowserRouter([
         {
           path: "/my-account",
           element:<MyAccountPage />
+        },
+        {
+          path: "/help-center",
+          element:<HelpCenter />
         }
       ]
     },
