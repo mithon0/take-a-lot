@@ -316,6 +316,243 @@ How do I get a refund instead of a credit?
 
 </div>
 
+{/*All Help Topics  */}
+
+<div className='px-2 lg:px-4 my-10'>
+
+{/*Large*/}
+<div className='hidden lg:block'>
+<h1 className='text-[#4d4d4f] text-xl font-semibold mb-6'>
+Popular Topics
+</h1>
+
+<div className='grid grid-cols-2 w-full gap-5'>
+
+    <Link to="/help-center/delivery" className='w-full h-[260px] bg-white shadow p-5'>
+
+<div className='w-full flex items-center justify-between pb-5 border-b'>
+<div className='flex items-center gap-4'>
+<div className='px-3 py-3 bg-gray-200 rounded-lg'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__a74a26dd212b3806eab80d2441241e0d6cc629b9.png" alt="Icon" className='w-6'/>
+</div>
+<p className='text-[#4d4d4f] text-xl font-semibold'>Delivery</p>
+</div>
+<div>
+    <p className='text-[#4d4d4f9a]'><small>10 topics</small></p>
+</div>
+</div>
+
+<div className='pt-5 flex flex-col space-y-3 text-sm'>
+<Link to="/help-center/delivery/order-track" className='hover:text-primary hover:underline'>Track your order</Link>
+<Link to="/help-center/delivery/reschedule-delivery" className='hover:text-primary hover:underline'>Reschedule your delivery</Link>
+<Link to="/help-center/delivery/change-address" className='hover:text-primary hover:underline'>Change your delivery address</Link>
+<Link to="/help-center/delivery" className='my-4 px-5 py-2 border border-primary w-fit bg-primary text-white rounded font-medium'>See All</Link>
+
+</div>
+
+
+
+    </Link>
+
+
+    <Link to="/help-center/returns" className='w-full h-[260px] bg-white shadow p-5'>
+
+<div className='w-full flex items-center justify-between pb-5 border-b'>
+<div className='flex items-center gap-4'>
+<div className='px-3 py-3 bg-gray-200 rounded-lg'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__affabfdc620808dbe89a48147eb8edfb71bc8486.png" alt="Icon" className='w-6'/>
+</div>
+<p className='text-[#4d4d4f] text-xl font-semibold'>Returns</p>
+</div>
+<div>
+    <p className='text-[#4d4d4f9a]'><small>13 topics</small></p>
+</div>
+</div>
+
+<div className='pt-5 flex flex-col space-y-3 text-sm'>
+<Link to="/help-center/returns/return-product" className='hover:text-primary hover:underline'>Can I return my product?</Link>
+<Link to="/help-center/returns/reschedule-collection" className='hover:text-primary hover:underline'>Reschedule my return collection</Link>
+<Link to="/help-center/returns/return-status" className='hover:text-primary hover:underline'>Track my return status</Link>
+<Link to="/help-center/returns" className='my-4 px-5 py-2 border border-primary w-fit bg-primary text-white rounded font-medium'>See All</Link>
+
+</div>
+
+
+
+    </Link>
+
+    <Link to="/help-center/orders-cancellations" className='w-full h-[260px] bg-white shadow p-5'>
+
+<div className='w-full flex items-center justify-between pb-5 border-b'>
+<div className='flex items-center gap-4'>
+<div className='px-3 py-3 bg-gray-200 rounded-lg'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__e21cd38f7bff0bd13c2f3cd965a3696f4fed75f5.png" alt="Icon" className='w-6'/>
+</div>
+<p className='text-[#4d4d4f] text-xl font-semibold'>Orders & Cancellations</p>
+</div>
+<div>
+    <p className='text-[#4d4d4f9a]'><small>5 topics</small></p>
+</div>
+</div>
+
+<div className='pt-5 flex flex-col space-y-3 text-sm'>
+<Link to="/help-center/orders-cancellations/cancel-order" className='hover:text-primary hover:underline'>How do I cancel an order?</Link>
+<Link to="/help-center/orders-cancellations/make-changes-after-placed" className='hover:text-primary hover:underline'>Can I make changes to my order after it has been placed?</Link>
+<Link to="/help-center/orders-cancellations/Why-cancelled-order" className='hover:text-primary hover:underline'>Why have you cancelled my order?</Link>
+<Link to="/help-center/orders-cancellations" className='my-4 px-5 py-2 border border-primary w-fit bg-primary text-white rounded font-medium'>See All</Link>
+
+</div>
+
+
+
+    </Link>
+
+    <Link to="/help-center/collection" className='w-full h-[260px] bg-white shadow p-5'>
+
+<div className='w-full flex items-center justify-between pb-5 border-b'>
+<div className='flex items-center gap-4'>
+<div className='px-3 py-3 bg-gray-200 rounded-lg'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__55a9e2e4e311872fc8b64a2871cf9e2725ac3bb4.png" alt="Icon" className='w-6'/>
+</div>
+<p className='text-[#4d4d4f] text-xl font-semibold'>Collection</p>
+</div>
+<div>
+    <p className='text-[#4d4d4f9a]'><small>5 topics</small></p>
+</div>
+</div>
+
+<div className='pt-5 flex flex-col space-y-3 text-sm'>
+<Link to="/help-center/collection/about-collection" className='hover:text-primary hover:underline'>About collection options & time frames</Link>
+<Link to="/help-center/collection/about-collection-fees" className='hover:text-primary hover:underline'>About collection fees</Link>
+<Link to="/help-center/collection/Why-collection-available" className='hover:text-primary hover:underline'>Why is collection not available for my order?</Link>
+<Link to="/help-center/collection" className='my-4 px-5 py-2 border border-primary w-fit bg-primary text-white rounded font-medium'>See All</Link>
+
+</div>
+
+
+
+    </Link>
+
+
+    <Link to="/help-center/refunds" className='w-full h-[260px] bg-white shadow p-5'>
+
+<div className='w-full flex items-center justify-between pb-5 border-b'>
+<div className='flex items-center gap-4'>
+<div className='px-3 py-3 bg-gray-200 rounded-lg'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__d61d99a83f753a99d72de8d47bb8e9e06c9b21c6.png" alt="Icon" className='w-6'/>
+</div>
+<p className='text-[#4d4d4f] text-xl font-semibold'>Refunds</p>
+</div>
+<div>
+    <p className='text-[#4d4d4f9a]'><small>2 topics</small></p>
+</div>
+</div>
+
+<div className='pt-5 flex flex-col space-y-3 text-sm relative h-full'>
+<Link to="/help-center/refunds/refunds-credit" className='hover:text-primary hover:underline'>How do I get a refund instead of a credit?</Link>
+<Link to="/help-center/refunds/refund-taking-long" className='hover:text-primary hover:underline'>Why is my refund taking so long?</Link>
+
+
+<Link to="/help-center/refunds" className='my-4 px-5 py-2 border border-primary w-fit bg-primary text-white rounded font-medium absolute bottom-16'>See All</Link>
+
+</div>
+
+
+
+    </Link>
+
+
+    <Link to="/help-center/payments-promos-gift-vouchers" className='w-full h-[260px] bg-white shadow p-5'>
+
+<div className='w-full flex items-center justify-between pb-5 border-b'>
+<div className='flex items-center gap-4'>
+<div className='px-3 py-3 bg-gray-200 rounded-lg'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__7339770cba87798856f927ef85ae2e8fa7c2d279.png" alt="Icon" className='w-6'/>
+</div>
+<p className='text-[#4d4d4f] text-xl font-semibold'>Payments, Promos & Gift Vouchers</p>
+</div>
+<div>
+    <p className='text-[#4d4d4f9a]'><small>15 topics</small></p>
+</div>
+</div>
+
+<div className='pt-5 flex flex-col space-y-3 text-sm relative h-full'>
+<Link to="/help-center/payments-promos-gift-vouchers/available-payment-options" className='hover:text-primary hover:underline'>Available payment options</Link>
+<Link to="/help-center/payments-promos-gift-vouchers/price-item-change-checkout" className='hover:text-primary hover:underline'>Why does the price of my item change when I try and check out?</Link>
+<Link to="/help-center/payments-promos-gift-vouchers/havent-received-confirmation" className='hover:text-primary hover:underline'>Why haven’t I received my payment confirmation email?</Link>
+
+
+<Link to="/help-center/payments-promos-gift-vouchers" className='my-4 px-5 py-2 border border-primary w-fit bg-primary text-white rounded font-medium'>See All</Link>
+
+</div>
+
+
+
+    </Link>
+
+
+    <Link to="/help-center/product-stock" className='w-full h-[260px] bg-white shadow p-5'>
+
+<div className='w-full flex items-center justify-between pb-5 border-b'>
+<div className='flex items-center gap-4'>
+<div className='px-3 py-3 bg-gray-200 rounded-lg'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__1f1f54addf8751b42cd0fa4d63cde55a67a6c7d5.png" alt="Icon" className='w-6'/>
+</div>
+<p className='text-[#4d4d4f] text-xl font-semibold'>Product & Stock</p>
+</div>
+<div>
+    <p className='text-[#4d4d4f9a]'><small>10 topics</small></p>
+</div>
+</div>
+
+<div className='pt-5 flex flex-col space-y-3 text-sm relative h-full'>
+<Link to="/help-center/product-stock/help-to-find-product" className='hover:text-primary hover:underline'>Can you help me find a product?</Link>
+<Link to="/help-center/product-stock/buy-products-sellers-Takealot" className='hover:text-primary hover:underline'>How do I buy products from sellers other than Takealot on the website?</Link>
+<Link to="/help-center/product-stock/give-information-product" className='hover:text-primary hover:underline'>Can you give me more information on a product?</Link>
+
+
+<Link to="/help-center/product-stock" className='my-4 px-5 py-2 border border-primary w-fit bg-primary text-white rounded font-medium'>See All</Link>
+
+</div>
+
+
+
+    </Link>
+
+
+    <Link to="/help-center/data-privacy" className='w-full h-[260px] bg-white shadow p-5'>
+
+<div className='w-full flex items-center justify-between pb-5 border-b'>
+<div className='flex items-center gap-4'>
+<div className='px-3 py-3 bg-gray-200 rounded-lg'>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__22d8e2ac641292318ff89859e8baa89e2628c1be.png" alt="Icon" className='w-6'/>
+</div>
+<p className='text-[#4d4d4f] text-xl font-semibold'>Data & Privacy</p>
+</div>
+<div>
+    <p className='text-[#4d4d4f9a]'><small>18 topics</small></p>
+</div>
+</div>
+
+<div className='pt-5 flex flex-col space-y-3 text-sm relative h-full'>
+<Link to="/help-center/data-privacy/register-to-takealot" className='hover:text-primary hover:underline'>How to register on takealot.com</Link>
+<Link to="/help-center/data-privacy/resetting-password" className='hover:text-primary hover:underline'>Changing or resetting your password</Link>
+<Link to="/help-center/data-privacy/profile-update-information" className='hover:text-primary hover:underline'>My email address has changed. How do I update this on my profile?</Link>
+
+
+<Link to="/help-center/data-privacy" className='my-4 px-5 py-2 border border-primary w-fit bg-primary text-white rounded font-medium'>See All</Link>
+
+</div>
+
+
+
+    </Link>
+</div>
+
+</div>
+
+</div>
+
         </section>
     );
 };
