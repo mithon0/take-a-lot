@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import Marquee from 'react-fast-marquee';
 import { HiShoppingCart } from 'react-icons/hi2';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { Link } from 'react-router-dom';
+
 
 const HelpCenter = () => {
     const [topicCatalog , setTopicCatalog] = useState(false)
     return (
         <section className='lg:px-4'>
-<div className='hero px-4 h-80 lg:h-[450px] rounded-b-lg' style={{backgroundImage: "url(https://shopfront.takealot.com/b0fd31305b6ec6eb9e374f5e527a4ad540896d49/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)"}}>
+<div className='hero px-4 h-[450px] rounded-b-lg' style={{backgroundImage: "url(https://shopfront.takealot.com/b0fd31305b6ec6eb9e374f5e527a4ad540896d49/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)"}}>
 
 {/*Top Nav */}
 <div className="drawer absolute top-0 lg:top-3 px-3">
@@ -112,10 +114,11 @@ const HelpCenter = () => {
   </div>
 </div>
 
+
 <div className='banner-section w-full mx-auto'>
 <h1 className='text-3xl lg:text-4xl font-bold text-white text-center'>How can we help you?</h1>
 
-<form className='input-field my-4 lg:w-[60%] mx-auto relative'>
+<form className='input-field my-4 lg:w-[80%] mx-auto relative'>
 
 <input type="text" placeholder='Search our Help Centre' className='py-4 px-3 rounded outline-none w-full'/>
 
@@ -124,19 +127,21 @@ const HelpCenter = () => {
 
 </form>
 
-<div className='hidden lg:flex items-center gap-2 lg:w-[60%] mx-auto mt-8'>
-<Link to="/orders" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500'>View Orders</Link>
+{/* large menu */}
+<div className='grid grid-cols-3 lg:grid-cols-6 items-center gap-2 lg:w-[80%] mx-auto mt-5 lg:mt-8'>
+<Link to="/orders" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>View Orders</Link>
 
-<Link to="/takealot-pickup-points" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500'>Takealot Pickup Points</Link>
+<Link to="/takealot-pickup-points" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Takealot Pickup Points</Link>
 
-<Link to="/account/returns" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500'>Track My Return</Link>
+<Link to="/account/returns" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Track My Return</Link>
 
-<Link to="/account/credits" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500'>Credit & Refunds</Link>
+<Link to="/account/credits" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Credit & Refunds</Link>
 
-<Link to="/" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500'>Returns Policy</Link>
+<Link to="/" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Returns Policy</Link>
 
-<Link to="/account/orders" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500'>Track Delivery</Link>
+<Link to="/account/orders" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Track Delivery</Link>
 </div>
+
 
 </div>
 
