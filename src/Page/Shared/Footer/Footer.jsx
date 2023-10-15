@@ -117,32 +117,32 @@ const Footer = () => {
                     <div className="container mx-auto border-t  ">
 
                         <div className="mt-4">
-                            <div className="inline-flex items-center justify-center gap-1 text-sm mb-3  " style={{ color: "#0b79bf" }}>
-                                <Link><p className="hover:underline ">Baby & Toddler</p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Beauty</p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Books </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Cameras </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Camping & Outdoors </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Cellphones & Wearables </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Computers & Tablets </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Fashion </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Gaming </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Garden, Pool & Patio </p></Link>
+                            <div className="space-x-1  text-xs mb-3  " style={{ color: "#0b79bf" }}>
+                                <Link className="hover:underline" to="/">Baby & Toddle / </Link>
+                                
+                                <Link className="hover:underline" to="/">Beaut / </Link>
+                                
+                                <Link className="hover:underline" to="/">Books / </Link>
+                                
+                                <Link className="hover:underline" to="/">Cameras / </Link>
+                                
+                                <Link className="hover:underline" to="/">Camping & Outdoors / </Link>
+                                
+                                <Link className="hover:underline" to="/">Cellphones & Wearables / </Link>
+                                
+                                <Link className="hover:underline" to="/">Computers & Tablets / </Link>
+                                
+                                <Link className="hover:underline" to="/">Fashion / </Link>
+                                
+                                <Link className="hover:underline" to="/">Gaming / </Link>
+                                
+                                <Link className="hover:underline" to="/">Garden, Pool & Patio / </Link>
 
-                                <Link><p className="hover:underline ">Health </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Home & Kitchen </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Luggage & Travel </p></Link>
+                                <Link className="hover:underline" to="/">Health / </Link>
+                                
+                                <Link className="hover:underline" to="/">Home & Kitchen / </Link>
+                                
+                                <Link className="hover:underline" to="/">Luggage & Travel / </Link>
 
 
 
@@ -153,24 +153,24 @@ const Footer = () => {
 
                         <div className="container mx-auto  ">
 
-                            <div className="inline-flex items-center justify-center space-x-1 text-sm mb-4 " style={{ color: "#0b79bf" }}>
+                            <div className="inline-flex items-center justify-center gap-2 text-xs mb-4 " style={{ color: "#0b79bf" }}>
 
 
-                                <Link><p className="hover:underline ">Movies & Series </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Music </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Office & Stationery </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Pets </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Sport </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">TV, Audio & Video </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Toys </p></Link>
-                                <p>/</p>
-                                <Link><p className="hover:underline ">Vouchers </p></Link>
+                                <Link className="hover:underline" to="/">Movies & Series / </Link>
+                                
+                                <Link className="hover:underline" to="/">Music / </Link>
+                                
+                                <Link className="hover:underline" to="/">Office & Stationery / </Link>
+                                
+                                <Link className="hover:underline" to="/">Pets / </Link>
+                                
+                                <Link className="hover:underline" to="/">Sport / </Link>
+                                
+                                <Link className="hover:underline" to="/">TV, Audio & Video / </Link>
+                                
+                                <Link className="hover:underline" to="/">Toys / </Link>
+                                
+                                <Link className="hover:underline" to="/">Vouchers </Link>
 
                             </div>
 
