@@ -10,7 +10,7 @@ const Footer = () => {
 
 
 
-        <footer className="text-gray-600 mt-20">
+        <footer className="text-gray-600 mt-20 -z-50">
             <div className="bg-white hidden lg:flex">
                 <div className="max-w-7xl mx-auto">
                     <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
@@ -200,10 +200,10 @@ const Footer = () => {
                                 <span className="font-bold text-xl mt-8  mb-3">Follow Us</span>
                             </p>
 
-                            <div className=" space-x-2  ">
-                                <Link to='https://www.facebook.com/KhejurBD/' target='_blank' className="w-8 h-8 items-center hover:text-blue-700 justify-center inline-flex rounded-full font-bold text-lg scale-100 hover:scale-110 hover:ease-out duration-500 " style={{ border: "1px solid" }}><BsFacebook></BsFacebook></Link>
-                                <Link to='https://www.youtube.com/@khejurbd268' target='_blank' className="w-8 h-8 items-center hover:text-blue-400 justify-center inline-flex rounded-full font-bold text-lg scale-100 hover:scale-110 hover:ease-out duration-500 " style={{ border: "1px solid" }}><BsTwitter></BsTwitter></Link>
-                                <Link to='https://www.instagram.com/khejur.bd/' target='_blank' className="w-8 h-8 items-center  hover:text-red-500  justify-center inline-flex rounded-full font-bold text-lg scale-100 hover:scale-110 hover:ease-out duration-500 " style={{ border: "1px solid" }}><BsInstagram></BsInstagram> </Link>
+                            <div className=" space-x-2 -z-30">
+                                <Link to='https://www.facebook.com/KhejurBD/' target='_blank' className="w-8 h-8 items-center hover:text-blue-700 justify-center inline-flex rounded-full font-bold text-lg scale-100 hover:scale-110 hover:ease-out duration-500  -z-30" style={{ border: "1px solid" }}><BsFacebook></BsFacebook></Link>
+                                <Link to='https://www.youtube.com/@khejurbd268' target='_blank' className="w-8 h-8 items-center hover:text-blue-400 justify-center inline-flex rounded-full font-bold text-lg scale-100 hover:scale-110 hover:ease-out duration-500 -z-30 " style={{ border: "1px solid" }}><BsTwitter></BsTwitter></Link>
+                                <Link to='https://www.instagram.com/khejur.bd/' target='_blank' className="w-8 h-8 items-center  hover:text-red-500  justify-center inline-flex rounded-full font-bold text-lg scale-100 hover:scale-110 hover:ease-out duration-500 -z-30" style={{ border: "1px solid" }}><BsInstagram></BsInstagram> </Link>
                             </div>
                         </div>
             <div className="bg-primary" >
