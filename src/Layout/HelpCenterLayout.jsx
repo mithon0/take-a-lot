@@ -5,7 +5,7 @@ import HelpCenterNav from '../Page/HelpCenter/HelpCenterNav';
 
 const HelpCenterLayout = () => {
     const location = useLocation();
-    const mainPath = location.pathname === "/help-center";
+    const mainPath = location.pathname === "/help-centre";
     return (
         <div>
             {mainPath ||  <HelpCenterNav />}
