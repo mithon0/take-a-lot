@@ -10,6 +10,8 @@ import HelpCenter from "../Page/HelpCenter/HelpCenter";
 import Orders from "../Page/Orders/Orders";
 import HelpDelivery from "../Page/HelpCenter/HelpDelivery";
 import HelpCenterLayout from "../Layout/HelpCenterLayout";
+import RegisterPage from "../Page/Register/RegisterPage";
+import LoginPage from "../Page/Login/LoginPage";
 
 
 
@@ -60,7 +62,15 @@ export const router = createBrowserRouter([
             element: <HelpDelivery />
           }
         ]
-      }
+      },
+      {
+        path:"/account/register",
+        element:<RegisterPage />
+      },
+      {
+        path:"/account/login",
+        element:<LoginPage />
+      },
     ]
   },
 ]);
