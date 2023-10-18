@@ -1,4 +1,4 @@
-import {  createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Page/Home/Home/Home";
 import AllProducts from "../Page/AllProducts/AllProducts";
@@ -8,48 +8,69 @@ import ApplyPage from "../Page/ApplyPage/ApplyPage";
 import MyAccountPage from "../Page/MyAccountPage/MyAccountPage";
 import HelpCenter from "../Page/HelpCenter/HelpCenter";
 import Orders from "../Page/Orders/Orders";
+import HelpDelivery from "../Page/HelpCenter/HelpDelivery";
+import HelpCenterLayout from "../Layout/HelpCenterLayout";
+import RegisterPage from "../Page/Register/RegisterPage";
+import LoginPage from "../Page/Login/LoginPage";
 
 
 
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      children: [
-        {
-            path: '/',
-            element: <Home></Home>
-        },
-        {
-          path:"/all",
-          element:<AllProducts />
-        },
-        {
-          path: "/product-details/:name/:id",
-          element:<ProductDetails />
-        }, 
-        {
-          path:"/orders",
-          element:<Orders/>
-        },
-        {
-          path:"/sell-on-takealot",
-          element:<SellOn />
-        },
-        {
-          path: "/sell/apply",
-          element: <ApplyPage />
-        },
-        {
-          path: "/my-account",
-          element:<MyAccountPage />
-        },
-        {
-          path: "/help-center",
-          element:<HelpCenter />
-        }
-      ]
-    },
-  ]);
-  
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: "/all",
+        element: <AllProducts />
+      },
+      {
+        path: "/product-details/:name/:id",
+        element: <ProductDetails />
+      },
+      {
+        path: "/orders",
+        element: <Orders />
+      },
+      {
+        path: "/sell-on-takealot",
+        element: <SellOn />
+      },
+      {
+        path: "/sell/apply",
+        element: <ApplyPage />
+      },
+      {
+        path: "/my-account",
+        element: <MyAccountPage />
+      },
+      {
+        path: "/help-center",
+        element: <HelpCenterLayout />,
+        children: [
+          {
+            path: "/help-center",
+            element: <HelpCenter />,
+          },
+          {
+            path: "delivery",
+            element: <HelpDelivery />
+          }
+        ]
+      },
+      {
+        path:"/account/register",
+        element:<RegisterPage />
+      },
+      {
+        path:"/account/login",
+        element:<LoginPage />
+      },
+    ]
+  },
+]);
