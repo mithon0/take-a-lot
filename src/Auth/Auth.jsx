@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react';
 export const UserAuth = createContext(null);
+
 const Auth = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
