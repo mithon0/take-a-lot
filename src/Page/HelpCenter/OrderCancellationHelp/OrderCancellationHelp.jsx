@@ -10,11 +10,12 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
+import { IoChevronForwardOutline } from 'react-icons/io5';
 
 const OrderCancellationHelp = () => {
     return (
         <section className='lg:px-4'>
-        <div className='hero h-60 rounded-b-lg' style={{ backgroundImage: "url(https://shopfront.takealot.com/b317a38ffe915f6034dfee91ccee142cabe5ca77/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)", backgroundRepeat: "no-repeat" }}>
+        <div className='hero h-60 rounded-b-lg relative' style={{ backgroundImage: "url(https://shopfront.takealot.com/b317a38ffe915f6034dfee91ccee142cabe5ca77/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)", backgroundRepeat: "no-repeat" }}>
 
             <div className="hidden lg:block text-xs breadcrumbs text-white absolute top-20 left-10">
                 <ul>
@@ -190,9 +191,109 @@ Orders & Cancellations
         <div className='my-9 w-full'>
 
             <div className='flex items-start justify-between gap-8'>
-                <div className='w-full'>
-                    <Outlet />
-                </div>
+            <div className='w-full'>
+<p className='text-xl font-semibold text-[#4d4d4f] mb-5 hidden lg:block'>Orders & Cancellations Topics</p>
+<div className='w-full bg-white py-8 shadow rounded px-6 flex flex-col gap-1 text-sm text-[#4d4d4f]'>
+
+<p className='text-lg font-semibold text-[#4d4d4f] mb-5 lg:hidden'>Orders & Cancellations Topics</p>
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/orders-cancellations/cancel-order">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>How do I cancel an order?</span>
+<span className='hidden lg:block'>You can cancel an order if you have not yet paid for it. On selected orders you will need to contact us for some assistance.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/orders-cancellations/make-changes-after-placed">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Can I make changes to my order after it has been placed?</span>
+<span className='hidden lg:block'>It is not possible to add or remove items in your order. On selected orders we can assist you with other order options.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/orders-cancellations/Why-cancelled-order">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Why have you cancelled my order?</span>
+<span className='hidden lg:block'>Changing your delivery address after placing an order is not possible. However, if you are not available to receive your order at your original delivery address, you are able to reschedule your delivery date here should your order be eligible by contacting us.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/orders-cancellations/orders-how-do-i-request-an-invoice">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>How do I request an invoice?</span>
+<span className='hidden lg:block'>You can request an invoice once your order has been delivered / collected. Follow these easy steps.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/delivery/next-business-delivery">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Placing orders</span>
+<span className='hidden lg:block'>Shopping on Takealot is quick and easy... search, add to your cart, checkout and your order is complete. Follow the easy steps below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+
+</div> 
+
+
+<div className='w-full bg-white shadow rounded p-4 my-10'>
+<div className='w-full bg-primary bg-opacity-10 py-5 flex items-center gap-10'>
+<div>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__d0da6dca9d77bd5c950880ccb158ac07bcea8752.png" alt="" className='w-32'/>
+</div>
+
+<div className='w-full flex flex-col gap-2 lg:flex-row items-center'>
+<div className='flex-1'>
+    <p className='text-lg font-semibold'>Didn't find what you need?</p>
+</div>
+
+<div className='mr-5'>
+    <button className='text-sm py-2 px-7 border border-primary bg-primary rounded text-white font-semibold'>Contact Us</button>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+</div>
 
                 <div className='w-1/3 bg-white shadow hidden lg:block text-sm'>
                     <p className='p-3 text-base font-medium text-[#000]'>All Help Topics</p>

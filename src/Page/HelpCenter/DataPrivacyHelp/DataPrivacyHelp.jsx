@@ -14,7 +14,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 const DataPrivacyHelp = () => {
     return (
         <section className='lg:px-4'>
-        <div className='hero h-60 rounded-b-lg' style={{ backgroundImage: "url(https://shopfront.takealot.com/b317a38ffe915f6034dfee91ccee142cabe5ca77/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)", backgroundRepeat: "no-repeat" }}>
+        <div className='hero h-60 rounded-b-lg relative' style={{ backgroundImage: "url(https://shopfront.takealot.com/b317a38ffe915f6034dfee91ccee142cabe5ca77/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)", backgroundRepeat: "no-repeat" }}>
 
             <div className="hidden lg:block text-xs breadcrumbs text-white absolute top-20 left-10">
                 <ul>
