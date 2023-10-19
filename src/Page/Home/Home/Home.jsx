@@ -28,7 +28,7 @@ const Home = () => {
     },
   };
     const [allProducts , setAllProducts] = useState([]);
-    console.log(allProducts);
+    // console.log(allProducts);
 
     useEffect(()=>{
         fetch(`https://take-a-lot-server-two.vercel.app/all-products`)
@@ -36,7 +36,7 @@ const Home = () => {
         .then(data=>setAllProducts(data))
     },[])
 
-    console.log(allProducts);
+    // console.log(allProducts);
 
 
     return (
