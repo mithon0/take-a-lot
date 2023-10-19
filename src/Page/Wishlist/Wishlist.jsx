@@ -108,7 +108,7 @@ const Wishlist = () => {
       >
  
         {
-allProducts.slice(0,5).map(prod=><SwiperSlide key={prod?._id} className="">
+allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
 
 <Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
 
