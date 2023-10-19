@@ -7,11 +7,18 @@ import SellOn from "../Page/SellOn/SellOn";
 import ApplyPage from "../Page/ApplyPage/ApplyPage";
 import MyAccountPage from "../Page/MyAccountPage/MyAccountPage";
 import HelpCenter from "../Page/HelpCenter/HelpCenter";
-import Orders from "../Page/Orders/Orders";
-import HelpDelivery from "../Page/HelpCenter/HelpDelivery";
 import HelpCenterLayout from "../Layout/HelpCenterLayout";
 import RegisterPage from "../Page/Register/RegisterPage";
 import LoginPage from "../Page/Login/LoginPage";
+import DeliveryHelpHome from "../Page/HelpCenter/DeliveryHelp/DeliveryHelpHome";
+import ReturnHelp from "../Page/HelpCenter/ReturnHelp/ReturnHelp";
+import OrderCancellationHelp from "../Page/HelpCenter/OrderCancellationHelp/OrderCancellationHelp";
+import CollectionHelp from "../Page/HelpCenter/CollectionHelp/CollectionHelp";
+import RefundsHelp from "../Page/HelpCenter/RefundsHelp/RefundsHelp";
+import PaymentsPromosGiftVouchersHelp from "../Page/HelpCenter/PaymentsPromosGiftVouchersHelp/PaymentsPromosGiftVouchersHelp";
+import ProductStockHelp from "../Page/HelpCenter/ProductStockHelp/ProductStockHelp";
+import DataPrivacyHelp from "../Page/HelpCenter/DataPrivacyHelp/DataPrivacyHelp";
+import Orders from "../Page/Orders/Orders";
 
 
 
@@ -34,7 +41,7 @@ export const router = createBrowserRouter([
         element: <ProductDetails />
       },
       {
-        path: "/orders",
+        path: "/account/orders",
         element: <Orders />
       },
       {
@@ -50,16 +57,44 @@ export const router = createBrowserRouter([
         element: <MyAccountPage />
       },
       {
-        path: "/help-center",
+        path: "/help-centre",
         element: <HelpCenterLayout />,
         children: [
           {
-            path: "/help-center",
+            path: "/help-centre",
             element: <HelpCenter />,
           },
           {
             path: "delivery",
-            element: <HelpDelivery />
+            element: <DeliveryHelpHome />
+          },
+          {
+            path:"returns",
+            element:<ReturnHelp />
+          },
+          {
+            path:"orders-cancellations",
+            element:<OrderCancellationHelp />
+          },
+          {
+            path:"collection",
+            element:<CollectionHelp />
+          },
+          {
+            path:"refunds",
+            element:<RefundsHelp />
+          },
+          {
+            path:"payments-promos-gift-vouchers",
+            element:<PaymentsPromosGiftVouchersHelp />
+          },
+          {
+            path:"product-stock",
+            element:<ProductStockHelp />
+          },
+          {
+            path:"data-privacy",
+            element:<DataPrivacyHelp />
           }
         ]
       },

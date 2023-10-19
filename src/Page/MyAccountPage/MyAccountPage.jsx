@@ -20,7 +20,7 @@ const MyAccountPage = () => {
 </div>
 
 <div className='space-y-2 flex flex-col w-fit'>
-<Link to="/orders" className='text-sm text-primary hover:border-b-2 hover:border-b-primary transition-all duration-200'>Orders</Link>
+<Link to="/account/orders" className='text-sm text-primary hover:border-b-2 hover:border-b-primary transition-all duration-200'>Orders</Link>
 <Link to="/account/returns" className='text-sm text-primary hover:border-b-2 hover:border-b-primary transition-all duration-200'>Invoices</Link>
 <Link to="/account/invoices" className='text-sm text-primary hover:border-b-2 hover:border-b-primary transition-all duration-200'>Returns</Link>
 <Link to="/account/reviews" className='text-sm text-primary hover:border-b-2 hover:border-b-primary transition-all duration-200'>Product reviews</Link>
@@ -92,7 +92,7 @@ const MyAccountPage = () => {
 </div>
 
 <div className='space-y-2 flex flex-col w-fit'>
-<Link to="/help-center" className='text-sm text-primary hover:border-b-2 hover:border-b-primary transition-all duration-200'>Help Center</Link>
+<Link to="/help-centre" className='text-sm text-primary hover:border-b-2 hover:border-b-primary transition-all duration-200'>Help Center</Link>
 
 </div>
 

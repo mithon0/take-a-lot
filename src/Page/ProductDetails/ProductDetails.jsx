@@ -818,7 +818,7 @@ Delivery destination</th>
 </ul>
 </div>
 
-<p className='font-medium text-[#4d4d4f] text-xs'>Find out more about <Link to="/help-center" className='text-primary hover:un'>Exchanges & Returns.</Link>
+<p className='font-medium text-[#4d4d4f] text-xs'>Find out more about <Link to="/help-centre" className='text-primary hover:un'>Exchanges & Returns.</Link>
 
 </p>
 
