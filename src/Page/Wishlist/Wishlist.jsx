@@ -87,16 +87,57 @@ const Wishlist = () => {
 </div>
 
 <div className='my-5'>
-<img src="https://tpc.googlesyndication.com/simgad/9334445511005059859?" alt="Banner" className='h-20'/>
+<img src="https://tpc.googlesyndication.com/simgad/9334445511005059859?" alt="Banner" className='h-12 lg:h-20'/>
 </div>
 
 <div>
   <p className='text-[#000] text-lg font-semibold'>Trending Now</p>  
 </div>
 
-<div className="w-full my-10 h-full overflow-hidden">
+<div className="hidden lg:block w-full my-10 h-full overflow-hidden">
 <Swiper
         slidesPerView={4}
+        spaceBetween={30}
+        // loop={true}
+        // pagination={{
+        //   clickable: true,
+        // }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+ 
+        {
+allProducts.slice(0,10).map(prod=><SwiperSlide key={prod?._id} className="">
+
+<Link to={`/product-details/${prod?.Product_Name}/${prod?._id}`} className="w-[200px] h-full overflow-visible flex flex-col gap-2 bg-white px-2 py-3 shadow hover:shadow-xl">
+
+<div className="w-[150px] h-[120px] mx-auto">
+<img src={prod?.Image_URL} alt={prod?.Product_Name} />
+</div>
+
+<div className="h-[40px] mt-8">
+  <p className="text-xs font-normal text-[#4d4d4f] overflow-hidden">{prod?.Product_Name.slice(0,45)}{prod?.Product_Name.length > 50 ? "..." : ""}</p>
+</div>
+
+<div className="mt-3 flex flex-col space-y-2">
+<p className="font-bold">R 220</p>
+<p className=" inline-flex items-center gap-1 text-sm"><HiStar className='h-4 w-4 text-yellow-400' /> <span>4.3</span><span className='font-medium text-gray-600'>(20)</span> <span><IoIosArrowDown className='h-5 w-5 text-gray-500' /></span> </p>
+</div>
+
+</Link>
+
+</SwiperSlide>)
+        }
+
+      </Swiper>
+
+</div>
+
+
+<div className="lg:hidden w-full my-10 h-full overflow-hidden">
+<Swiper
+        slidesPerView={2}
         spaceBetween={30}
         // loop={true}
         // pagination={{
