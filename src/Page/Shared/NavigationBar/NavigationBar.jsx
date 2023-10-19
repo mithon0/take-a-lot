@@ -96,13 +96,13 @@ const NavigationBar = () => {
     <Link to="/deals">Deal</Link>
 </li>
 <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
-    <Link to="/orders">Orders</Link>
+    <Link to="/account/orders">Orders</Link>
 </li>
 <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200" onClick={()=>setPhoneAccountMenu(true)}>
     <Link to="/my-account" className="flex items-center justify-between">My Account <IoMdArrowForward className="h-5 w-5"/></Link>
 </li>
 <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
-    <Link to="/help-center">Help Center</Link>
+    <Link to="/help-centre">Help Center</Link>
 </li>
 
         </ul>
@@ -221,7 +221,7 @@ const NavigationBar = () => {
     
       <ul className="px-0 shadow my-4">
       <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
-    <Link to="/orders">Orders</Link>
+    <Link to="/account/orders">Orders</Link>
 </li>
       <li className="py-2 bg-white focus:bg-transparent hover:bg-transparent bg-transparent border-b border-b-gray-200">
     <Link to="/account/returns">Returns</Link>
@@ -2084,7 +2084,7 @@ const NavigationBar = () => {
                         <div className="space-x-12 inline-flex items-center">
                             <Link to="/"><img src="https://shopfront.takealot.com/aed55792c2c96c6c4f665ee46aa6ff6e20f41112/static/media/src/images/logo.svg-f6ccb489b85bbddf97d6.svg" alt="Takealot" className="w-44" /></Link>
 
-                            <Link to="/help-center" className="smallLink">Help Center</Link>
+                            <Link to="/help-centre" className="smallLink">Help Center</Link>
                         </div>
                         <div className="divider divider-horizontal"></div>
                         <div>
@@ -2101,7 +2101,7 @@ const NavigationBar = () => {
                             <label htmlFor="register_modal" className="smallLink cursor-pointer">Register</label>
                             
                             <div className="divider divider-horizontal"></div>
-                            <Link to="/orders" className="smallLink">Orders</Link>
+                            <Link to="/account/orders" className="smallLink">Orders</Link>
                             <div className="divider divider-horizontal"></div>
 
 
@@ -2129,13 +2129,13 @@ const NavigationBar = () => {
                                 >
 
                                     <Link to="/my-account" className="smallLink">My Account</Link>
-                                    <Link to="/account/orders" className="smallLink">Track Order</Link>
+                                    <Link to="/account/account/orders" className="smallLink">Track Order</Link>
                                     <Link to="/account/returns" className="smallLink">Returns</Link>
                                     <Link to="/account/credits" className="smallLink">Credits & Refunds</Link>
                                     <Link to="/account/reviews" className="smallLink">Product Reviews</Link>
                                     <Link to="/account/invoices" className="smallLink">Invoices</Link>
                                     <Link to="/account/personal-details" className="smallLink">Personal Details</Link>
-                                    <Link to="/account/help-center" className="smallLink">Help Center</Link>
+                                    <Link to="/account/help-centre" className="smallLink">Help Center</Link>
                                 </div>
                             </div>
 

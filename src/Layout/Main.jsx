@@ -6,7 +6,7 @@ import Footer from "../Page/Shared/Footer/Footer";
 
 const Main = () => {
     const location = useLocation();
-    const helpCenterPath = location.pathname.includes("help-center");
+    const helpCenterPath = location.pathname.includes("help-centre");
     return (
         <div>
             {helpCenterPath || <NavigationBar></NavigationBar>}
