@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const HelpCenterNav = () => {
     const [topicCatalog, setTopicCatalog] = useState(false)
     return (
-        <section className=''>
+        <section className='z-50'>
             <div className="drawer absolute top-0 px-3 bg-white max-w-7xl mx-auto">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col">
