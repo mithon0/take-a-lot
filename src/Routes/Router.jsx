@@ -20,6 +20,7 @@ import ProductStockHelp from "../Page/HelpCenter/ProductStockHelp/ProductStockHe
 import DataPrivacyHelp from "../Page/HelpCenter/DataPrivacyHelp/DataPrivacyHelp";
 import Orders from "../Page/Orders/Orders";
 import Wishlist from "../Page/Wishlist/Wishlist";
+import Cart from "../Page/Cart/Cart";
 
 
 
@@ -110,6 +111,10 @@ export const router = createBrowserRouter([
       {
         path:"/wishlist",
         element:<Wishlist />
+      },
+      {
+        path:"/cart",
+        element: <Cart />
       }
     ]
   },
