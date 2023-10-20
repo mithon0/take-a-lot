@@ -36,10 +36,10 @@ const ReviewsHistory = () => {
             <NavLink to="/account/reviewshistory" className={({ isActive }) => (isActive ? "text-xs border-b-4 border-blue-500 py-2" : "hover:text-blue-500 pl-5 py-2  border-l-4 border-transparent text-xs text-primary")}>Reviews History</NavLink>
         </ul>
       </div>
-        <img className="avatar rounded-full border p-2 shadow-lg" src={reviewIcon} alt="" />
+        <img className="avatar w-32 rounded-full border p-2 shadow-lg" src={reviewIcon} alt="" />
         <p>You have no reviews for the selected period</p>
         <p>Select a product from your order items to write a review</p>
-        <button className="bg-blue-400 px-4 py-2 rounded">View Order Items</button>
+        <button className="bg-[#0B79BF] text-white  px-4 py-2 rounded">View Order Items</button>
       </div>
     </div>
     );
