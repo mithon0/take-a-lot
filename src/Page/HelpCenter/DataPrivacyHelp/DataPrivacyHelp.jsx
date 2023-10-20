@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
+import { IoChevronForwardOutline } from 'react-icons/io5';
 
 const DataPrivacyHelp = () => {
     return (
@@ -168,9 +169,303 @@ const DataPrivacyHelp = () => {
         <div className='my-9 w-full'>
 
             <div className='flex items-start justify-between gap-8'>
-                <div className='w-full'>
-                    <Outlet />
-                </div>
+            <div className='w-full'>
+<p className='text-xl font-semibold text-[#4d4d4f] mb-5 hidden lg:block'>Data & Privacy Topics</p>
+<div className='w-full bg-white py-8 shadow rounded px-6 flex flex-col gap-1 text-sm text-[#4d4d4f]'>
+
+<p className='text-lg font-semibold text-[#4d4d4f] mb-5 lg:hidden'>Data & Privacy Topics</p>
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/register-to-takealot">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>How to register on takealot.com</span>
+<span className='hidden lg:block'>Registering is easy. You'll need an email address and at least one mobile contact number.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/resetting-password">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Changing or resetting your password</span>
+<span className='hidden lg:block'>To change or reset your password, follow the simple steps below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/profile-update-information">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>My email address has changed. How do I update this on my profile?</span>
+<span className='hidden lg:block'>To change your email address, go to My Account and follow the simple steps below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/unsubscribe-email-newsletters">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>How do I unsubscribe from your email newsletters?</span>
+<span className='hidden lg:block'>To manage or unsubscribe from your newsletter preferences, go to My Account and follow the steps below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/managing-personal-information">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Managing or requesting personal information</span>
+<span className='hidden lg:block'>Click on 'Delete My Account' below to delete your Takealot account and personal information or find out more about account deletion.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/delete-account">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Deleting my account or personal information</span>
+<span className='hidden lg:block'>Click on 'Delete My Account' below to delete your Takealot account and personal information or find out more about account deletion.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/track-status-deletion-request">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Can I track the status of my personal information or account deletion request?</span>
+<span className='hidden lg:block'>A personal information or account deletion request takes up to 30 days to process.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/about-POPIA-compliance">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about POPIA and Compliance</span>
+<span className='hidden lg:block'>POPIA refers to the Protection of Personal Information Act, 2013. This act promotes the protection of personal information and introduced certain conditions on how it is handled. Takealot is fully compliant with all the obligations set out in POPIA.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/takealot-verify-identity">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Why does Takealot ask to verify my identity when I make contact?</span>
+<span className='hidden lg:block'>Internal processes and policies are in place to address all personal information security compromises. These include ongoing security measures to mitigate any further risks and unauthorised access to your personal information.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/about-personal-information">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about personal information</span>
+<span className='hidden lg:block'>Our Privacy Policy provides detailed information on how we collect and process personal information. We have various purposes for processing and storing personal information, find out more below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/difference-between-POPIA-PAIA">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Difference between POPIA and PAIA</span>
+<span className='hidden lg:block'>POPIA give you the right to request access or the right to delete any personal information we may have in our records. PAIA is the Promotion of Access to Information Act, 2000 which gives you the right to access all information and is not restricted to personal information only.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/security-compromise-involving-personal-information">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>What happens if there is a security compromise involving my personal information</span>
+<span className='hidden lg:block'>Internal processes and policies are in place to address all personal information security compromises. These include ongoing security measures to mitigate any further risks and unauthorised access to your personal information.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/authorise-another-person-access-account">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Can I authorise another person to access my takealot.com account?</span>
+<span className='hidden lg:block'>To authorise a person to access your Takealot account, you will be required to complete a consent form.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/access-deceased-family-members-account">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Can I get access to a deceased family member’s takealot.com account?</span>
+<span className='hidden lg:block'>Access can be granted to a deceased family member’s account. We will require certain documentation in order to authorise and consent to provide the personal information on the Takealot account.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/about-cookies-Takealot">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about cookies on Takealot</span>
+<span className='hidden lg:block'>Takealot uses cookies and user tracking to improve your experience on our website or mobile apps. These cookies are small text files that do not contain or collect any personal information.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/children-allowed-to-use-account">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Are children allowed to use takealot.com?</span>
+<span className='hidden lg:block'>Any person under the age of 18 is not permitted to use our platforms without the consent and supervision of a parent or legal guardian.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/verify-email-address">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>How to verify your email address</span>
+<span className='hidden lg:block'>Verify your account’s email address by following these steps.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/data-privacy/verify-mobile-number">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>How to verify your mobile number</span>
+<span className='hidden lg:block'>Verify your account’s mobile number by following these steps.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+</div> 
+
+
+<div className='w-full bg-white shadow rounded p-4 my-10'>
+<div className='w-full bg-primary bg-opacity-10 py-5 flex items-center gap-10'>
+<div>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__d0da6dca9d77bd5c950880ccb158ac07bcea8752.png" alt="" className='w-32'/>
+</div>
+
+<div className='w-full flex flex-col gap-2 lg:flex-row items-center'>
+<div className='flex-1'>
+    <p className='text-lg font-semibold'>Didn't find what you need?</p>
+</div>
+
+<div className='mr-5'>
+    <button className='text-sm py-2 px-7 border border-primary bg-primary rounded text-white font-semibold'>Contact Us</button>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+</div>
 
                 <div className='w-1/3 bg-white shadow hidden lg:block text-sm'>
                     <p className='p-3 text-base font-medium text-[#000]'>All Help Topics</p>
