@@ -10,10 +10,11 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
+import { IoChevronForwardOutline } from 'react-icons/io5';
 const PaymentsPromosGiftVouchersHelp = () => {
     return (
         <section className='lg:px-4'>
-        <div className='hero h-60 rounded-b-lg' style={{ backgroundImage: "url(https://shopfront.takealot.com/b317a38ffe915f6034dfee91ccee142cabe5ca77/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)", backgroundRepeat: "no-repeat" }}>
+        <div className='hero h-60 rounded-b-lg relative' style={{ backgroundImage: "url(https://shopfront.takealot.com/b317a38ffe915f6034dfee91ccee142cabe5ca77/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)", backgroundRepeat: "no-repeat" }}>
 
             <div className="hidden lg:block text-xs breadcrumbs text-white absolute top-20 left-10">
                 <ul>
@@ -176,9 +177,218 @@ const PaymentsPromosGiftVouchersHelp = () => {
         <div className='my-9 w-full'>
 
             <div className='flex items-start justify-between gap-8'>
-                <div className='w-full'>
-                    <Outlet />
-                </div>
+            <div className='w-full'>
+<p className='text-xl font-semibold text-[#4d4d4f] mb-5 hidden lg:block'>Payments, Promos & Gift Vouchers Topics</p>
+<div className='w-full bg-white py-8 shadow rounded px-6 flex flex-col gap-1 text-sm text-[#4d4d4f]'>
+
+<p className='text-lg font-semibold text-[#4d4d4f] mb-5 lg:hidden'>Payments, Promos & Gift Vouchers Topics</p>
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/available-payment-options">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Available payment options</span>
+<span className='hidden lg:block'>We have various safe and easy payment options available to you. During your checkout, we will offer available payment options on the payment page. See below to find out what options are available.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/price-item-change-checkout">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Why does the price of my item change when I try and check out?</span>
+<span className='hidden lg:block'>Promotional deals and discounts may be available for a limited time only or while stocks lasts. Prices are only secured through payment and is not reserved by adding to your cart.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/havent-received-confirmation">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Why haven’t I received my payment confirmation email?</span>
+<span className='hidden lg:block'>Your payment confirmation email will be sent after your payment has been received. To check if your order and payment has been processed successfully, see the details below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/all-about-coupon-codes-discounts">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about coupon codes & discounts</span>
+<span className='hidden lg:block'>Coupons are discounts offered and can be a fixed amount or a percentage discount offered on certain products or promotions. To find out more, read below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/all-about-gift-vouchers">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about Gift Vouchers</span>
+<span className='hidden lg:block'>A great option as a gift for birthdays and special occasions. Find out more on how easy it is to redeem and how long it will be valid for use.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/all-about-payflex">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about Payflex</span>
+<span className='hidden lg:block'>Payflex is an interest-free payment option that allows you to pay for your order on Takealot and pay 25% per instalment. To find out how it works read more below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/all-about-credit-debit-card">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about Credit / Debit Card Payments</span>
+<span className='hidden lg:block'>Pay for your order using your credit, debit or cheque cards. Find out how it works ...</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/all-about-cash-on-delivery">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about Cash on Delivery ( COD )</span>
+<span className='hidden lg:block'>Cash on Delivery is offered on select orders. Read below to find out if your order will be eligible and how it works.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/all-about-instant-eFT-ozow">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about Instant EFT with Ozow</span>
+<span className='hidden lg:block'>Ozow is an Instant EFT payment method which allows you to pay directly from your bank account. Find out more on how it works and the benefits.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/all-about-instant-EFT-payFast">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about Instant EFT with PayFast</span>
+<span className='hidden lg:block'>PayFast is an instant EFT payment method offered by PayFast. It allows you to pay directly from your bank account. Find out more about how it works.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/all-about-mobicred">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about Mobicred</span>
+<span className='hidden lg:block'>Mobicred is a simple, revolving credit facility. Shop on Takealot and repay your order in monthly instalments  over 12 months. Read below to find out about the fees and interest rates.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/all-about-eBucks">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about eBucks</span>
+<span className='hidden lg:block'>Shop and pay using the eBucks you earned from your FNB or RMB card. Find out how to earn eBucks while you shop on Takealot ...</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/all-about-masterpass">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about Masterpass</span>
+<span className='hidden lg:block'>Masterpass is a digital wallet service that can be used to pay for your Takealot order. Start by downloading the app on your smartphone, then simply follow the guide below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/a-ll-about-discovery-miles">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about Discovery Miles</span>
+<span className='hidden lg:block'>Shop and Pay using your Discovery Miles earned as a Discovery customer, read more below on how easy it is to pay.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/payments-promos-gift-vouchers/all-about-nsfas-cellbux-vouchers">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about NSFAS | Cellbux Vouchers</span>
+<span className='hidden lg:block'>NSFAS Wallet is a mobile platform which offers allowances to students who qualify for NSFAS bursaries. Cellbux Vouchers is a voucher based payment solution offered to customers and businesses. Find out more below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+</Link>
+
+</div> 
+
+
+<div className='w-full bg-white shadow rounded p-4 my-10'>
+<div className='w-full bg-primary bg-opacity-10 py-5 flex items-center gap-10'>
+<div>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__d0da6dca9d77bd5c950880ccb158ac07bcea8752.png" alt="" className='w-32'/>
+</div>
+
+<div className='w-full flex flex-col gap-2 lg:flex-row items-center'>
+<div className='flex-1'>
+    <p className='text-lg font-semibold'>Didn't find what you need?</p>
+</div>
+
+<div className='mr-5'>
+    <button className='text-sm py-2 px-7 border border-primary bg-primary rounded text-white font-semibold'>Contact Us</button>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+</div>
 
                 <div className='w-1/3 bg-white shadow hidden lg:block text-sm'>
                     <p className='p-3 text-base font-medium text-[#000]'>All Help Topics</p>

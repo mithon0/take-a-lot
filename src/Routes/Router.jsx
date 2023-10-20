@@ -19,6 +19,8 @@ import PaymentsPromosGiftVouchersHelp from "../Page/HelpCenter/PaymentsPromosGif
 import ProductStockHelp from "../Page/HelpCenter/ProductStockHelp/ProductStockHelp";
 import DataPrivacyHelp from "../Page/HelpCenter/DataPrivacyHelp/DataPrivacyHelp";
 import Orders from "../Page/Orders/Orders";
+import Wishlist from "../Page/Wishlist/Wishlist";
+import Cart from "../Page/Cart/Cart";
 
 
 
@@ -106,6 +108,14 @@ export const router = createBrowserRouter([
         path:"/account/login",
         element:<LoginPage />
       },
+      {
+        path:"/wishlist",
+        element:<Wishlist />
+      },
+      {
+        path:"/cart",
+        element: <Cart />
+      }
     ]
   },
 ]);
