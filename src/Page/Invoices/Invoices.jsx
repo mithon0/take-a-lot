@@ -3,7 +3,7 @@ import React from 'react';
 const Invoices = () => {
     return (
         <div>
-            Invoices
+            Insert there Invoices page design
         </div>
     );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 const PersonalInfo = () => {
     return (
         <div>
-            PersonalInfo
+           Insert there Personal Info page design 
         </div>
     );
 };

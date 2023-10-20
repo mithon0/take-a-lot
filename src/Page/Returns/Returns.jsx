@@ -3,7 +3,7 @@ import React from 'react';
 const Returns = () => {
     return (
         <div>
-            Returns
+           Insert there Returns page design
         </div>
     );
 };

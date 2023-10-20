@@ -3,7 +3,7 @@ import React from 'react';
 const ApplyVoucher = () => {
     return (
         <div>
-            ApplyVoucher
+            Insert there Apply Voucher page design
         </div>
     );
 };

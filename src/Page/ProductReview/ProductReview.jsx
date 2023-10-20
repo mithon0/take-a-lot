@@ -3,7 +3,7 @@ import React from 'react';
 const ProductReview = () => {
     return (
         <div>
-            ProductReview
+           Insert there Product Review page design
         </div>
     );
 };
