@@ -2129,7 +2129,7 @@ const NavigationBar = () => {
                                 >
 
                                     <Link to="/my-account" className="smallLink">My Account</Link>
-                                    <Link to="/account/account/orders" className="smallLink">Track Order</Link>
+                                    <Link to="/account/orders" className="smallLink">Track Order</Link>
                                     <Link to="/account/returns" className="smallLink">Returns</Link>
                                     <Link to="/account/credits" className="smallLink">Credits & Refunds</Link>
                                     <Link to="/account/reviews" className="smallLink">Product Reviews</Link>
