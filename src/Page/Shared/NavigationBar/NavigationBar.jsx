@@ -2064,9 +2064,9 @@ const NavigationBar = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                             </button>
                             <button className="btn btn-ghost btn-circle">
-                                <div className="indicator">
+                                <Link to="/cart" className="indicator">
                                     <HiShoppingCart className="w-5 h-5" />
-                                </div>
+                                </Link>
                             </button>
                         </div>
                     </div>
@@ -2129,7 +2129,7 @@ const NavigationBar = () => {
                                 >
 
                                     <Link to="/my-account" className="smallLink">My Account</Link>
-                                    <Link to="/account/account/orders" className="smallLink">Track Order</Link>
+                                    <Link to="/account/orders" className="smallLink">Track Order</Link>
                                     <Link to="/account/returns" className="smallLink">Returns</Link>
                                     <Link to="/account/credits" className="smallLink">Credits & Refunds</Link>
                                     <Link to="/account/reviews" className="smallLink">Product Reviews</Link>
@@ -2148,9 +2148,9 @@ const NavigationBar = () => {
                                     </p>
 
                                 </Link>
-                                <p className="inline-flex items-center gap-4 px-3 py-1 bg-success rounded-2xl font-semibold text-white cursor-pointer hover">
+                                <Link to="/cart" className="inline-flex items-center gap-4 px-3 py-1 bg-success rounded-2xl font-semibold text-white cursor-pointer hover">
                                     <HiShoppingCart className="w-5 h-5" /> <span>0</span>
-                                </p>
+                                </Link>
                             </div>
 
                         </div>

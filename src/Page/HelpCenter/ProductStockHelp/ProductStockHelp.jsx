@@ -10,11 +10,12 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
+import { IoChevronForwardOutline } from 'react-icons/io5';
 
 const ProductStockHelp = () => {
     return (
         <section className='lg:px-4'>
-        <div className='hero h-60 rounded-b-lg' style={{ backgroundImage: "url(https://shopfront.takealot.com/b317a38ffe915f6034dfee91ccee142cabe5ca77/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)", backgroundRepeat: "no-repeat" }}>
+        <div className='hero h-60 rounded-b-lg relative' style={{ backgroundImage: "url(https://shopfront.takealot.com/b317a38ffe915f6034dfee91ccee142cabe5ca77/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)", backgroundRepeat: "no-repeat" }}>
 
             <div className="hidden lg:block text-xs breadcrumbs text-white absolute top-20 left-10">
                 <ul>
@@ -169,9 +170,187 @@ const ProductStockHelp = () => {
         <div className='my-9 w-full'>
 
             <div className='flex items-start justify-between gap-8'>
-                <div className='w-full'>
-                    <Outlet />
-                </div>
+            <div className='w-full'>
+<p className='text-xl font-semibold text-[#4d4d4f] mb-5 hidden lg:block'>Popular Product & Stock Topics</p>
+<div className='w-full bg-white py-8 shadow rounded px-6 flex flex-col gap-1 text-sm text-[#4d4d4f]'>
+
+<p className='text-lg font-semibold text-[#4d4d4f] mb-5 lg:hidden'>Popular Product & Stock Topics</p>
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/product-stock/help-to-find-product">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Can you help me find a product?</span>
+<span className='hidden lg:block'>Browse millions of products by entering words in the search bar, or use the Shop by Department menu and filters to refine your search results.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/product-stock/buy-products-sellers-Takealot">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>How do I buy products from sellers other than Takealot on the website?</span>
+<span className='hidden lg:block'>The product page will indicate if a product is sold by a seller. The ordering process remains the same for seller products.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/product-stock/give-information-product">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Can you give me more information on a product?</span>
+<span className='hidden lg:block'>Find more information on a product by looking at the description or product information tabs on the product page of the product you are viewing.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/product-stock/item-want-in-stock">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>When will the item I want be in stock?</span>
+<span className='hidden lg:block'>All out of stock products will be made available as soon as the products are restocked. To be notified of these products see below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/product-stock/about-pre-orders">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about pre-orders</span>
+<span className='hidden lg:block'>Pre-orders are products that have not been released yet, e.g gaming titles or books. These can be purchased individually and will be shipped to you for delivery or collection on the release date. Find out more about the order process below.</span>
+</div>
+
+<span><IoChevronForwardOutline
+ className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/product-stock/about-unboxed-deals">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about unboxed deals</span>
+<span className='hidden lg:block'>Bundle deals are 2 or more individual products that can be bought together as part of a promotion or at a discounted price. We offer different types of bundles, such as multi-buys or pre-packed bundles. To find out more about buying and returning items for bundle deals, read below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/product-stock/about-bundle-deals">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about bundle deals</span>
+<span className='hidden lg:block'>Bundle deals are 2 or more individual products that can be bought together as part of a promotion or at a discounted price. We offer different types of bundles, such as multi-buys or pre-packed bundles. To find out more about buying and returning items for bundle deals, read below.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/product-stock/about-online-courses">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about online courses</span>
+<span className='hidden lg:block'>The product page will indicate if a product is sold by a seller. The ordering process remains the same for seller products.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/product-stock/about-flatpack-furniture">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>All about flatpack furniture</span>
+<span className='hidden lg:block'>Flatpack furniture is unassembled and may be delivered in multiple boxes and also include an assembly manual. Some items require additional tools, like a screwdriver. Returning these items will require all their components and accessories to be sent back in line with the standard returns policies.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/product-stock/blu-ray-dvd-will-work">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>How will I know if my blu-ray dvd will work?</span>
+<span className='hidden lg:block'>Some DVDs may be region locked. Check the product page on the description tab for the region, or the map below to find out if the DVD will play on your Blu-ray player.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+
+
+</div> 
+
+
+<div className='w-full bg-white shadow rounded p-4 my-10'>
+<div className='w-full bg-primary bg-opacity-10 py-5 flex items-center gap-10'>
+<div>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__d0da6dca9d77bd5c950880ccb158ac07bcea8752.png" alt="" className='w-32'/>
+</div>
+
+<div className='w-full flex flex-col gap-2 lg:flex-row items-center'>
+<div className='flex-1'>
+    <p className='text-lg font-semibold'>Didn't find what you need?</p>
+</div>
+
+<div className='mr-5'>
+    <button className='text-sm py-2 px-7 border border-primary bg-primary rounded text-white font-semibold'>Contact Us</button>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+</div>
 
                 <div className='w-1/3 bg-white shadow hidden lg:block text-sm'>
                     <p className='p-3 text-base font-medium text-[#000]'>All Help Topics</p>

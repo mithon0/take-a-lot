@@ -9,7 +9,7 @@ import { HelmetProvider } from 'react-helmet-async';
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='overflow-hidden'>
+  <div className='overflow-hidden max-w-7xl mx-auto'>
     <React.StrictMode>
     <HelmetProvider>
       <Auth>

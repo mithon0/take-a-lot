@@ -19,6 +19,17 @@ import PaymentsPromosGiftVouchersHelp from "../Page/HelpCenter/PaymentsPromosGif
 import ProductStockHelp from "../Page/HelpCenter/ProductStockHelp/ProductStockHelp";
 import DataPrivacyHelp from "../Page/HelpCenter/DataPrivacyHelp/DataPrivacyHelp";
 import Orders from "../Page/Orders/Orders";
+import Wishlist from "../Page/Wishlist/Wishlist";
+import Cart from "../Page/Cart/Cart";
+import Account from "../Page/Account/Account";
+import Returns from "../Page/Returns/Returns";
+import CreditRefunds from "../Page/CreditRefunds/CreditRefunds";
+import ProductReview from "../Page/ProductReview/ProductReview";
+import Invoices from "../Page/Invoices/Invoices";
+import PersonalInfo from "../Page/PersonalInfo/PersonalInfo";
+import ApplyVoucher from "../Page/ApplyVoucher/ApplyVoucher";
+import AddressBook from "../Page/AddressBook/AddressBook";
+import Newsletter from "../Page/Newsletter/Newsletter";
 
 
 
@@ -39,10 +50,6 @@ export const router = createBrowserRouter([
       {
         path: "/product-details/:name/:id",
         element: <ProductDetails />
-      },
-      {
-        path: "/account/orders",
-        element: <Orders />
       },
       {
         path: "/sell-on-takealot",
@@ -106,6 +113,56 @@ export const router = createBrowserRouter([
         path:"/account/login",
         element:<LoginPage />
       },
+      {
+        path:"/wishlist",
+        element:<Wishlist />
+      },
+      {
+        path:"/cart",
+        element: <Cart />
+      },
+      {
+        path:"/account",
+        element:<Account />,
+        children:[
+          {
+            path: "orders",
+            element: <Orders />
+          },
+          {
+            path:"returns",
+            element:<Returns />
+          },
+          {
+            path:"credits",
+            element:<CreditRefunds />
+          },
+          {
+            path:"reviews",
+            element:<ProductReview />
+          },
+          {
+            path:"invoices",
+            element:<Invoices />
+          },
+          {
+            path:"personal-details",
+            element:<PersonalInfo />
+          },
+          {
+            path:"voucher",
+            element:<ApplyVoucher />
+          },
+          {
+            path:"address-book",
+            element:<AddressBook />
+          },
+          {
+            path:"newsletter",
+            element:<Newsletter />
+          }
+        ]
+      }
     ]
   },
 ]);

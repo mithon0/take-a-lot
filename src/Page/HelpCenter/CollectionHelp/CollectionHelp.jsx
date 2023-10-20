@@ -10,13 +10,14 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
+import { IoChevronForwardOutline } from 'react-icons/io5';
 
 const CollectionHelp = () => {
     return (
         <section className='lg:px-4'>
-        <div className='hero h-60 rounded-b-lg' style={{ backgroundImage: "url(https://shopfront.takealot.com/b317a38ffe915f6034dfee91ccee142cabe5ca77/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)", backgroundRepeat: "no-repeat" }}>
+        <div className='hero h-60 rounded-b-lg relative' style={{ backgroundImage: "url(https://shopfront.takealot.com/b317a38ffe915f6034dfee91ccee142cabe5ca77/static/media/src/images/help-centre/Header-Large@2x.png-868cd5e789ded2bf3855.png)", backgroundRepeat: "no-repeat" }}>
 
-            <div className="hidden lg:block text-xs breadcrumbs text-white absolute top-20 left-10">
+            <div className="hidden lg:block text-xs breadcrumbs text-white absolute top-20 left-10 ">
                 <ul>
                     <li><Link to="/help-centre">Help Centre</Link></li>
                     <li><Link>
@@ -167,9 +168,124 @@ const CollectionHelp = () => {
         <div className='my-9 w-full'>
 
             <div className='flex items-start justify-between gap-8'>
-                <div className='w-full'>
-                    <Outlet />
-                </div>
+            <div className='w-full'>
+<p className='text-xl font-semibold text-[#4d4d4f] mb-5 hidden lg:block'>Collection Topics</p>
+<div className='w-full bg-white py-8 shadow rounded px-6 flex flex-col gap-1 text-sm text-[#4d4d4f]'>
+
+<p className='text-lg font-semibold text-[#4d4d4f] mb-5 lg:hidden'>Collection Topics</p>
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/collection/about-collection">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>About collection options & time frames</span>
+<span className='hidden lg:block'>Takealot offers collection at a Takealot Pickup Point anywhere in South Africa. Estimated collection dates depend on where you are, our product selection and your choice of collection options.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/collection/about-collection-fees">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>About collection fees</span>
+<span className='hidden lg:block'>Takealot offers Standard Collection free for orders totalling R500 or more. We also offer more collection options such as premium same day or next day collect at a cost available if you are in one of our Main centres (Cape Town, Kwa-Zulu Natal, Johannesburg & Pretoria)</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/collection/Why-collection-available">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Why is collection not available for my order?</span>
+<span className='hidden lg:block'>Certain items are not available for collection due to the size or weight and may need to be delivered to your home or business address.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/collection/changing-my-delivery-method-or-selected-takealot-pickup-point">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Changing my delivery method or selected Takealot pickup point</span>
+<span className='hidden lg:block'>On select orders, we may be able to change your order from collect to delivery. If you want to request a change from  collect to delivery, please contact us.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/collection/track-my-collection-order">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Track my collection order</span>
+<span className='hidden lg:block'>We will notify when your order is ready for collection based on the estimated collection date provided when we confirm your payment. You are able to track your order by logging into your account and selecting Track Order.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+<div className='my-4 border-b'></div> 
+
+
+<Link className='w-full flex gap-4 items-center topic-link' to="/help-centre/collection/collecting-your-order">
+
+<div className='w-full flex flex-col gap-2'>
+<span className='text-base w-fit font-semibold topic-head'>Collecting your order</span>
+<span className='hidden lg:block'>When you receive your ready for collection email, we provide you with a QR code and instructions on where your QR code can be found to receive your order at a Takealot Pickup Point within 7 days.</span>
+</div>
+
+<span><IoChevronForwardOutline className='h-6 w-7 text-[#4d4d4f]'/></span>
+
+
+</Link>
+
+
+</div> 
+
+
+<div className='w-full bg-white shadow rounded p-4 my-10'>
+<div className='w-full bg-primary bg-opacity-10 py-5 flex items-center gap-10'>
+<div>
+<img src="https://media.takealot.com/help-cms/original_images/____CMS__d0da6dca9d77bd5c950880ccb158ac07bcea8752.png" alt="" className='w-32'/>
+</div>
+
+<div className='w-full flex flex-col gap-2 lg:flex-row items-center'>
+<div className='flex-1'>
+    <p className='text-lg font-semibold'>Didn't find what you need?</p>
+</div>
+
+<div className='mr-5'>
+    <button className='text-sm py-2 px-7 border border-primary bg-primary rounded text-white font-semibold'>Contact Us</button>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+</div>
 
                 <div className='w-1/3 bg-white shadow hidden lg:block text-sm'>
                     <p className='p-3 text-base font-medium text-[#000]'>All Help Topics</p>
