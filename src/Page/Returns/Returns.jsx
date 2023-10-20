@@ -7,7 +7,14 @@ import icon4 from '../../assets/icons/reviews.svg'
 
 const Returns = () => {
   return (
-    <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-5">
+    <div>
+      <div className="flex justify-between mb-5">
+      <div className="text-2xl font-semibold">Returns</div>
+      <div>
+        <button className="bg-[#0B79BF] px-8 py-2 rounded text-white ">Log Returns</button>
+      </div>
+      </div>
+      <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-5">
       <div className="text-center bg-white rounded-lg space-y-2 relative py-10 px-2">
         <div className="bg-[#0B79BF] absolute z-10 mt-5 rounded-b-full py-6  -mt-10 ms-3 text-white px-3 py-2 text-xs font-mono">
           <p>Step <br /> 1</p>
@@ -59,6 +66,7 @@ const Returns = () => {
           Items to be refunded or exchanged if all criteria are met.
         </p>
       </div>
+    </div>
     </div>
   );
 };
