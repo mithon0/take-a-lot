@@ -29,7 +29,7 @@ const ReviewsHistory = () => {
           </div>
         </div>
       </div>
-      <div className="text-center space-y-4 bg-white pt-6 pb-20 mt-4">
+      <div className="text-center space-y-4 bg-white pt-6 pb-20 mt-4 shadow">
         <div>
           <ul className='flex gap-5 ms-5 text-black font-medium'>
             <NavLink to="/account/reviews" className={({ isActive }) => (isActive ? " text-xs border-b-2 border-blue-500 py-2 text-primary" : "hover:text-blue-500 py-2  rounded-r-full bg-opacity-10 border-b-4 border-transparent text-xs text-[#5f5f60]")}>Order Items</NavLink>
