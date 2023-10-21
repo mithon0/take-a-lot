@@ -2135,7 +2135,7 @@ const NavigationBar = () => {
                                     <Link to="/account/reviews" className="smallLink">Product Reviews</Link>
                                     <Link to="/account/invoices" className="smallLink">Invoices</Link>
                                     <Link to="/account/personal-details" className="smallLink">Personal Details</Link>
-                                    <Link to="/account/help-centre" className="smallLink">Help Center</Link>
+                                    <Link to="/help-centre" className="smallLink">Help Center</Link>
                                 </div>
                             </div>
 
