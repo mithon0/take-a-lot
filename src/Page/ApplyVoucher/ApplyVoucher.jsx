@@ -15,11 +15,11 @@ const ApplyVoucher = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex items-center gap-5 bg-white p-5 relative">
+      <div className="flex items-center gap-5 bg-white px-8 py-12 relative  shadow-sm">
         <label
           htmlFor="voucherCode"
           className={`absolute transition-all duration-300 text-sm ${
-            (isFocused || isDirty) && "top-1 left-4 text-red-500"
+            (isFocused || isDirty) && "top-7 left-8 text-red-500"
           }`}
         >
           Enter a gift voucher code
