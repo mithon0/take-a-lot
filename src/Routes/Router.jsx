@@ -30,6 +30,7 @@ import PersonalInfo from "../Page/PersonalInfo/PersonalInfo";
 import ApplyVoucher from "../Page/ApplyVoucher/ApplyVoucher";
 import AddressBook from "../Page/AddressBook/AddressBook";
 import Newsletter from "../Page/Newsletter/Newsletter";
+import ReviewsHistory from "../Page/ReviewsHistory/ReviewsHistory";
 
 
 
@@ -160,6 +161,10 @@ export const router = createBrowserRouter([
           {
             path:"newsletter",
             element:<Newsletter />
+          },
+          {
+            path: "reviewshistory",
+            element: <ReviewsHistory/>
           }
         ]
       }
