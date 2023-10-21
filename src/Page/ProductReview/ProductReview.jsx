@@ -31,26 +31,9 @@ const ProductReview = () => {
       <div className="text-center space-y-4 bg-white pt-6 pb-20 mt-4">
         <div className="justify-center items-center">
           <ul className="flex gap-5 ms-5 text-black hover:text-blue-500">
-            <NavLink
-              to="/account/reviews"
-              className={({ isActive }) =>
-                isActive
-                  ? " text-[#5f5f60] text-xs border-b-4 border-blue-500"
-                  : "hover:text-blue-500 pl-10 py-2  rounded-r-full bg-opacity-10 border-b-4 border-transparent text-xs black"
-              }
-            >
-              Order Items
-            </NavLink>
-            <NavLink
-              to="/account/reviewshistory"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-xs border-b-4 border-blue-500"
-                  : "hover:text-blue-500 pl-5 py-2  border-l-4 border-transparent text-xs text-primary"
-              }
-            >
-              Reviews History
-            </NavLink>
+          <NavLink to="/account/reviews" className={({ isActive }) => (isActive ? " text-xs border-b-2 border-blue-500 py-2 text-primary" : "hover:text-blue-500 py-2  rounded-r-full bg-opacity-10 border-b-4 border-transparent text-xs text-[#5f5f60]")}>Order Items</NavLink>
+
+<NavLink to="/account/reviewshistory" className={({ isActive }) => (isActive ? " text-[#5f5f60] text-xs border-b-2 border-blue-500 py-2" : "hover:text-blue-500 py-2  rounded-r-full bg-opacity-10 border-b-4 border-transparent text-xs text-[#5f5f60]")}>Reviews History</NavLink>
           </ul>
         </div>
         <img
