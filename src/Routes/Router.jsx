@@ -33,6 +33,24 @@ import Newsletter from "../Page/Newsletter/Newsletter";
 import ReviewsHistory from "../Page/ReviewsHistory/ReviewsHistory";
 import RefundsHistory from "../Page/RefundsHistory/RefundsHistory";
 import FeeEstimator from "../Page/FeeEstimator/FeeEstimator";
+import PickupPoints from "../Page/PickupPoints/PickupPoints";
+import ReturnPolicy from "../Page/ReturnPolicy/ReturnPolicy";
+import About from "../Page/About/About";
+import WhoWeAre from "../Page/About/WhoWeAre";
+import OurJourney from "../Page/About/OurJourney";
+import OurValue from "../Page/About/OurValue";
+import OurEnv from "../Page/About/OurEnv";
+import OurCareers from "../Page/About/OurCareers";
+import Extraordinary from "../Page/About/Extraordinary";
+import CompanyNews from "../Page/About/CompanyNews";
+import Charity from "../Page/About/Charity";
+import DeliveryTeam from "../Page/About/DeliveryTeam";
+import TermsAndCs from "../Page/ReturnPolicy/T&Cs/TermsAndCs";
+import ReturnPolicyAndHelp from "../Page/ReturnPolicy/ReturnPolicyAndHelp";
+import DailyDeals from "../Page/ReturnPolicy/DailyDeals/DailyDeals";
+import VouchersAndCouponsConditions from "../Page/ReturnPolicy/VouchersAndCouponsConditions/VouchersAndCouponsConditions";
+import ResponsibleDisclosure from "../Page/ReturnPolicy/ResponsibleDisclosure/ResponsibleDisclosure";
+import PrivacyPolicy from "../Page/ReturnPolicy/PrivacyPolicy/PrivacyPolicy";
 
 
 
@@ -175,6 +193,83 @@ export const router = createBrowserRouter([
           {
             path: "refundshistory",
             element: <RefundsHistory/>
+          }
+        ]
+      },
+      {
+        path:"/takealot-pickup-points",
+        element:<PickupPoints />
+      },
+      {
+        path:"/return-policy-help/",
+        element:<ReturnPolicyAndHelp />,
+        children:[
+          {
+            path:"/return-policy-help/",
+            element:<ReturnPolicy />
+          },
+          {
+            path:"terms-and-conditions",
+            element:<TermsAndCs/>
+          },
+          {
+            path:"savealot-daily-deals",
+            element:<DailyDeals />
+          },
+          {
+            path:"promotional-codes-tcs",
+            element:<VouchersAndCouponsConditions />
+          },
+          {
+            path:"responsible-disclosure-policy",
+            element:<ResponsibleDisclosure />
+          },
+          {
+            path:"privacy-policy",
+            element:<PrivacyPolicy />
+          }
+
+        ]
+      },
+      {
+        path:"/about",
+        element:<About />,
+        children:[
+          {
+            path:"who-we-are",
+            element:<WhoWeAre />
+          },
+          {
+            path:"our-journey",
+            element:<OurJourney/>
+          },
+          {
+            path:"our-values",
+            element:<OurValue />
+          },
+          {
+            path:"our-environment",
+            element:<OurEnv />
+          },
+          {
+            path:"careers",
+            element:<OurCareers />
+          },
+          {
+            path:"extraordinary-minds",
+            element:<Extraordinary />
+          },
+          {
+            path:"company-news",
+            element:<CompanyNews />
+          },
+          {
+            path:"our-charity",
+            element:<Charity />
+          },
+          {
+            path:"delivery-team",
+            element:<DeliveryTeam />
           }
         ]
       }
