@@ -8,16 +8,16 @@ import icon4 from '../../assets/icons/reviews.svg'
 const Returns = () => {
   return (
     <div>
-      <div className="flex justify-between mb-5">
-      <div className="text-2xl font-semibold">Returns</div>
+      <div className="flex justify-between mb-5 text-sm">
+      <div className="text-lg font-semibold text-[#4d4d4f]">Returns</div>
       <div>
-        <button className="bg-[#0B79BF] px-8 py-2 rounded text-white ">Log Returns</button>
+        <button className="bg-primary text-white font-semibold border border-primary px-4 py-2 rounded">Log Returns</button>
       </div>
       </div>
-      <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-5">
-      <div className="text-center bg-white rounded-lg space-y-2 relative py-10 px-2">
-        <div className="bg-[#0B79BF] absolute z-10 mt-5 rounded-b-full py-6  -mt-10 ms-3 text-white px-3 py-2 text-xs font-mono">
-          <p>Step <br /> 1</p>
+      <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-3 lg:gap-1">
+      <div className="text-center bg-white rounded shadow space-y-2 relative py-10 px-2">
+        <div className="bg-[#0B79BF] absolute z-10 rounded-b-full py-6  -mt-10 ms-3 text-white px-3 text-xs font-mono">
+          <p>Step <br /> <span className="text-base font-bold">1</span></p>
         </div>
         <img className="w-32 h-32 object-contain bg-slate-300 bg-opacity-10 p-2 avatar rounded-full" src={icon2} alt="Step 1" />
         <h2 className="text-[#0B79BF] text- font-semibold pt-8">Log a Return</h2>
@@ -26,9 +26,9 @@ const Returns = () => {
           hours
         </p>
       </div>
-      <div className="text-center bg-white rounded-lg space-y-2 relative py-10 px-2">
-        <div className="bg-[#0B79BF] absolute z-10 mt-5 rounded-b-full py-6  -mt-10 ms-3 text-white px-3 py-2 text-xs font-mono">
-          <p>Step <br /> 1</p>
+      <div className="text-center bg-white rounded shadow space-y-2 relative py-10 px-2">
+        <div className="bg-[#0B79BF] absolute z-10 rounded-b-full py-6  -mt-10 ms-3 text-white px-3 text-xs font-mono">
+          <p>Step <br /> <span className="text-base font-bold">2</span></p>
         </div>
         <img className="w-32 h-32 object-contain bg-slate-300 bg-opacity-10 p-2 avatar rounded-full" src={img} alt="Step w-32 h-32 1" object-contain bg-slate-300 bg-opacity-10 p-2 />
         <h2 className="text-[#0B79BF] text- font-semibold pt-8">Preparation your return</h2>
@@ -36,9 +36,9 @@ const Returns = () => {
           Package your items for transport and evaluation.
         </p>
       </div>
-      <div className="text-center bg-white rounded-lg space-y-2 relative py-10 px-2">
-        <div className="bg-[#0B79BF] absolute z-10 mt-5 rounded-b-full py-6  -mt-10 ms-3 text-white px-3 py-2 text-xs font-mono">
-          <p>Step <br /> 2</p>
+      <div className="text-center bg-white rounded shadow space-y-2 relative py-10 px-2">
+        <div className="bg-[#0B79BF] absolute z-10 rounded-b-full py-6  -mt-10 ms-3 text-white px-3 text-xs font-mono">
+          <p>Step <br /> <span className="text-base font-bold">3</span></p>
         </div>
         <img className="w-32 h-32 object-contain bg-slate-300 bg-opacity-10 p-2 avatar rounded-full" src={icon4} alt="Step 1" />
         <h2 className="text-[#0B79BF] text- font-semibold pt-8">Return Items</h2>
@@ -46,9 +46,9 @@ const Returns = () => {
           Drop-off at a Takealot Pickup Point or collection from your address
         </p>
       </div>
-      <div className="text-center bg-white rounded-lg space-y-2 relative py-10 px-2">
-        <div className="bg-[#0B79BF] absolute z-10 mt-5 rounded-b-full py-6  -mt-10 ms-3 text-white px-3 py-2 text-xs font-mono">
-          <p>Step <br /> 4</p>
+      <div className="text-center bg-white rounded shadow space-y-2 relative py-10 px-2">
+        <div className="bg-[#0B79BF] absolute z-10 rounded-b-full py-6  -mt-10 ms-3 text-white px-3 text-xs font-mono">
+          <p>Step <br /> <span className="text-base font-bold">4</span></p>
         </div>
         <img className="w-32 h-32 object-contain bg-slate-300 bg-opacity-10 p-2 avatar rounded-full" src={icon1} alt="Step 1" />
         <h2 className="text-[#0B79BF] text- font-semibold pt-8">Evaluation</h2>
@@ -56,9 +56,9 @@ const Returns = () => {
           The Takealot team will assess the returned items
         </p>
       </div>
-      <div className="text-center bg-white rounded-lg space-y-2 relative py-10 px-2">
-        <div className="bg-[#0B79BF] absolute z-10 mt-5 rounded-b-full py-6  -mt-10 ms-3 text-white px-3 py-2 text-xs font-mono">
-          <p>Step <br /> 5</p>
+      <div className="text-center bg-white rounded shadow space-y-2 relative py-10 px-2">
+        <div className="bg-[#0B79BF] absolute z-10 rounded-b-full py-6  -mt-10 ms-3 text-white px-3 text-xs font-mono">
+          <p>Step <br /> <span className="text-base font-bold">5</span></p>
         </div>
         <img className="w-32 h-32 object-contain bg-slate-300 bg-opacity-10 p-2 avatar rounded-full" src={icon3} alt="Step 1" />
         <h2 className="text-[#0B79BF] text- font-semibold pt-8">Refund of Exchange</h2>
