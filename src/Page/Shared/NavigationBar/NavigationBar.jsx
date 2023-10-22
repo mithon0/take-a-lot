@@ -30,7 +30,7 @@ const NavigationBar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(location.pathname === "/" ? true : false);
 
     const [deptName, setDeptName] = useState("");
-    console.log(deptName);
+    // console.log(deptName);
     const [mSearchPage, setMSearchPage] = useState(false)
     // console.log(mSearchPage);
     const inputRef = useRef(null);
@@ -2135,7 +2135,7 @@ const NavigationBar = () => {
                                     <Link to="/account/reviews" className="smallLink">Product Reviews</Link>
                                     <Link to="/account/invoices" className="smallLink">Invoices</Link>
                                     <Link to="/account/personal-details" className="smallLink">Personal Details</Link>
-                                    <Link to="/account/help-centre" className="smallLink">Help Center</Link>
+                                    <Link to="/help-centre" className="smallLink">Help Center</Link>
                                 </div>
                             </div>
 
