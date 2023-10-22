@@ -33,8 +33,7 @@ const ProductReview = () => {
           <ul className='flex gap-5 ms-5 text-black hover:text-blue-500 font-medium'>
             <NavLink to="/account/reviews" className={({ isActive }) => (isActive ? " text-xs border-b-2 border-blue-500 py-2 text-primary" : "hover:text-blue-500 py-2  rounded-r-full bg-opacity-10 border-b-4 border-transparent text-xs text-[#5f5f60]")}>Order Items</NavLink>
 
-            <NavLink to="/account/reviewshistory" className={({ isActive }) => (isActive ? " text-[#5f5f60] text-xs border-b-2 border-blue-500 py-2" : "hover:text-blue-500 py-2  rounded-r-full bg-opacity-10 border-b-4 border-transparent text-xs text-[#5f5f60]")}>Reviews History</NavLink>
-
+            <NavLink to="/account/reviewshistory" className={({ isActive }) => (isActive ? "text-[#5f5f60] text-xs border-b-2 border-blue-500 py-2" : "hover:text-blue-500 py-2  rounded-r-full bg-opacity-10 border-b-4 border-transparent text-xs text-[#5f5f60]")}>Reviews History</NavLink>
 
           </ul>
         </div>
@@ -44,7 +43,6 @@ const ProductReview = () => {
           <p>You are only able to review products purchased from Takealot.com</p>
           <Link to="/all" className="bg-primary text-white font-semibold border border-primary px-4 py-2 rounded">Start Shopping</Link>
         </div>
-
       </div>
     </div>
   );
