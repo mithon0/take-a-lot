@@ -28,7 +28,7 @@ const CreditRefunds = () => {
           </ul>
         </div>
         <div className='pt-28 pb-20'>
-          <p className='text-sm'>You have no history abilavil</p>
+          <p className='text-sm'>You have no history available</p>
         </div>
 
       </div>
