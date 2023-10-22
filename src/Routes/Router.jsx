@@ -32,6 +32,7 @@ import AddressBook from "../Page/AddressBook/AddressBook";
 import Newsletter from "../Page/Newsletter/Newsletter";
 import ReviewsHistory from "../Page/ReviewsHistory/ReviewsHistory";
 import RefundsHistory from "../Page/RefundsHistory/RefundsHistory";
+import FeeEstimator from "../Page/FeeEstimator/FeeEstimator";
 
 
 
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: 'fee-estimator',
+        element: <FeeEstimator/>
       },
       {
         path: "/all",

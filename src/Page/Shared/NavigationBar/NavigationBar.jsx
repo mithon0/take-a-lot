@@ -2217,7 +2217,7 @@ const NavigationBar = () => {
                             </button>
 
                         </form>
-
+                            
                         <div className="w-full grid grid-cols-8 mt-2 text-center text-[#333333] text-xs bg-[#ededed] rounded-l-sm rounded-r-sm">
                             <Link to="/alot-for-less" className="  py-[6px] text-white bg-[#55378b] hover:bg-[#61419c] rounded-l-sm"> Alot For Less</Link>
 
