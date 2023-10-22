@@ -32,6 +32,7 @@ import AddressBook from "../Page/AddressBook/AddressBook";
 import Newsletter from "../Page/Newsletter/Newsletter";
 import ReviewsHistory from "../Page/ReviewsHistory/ReviewsHistory";
 import RefundsHistory from "../Page/RefundsHistory/RefundsHistory";
+import FeeEstimator from "../Page/FeeEstimator/FeeEstimator";
 import PickupPoints from "../Page/PickupPoints/PickupPoints";
 import ReturnPolicy from "../Page/ReturnPolicy/ReturnPolicy";
 import About from "../Page/About/About";
@@ -62,6 +63,10 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: 'fee-estimator',
+        element: <FeeEstimator/>
       },
       {
         path: "/all",
