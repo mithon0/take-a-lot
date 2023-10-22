@@ -25,9 +25,9 @@ const FeeEstimator = () => {
   return (
     <div className="">
       <div className="bg-white py-4 w-full flex px-2">
-        <div>
+        <Link to="/">
           <img className="w-28" src={logo} alt="" />
-        </div>
+        </Link>
         <div className="ps-[500px]">
           <h1 className="text-lg flex items-center gap-2 font-semibold">
             <FaCalculator /> FeeEstimator
@@ -478,7 +478,7 @@ const FeeEstimator = () => {
           <div className="flex justify-between mt-2">
             <p className="text-xs">Required <span className="text-red-500">*</span></p>
             <div>
-                <button className="bg-blue-400 px-4 py-2 rounded text-white text-xs">Calculate</button>
+                <button className="px-4 py-2 bg-primary rounded text-white font-semibold text-xs">Calculate</button>
             </div>
           </div>
          
@@ -489,6 +489,7 @@ const FeeEstimator = () => {
         </form>
       </div>
     </div>
+
   );
 };
 

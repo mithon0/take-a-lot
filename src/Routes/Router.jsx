@@ -65,7 +65,7 @@ export const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: 'fee-estimator',
+        path: '/fee-estimator',
         element: <FeeEstimator/>
       },
       {

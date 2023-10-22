@@ -17,7 +17,7 @@ Marketplace Platform</h2>
 
 <div className='flex flex-col lg:flex-row gap-5 my-5 absolute bottom-3 left-0 lg:left-6 right-0'>
     <Link to="/sell/apply" className='w-full lg:w-48 text-center rounded-3xl lg:rounded-none px-8 py-2 border border-white bg-white hover:text-white hover:bg-transparent text-primary font-medium text-sm'>Apply to Sell</Link>
-    <Link to="/sell/pricing" className='w-full lg:w-48 text-center rounded-3xl lg:rounded-none px-8 py-2 border border-white hover:bg-white text-white bg-transparent hover:text-primary font-medium text-sm'>See Pricing</Link>
+    <a href="#pricing" className='w-full lg:w-48 text-center rounded-3xl lg:rounded-none px-8 py-2 border border-white hover:bg-white text-white bg-transparent hover:text-primary font-medium text-sm'>See Pricing</a>
 </div>
 </div>
 
@@ -404,7 +404,7 @@ Takealot revenue</p>
 </div>
 
 
-<div className='px-6'>
+<div className='px-6' id='pricing'>
 <div tabIndex={0} className="collapse collapse-arrow  bg-gray-300 bg-opacity-20 rounded-none">
                         <input type="checkbox" />
                         <div className="collapse-title font-semibold text- border-b-2 border-b-gray-500">
@@ -876,7 +876,7 @@ They are calculated as a % of the VAT inclusive selling price per item sold. Thi
 
 
 
-<div className='hero h-80 my-10' style={{backgroundImage: "url(https://shopfront.takealot.com/b0fd31305b6ec6eb9e374f5e527a4ad540896d49/static/media/src/images/sell-on-takealot/line-art-bg.png-88f0c171cbf5ea3af16e.png)"}}>
+<div className='hero h-72 my-10' style={{backgroundImage: "url(https://shopfront.takealot.com/b0fd31305b6ec6eb9e374f5e527a4ad540896d49/static/media/src/images/sell-on-takealot/line-art-bg.png-88f0c171cbf5ea3af16e.png)"}}>
 
 <div className='flex items-center flex-col gap-7'>
     <p className='text-4xl lg:text-5xl font-bold text-white'>Ready to start selling online?</p>
