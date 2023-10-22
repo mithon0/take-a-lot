@@ -12,10 +12,10 @@ const CreditRefunds = () => {
                         <h1 className='text-2xl font-bold'>R O </h1>
                     </div>
                     <div>
-                        <button className='bg-[#0B79BF] py-2 px-6 text-white rounded'>Redeem Gift Voucher</button>
+                        <button className='px-5 py-3 rounded text-xs font-medium text-white bg-primary'>Redeem Gift Voucher</button>
                     </div>
                 </div>
-                <p>Credit will be automatically applied to your next purchase.</p>
+                <p className='text-sm'>Credit will be automatically applied to your next purchase.</p>
             </div>
             <div className="text-center space-y-4 bg-white shadow pt-6 pb-20 mt-4">
         <div className='justify-center items-center'>

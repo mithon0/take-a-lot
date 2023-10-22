@@ -51,7 +51,7 @@ const ApplyVoucher = () => {
         />
         <button
           type="submit"
-          className={`bg-[#0B79BF] text-white px-3 py-2 rounded ${
+          className={`px-5 py-3 rounded text-xs font-medium text-white bg-primary ${
             isDirty || errors.voucherCode ? '' : 'bg-opacity-50 cursor-not-allowed'
           }`}
           disabled={!isDirty || !!errors.voucherCode}
