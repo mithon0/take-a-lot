@@ -31,6 +31,7 @@ import ApplyVoucher from "../Page/ApplyVoucher/ApplyVoucher";
 import AddressBook from "../Page/AddressBook/AddressBook";
 import Newsletter from "../Page/Newsletter/Newsletter";
 import ReviewsHistory from "../Page/ReviewsHistory/ReviewsHistory";
+import RefundsHistory from "../Page/RefundsHistory/RefundsHistory";
 
 
 
@@ -165,6 +166,10 @@ export const router = createBrowserRouter([
           {
             path: "reviewshistory",
             element: <ReviewsHistory/>
+          },
+          {
+            path: "refundshistory",
+            element: <RefundsHistory/>
           }
         ]
       }
