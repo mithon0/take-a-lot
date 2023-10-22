@@ -28,7 +28,7 @@ const RefundsHistory = () => {
       </ul>
     </div>
     <div className='text-sm pt-28 pb-20'>
-      <p>You have no history abilavil</p>
+      <p>You have no history available</p>
     </div>
 
       </div>
