@@ -148,9 +148,9 @@ const HelpCenter = () => {
 
                         <Link to="/account/credits" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Credit & Refunds</Link>
 
-                        <Link to="/" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Returns Policy</Link>
+                        <Link to="/return-policy-help/" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Returns Policy</Link>
 
-                        <Link to="/account/account/orders" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Track Delivery</Link>
+                        <Link to="/account/orders" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Track Delivery</Link>
                     </div>
 
 
@@ -381,7 +381,7 @@ const HelpCenter = () => {
 
                         </Link>
 
-                        <Link to="/help-centre/account/orders-cancellations" className='w-full h-[260px] bg-white shadow p-5'>
+                        <Link to="/help-centre/orders-cancellations" className='w-full h-[260px] bg-white shadow p-5'>
 
                             <div className='w-full flex items-center justify-between pb-5 border-b'>
                                 <div className='flex items-center gap-4'>
