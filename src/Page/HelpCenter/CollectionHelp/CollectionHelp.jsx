@@ -42,7 +42,7 @@ const CollectionHelp = () => {
 
                 <div className='flex  items-center gap-2'>
                 <Link to="/account/orders" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>View Orders</Link>
-                        <Link to="/account/takealot-pickup-points" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Pickup Points</Link>
+                        <Link to="/takealot-pickup-points" className='text-xs font-light px-3 py-2 rounded-2xl text-white border border-white hover:bg-white hover:text-primary transition-all duration-500 text-center'>Pickup Points</Link>
                 </div>
             </div>
 
