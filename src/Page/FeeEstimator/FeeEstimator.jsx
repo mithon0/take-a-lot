@@ -24,6 +24,7 @@ const FeeEstimator = () => {
       };
   return (
     <div className="">
+
       <div className="bg-white py-4 w-full flex px-2">
         <Link to="/">
           <img className="w-28" src={logo} alt="" />
@@ -35,7 +36,7 @@ const FeeEstimator = () => {
         </div>
       </div>
       <div className="hero-content flex-col lg:flex-row mt-3">
-        <div className="bg-white px-3 py-3 hover:shadow-lg w-[35%] m-2">
+        <div className="bg-white px-3 py-3 hover:shadow-xl w-[35%] m-2 rounded">
           <h1 className="text-2xl font-semibold mb-3">Estimate Takealot Fees</h1>
           <p className="text-xs pb-[200px]">
             Use the Fee Estimator to estimate the Takealot Fees you will be
@@ -45,11 +46,11 @@ const FeeEstimator = () => {
             subscription fees, storage fees or any other fees that can be
             avoided and are not guaranteed to be applied to the sale of a
             product. <br /> <br /> For more information on how to use the Fee Estimator, click
-            <Link>here</Link> or view the Takealot <Link>pricing schedule</Link> for information on fees.
+            <Link className="text-blue-400"> here</Link> or view the Takealot <Link className="text-blue-400">pricing schedule</Link> for information on fees.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)}  className="bg-white mx-10 px-3 py-4 hover:shadow-lg">
+        <form onSubmit={handleSubmit(onSubmit)}  className="bg-white mx-10 px-3 py-4 hover:shadow-xl rounded">
 
             {/* pacage dmensions */}
           <div className="flex gap-2 ">
@@ -79,8 +80,10 @@ const FeeEstimator = () => {
             
             <div className="ms-5">
               <input
-                className={`border w-[80px] rounded-md py-1 px-3 outline-none focus:bg-blue-100 focus:border-blue-200 ${
-                  errors ? "border-red-500" : ""
+              {...register("Dimension1")}
+              name="Dimension1"
+                className={`border w-[80px] rounded-md py-1 px-3 outline-none focus:bg-blue-100 focus:border-blue-200 "border-red-500" focus:bg-blue-100 focus:border-blue-200 ${
+                    errors ? "border-red-500" : ""
                 }`}
                 type="text"
                 placeholder=""
@@ -117,6 +120,8 @@ const FeeEstimator = () => {
             </span>
             <div className="">
               <input
+              {...register("Dimension2")}
+              name="Dimension2"
                 className={`border w-[80px] rounded-md py-1 px-3 outline-none focus:bg-blue-100 focus:border-blue-200 ${
                   errors ? "border-red-500" : ""
                 }`}
@@ -198,12 +203,12 @@ const FeeEstimator = () => {
             
             <div className="flex gap-10 ms-20 text-xs">
                 <div className="">
-                <input type="radio" name="radio-1" className="radio" /> 7Kg <br />
-                <input type="radio" name="radio-1" className="radio " /> 725.1kg - 39.9kg
+                <input type="radio" name="radio-1" className="radio" /> {"<"+'='}7Kg <br />
+                <input type="radio" name="radio-1" className="radio " /> 25.1kg - 39.9kg
                 </div>
                 <div>
-                <input type="radio" name="radio-1" className="radio " /> 7Kg <br />
-                <input type="radio" name="radio-1" className="radio " /> 725.1kg - 39.9kg
+                <input type="radio" name="radio-1" className="radio " /> 7.1Kg - 25kg <br />
+                <input type="radio" name="radio-1" className="radio " /> 40kg - 70kg
                 </div>
             </div>
 
@@ -285,14 +290,14 @@ const FeeEstimator = () => {
       <select
         className="text-xs w-80 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
       >
-        <option value="">Consumer Electronics</option>
-        <option value="option1">Consumer Electronics</option>
-        <option value="option2">Home</option>
-        <option value="option3">Personal & Lifestyle</option>
-        <option value="option4">Family</option>
-        <option value="option5">Consumables</option>
-        <option value="option5">Media</option>
-        <option value="option5">Office & Business</option>
+        <option value="">Smart Home & Connected Living</option>
+        <option value="option1">Electronic Accessories</option>
+        <option value="option2">Cameras</option>
+        <option value="option3">Gaming</option>
+        <option value="option4">Computers & Laptops</option>
+        <option value="option5">Computers & Components</option>
+        <option value="option5">TV & audio</option>
+        <option value="option5">Mobile</option>
       </select>
     </div>              
           </div>
@@ -478,7 +483,9 @@ const FeeEstimator = () => {
           <div className="flex justify-between mt-2">
             <p className="text-xs">Required <span className="text-red-500">*</span></p>
             <div>
+
                 <button className="px-4 py-2 bg-primary rounded text-white font-semibold text-xs">Calculate</button>
+
             </div>
           </div>
          
@@ -488,6 +495,9 @@ const FeeEstimator = () => {
 
         </form>
       </div>
+      <div className="text-right">
+                <button className=" -rotate-90  -mr-6 bg-blue-600 px-4 py-2 rounded text-white text-xs">Calculate</button>
+            </div>
     </div>
 
   );
