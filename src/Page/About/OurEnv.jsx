@@ -30,8 +30,89 @@ const OurEnv = () => {
       </div>
 
       
-        <div className="mt-14">
-        <img src={valueWallImg} alt="" />
+        <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 gap-10">
+            <div>
+                <img src="https://media.takealot.com/covers_blog/environment011.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/environment031.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/environment061.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-0221.jpg?_=1685969302" alt="" />
+            </div>
+        </div>
+        <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 gap-10">
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-0521.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/environment041.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-0031.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-0141.jpg?_=1685969302" alt="" />
+            </div>
+        </div>
+        <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 gap-10">
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-0201.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-058.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-039.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-0011.jpg?_=1685969302" alt="" />
+            </div>
+        </div>
+        <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 gap-10">
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-025.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-0461.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/environment061.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-0221.jpg?_=1685969302" alt="" />
+            </div>
+        </div>
+        <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 gap-10">
+            <div>
+                <img src="https://media.takealot.com/covers_blog/environment011.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/environment031.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/environment061.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-0221.jpg?_=1685969302" alt="" />
+            </div>
+        </div>
+        <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 gap-10">
+            <div>
+                <img src="https://media.takealot.com/covers_blog/environment011.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/environment031.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/environment061.jpg?_=1685969302" alt="" />
+            </div>
+            <div>
+                <img src="https://media.takealot.com/covers_blog/Takealotold-office-0221.jpg?_=1685969302" alt="" />
+            </div>
         </div>
 
     </div>
