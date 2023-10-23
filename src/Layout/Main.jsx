@@ -13,7 +13,7 @@ const Main = () => {
         <div>
             {/* <FeeEstimator></FeeEstimator> */}
             {helpCenterPath || <NavigationBar></NavigationBar>}
-            {helpCenterPath || <FeeEstimator></FeeEstimator>}
+            {/* {helpCenterPath || <FeeEstimator></FeeEstimator>} */}
             <div className="max-w-7xl mx-auto">
             <Outlet></Outlet>
             </div>
