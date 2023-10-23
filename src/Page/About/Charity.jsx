@@ -1,12 +1,7 @@
 import React from "react";
-import coverimg from "../../assets/images/Our-journey.webp";
 import dottedBg2 from "../../assets/images/dotted-bg-2.png";
-import bodyImg from "../../assets/images/body_image.jpg";
-import desgImg from "../../assets/images/Our-Destination-Page-1024x341.jpg";
-import rootSec from "../../assets/images/roots-scooters2.jpg";
 import { Link } from "react-router-dom";
-import keyboardImg from "../../assets/images/Mr-D-strap.webp";
-import deleveryImg from "../../assets/images/takealot_delivery_colour.webp";
+
 
 const Charity = () => {
   return (
