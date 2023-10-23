@@ -6,22 +6,18 @@ import { Link } from "react-router-dom";
 const Charity = () => {
   return (
     <div>
-      <div className="relative bg-black bg-opacity-60 px-12 overflow-hidden">
-        <img
-          src={dottedBg2}
-          alt=""
-          className="absolute bg-black bg-opacity-0 w-[800px] ms-28 opacity-40 -rotate-12 z-0"
-        />
-        <div className="relative z-10 text-white flex  items-center justify-center gap-48">
+      <div className="relative bg-black bg-opacity-60 px-12 hero" style={{backgroundImage: "url(https://static.takealot.com/images/top-strap-bg.gif)"}}>
+
+        <div className="relative z-10 text-white flex  items-center justify-center gap-48 w-full py-5">
           <div className="space-y-3">
-            <h2 className="text-3xl font-semibold">Learn More About</h2>
-            <h1 className="text-5xl font-bold mb-4">OUR CHARITY</h1>
+            <h2 className="text-xl lg:text-3xl font-medium">LEARN MORE ABOUT</h2>
+            <h1 className="text-3xl lg:text-5xl font-bold mb-4">OUR CHARITY</h1>
             <p className="text-xs">
               Together with our shoppers, we strive to make a difference in the
               lives of those in need by supporting Beautiful Gate South Africa.
             </p>
           </div>
-          <div className="">
+          <div className=" w-full hidden lg:block">
             <img
               src="https://media.takealot.com/covers_blog/Our-Charity-Strap.png?_=1685969305"
               alt="Who We Are"
@@ -31,7 +27,7 @@ const Charity = () => {
         </div>
       </div>
 
-      <div className="mx-20">
+      <div className="px-4 lg:20">
         <div className="">
           <div className="grid lg:grid-cols-2 gap-5 mt-10">
             <div>
@@ -120,7 +116,7 @@ const Charity = () => {
                   src="https://developers.google.com/static/maps/images/landing/hero_maps_static_api.png"
                   alt=""
                 />
-                <div className="mt-5">
+                <div className="mt-5 text-sm">
                 <p>Tel: +27 21 370 2500</p>
                 <p>Fax: +27 21 374 8237</p>
                 <p>Email:
@@ -134,10 +130,10 @@ const Charity = () => {
           </div>
         </div>
       </div>
-      <div className="mx-20">
+      <div className="px-4 lg:20">
         <div className="">
-          <div className="grid lg:grid-cols-2 gap-5 mt-10">
-            <div>
+          <div className="flex items-start flex-col lg:flex-row gap-5 mt-10">
+            <div className="w-full">
               <div className="float-left">
                 <h2 className="font-semibold text-lg">Projects</h2>
               </div>
@@ -160,7 +156,7 @@ const Charity = () => {
                 
               </div>
             </div>
-            <div>
+            <div className="w-full">
               <div className="float-left">
                 <h2 className="font-semibold text-lg">Inspiration</h2>
               </div>
@@ -171,7 +167,7 @@ const Charity = () => {
               <br />
               <div>
                 
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/dXUSAHTazxI?si=K8Ejf1EBn8OmO_x1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe className="w-full h-80"  src="https://www.youtube.com/embed/dXUSAHTazxI?si=K8Ejf1EBn8OmO_x1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
               </div>

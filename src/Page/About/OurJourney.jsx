@@ -9,29 +9,25 @@ import { Link } from "react-router-dom";
 const OurJourney = () => {
     return (
         <div>
-      <div className="relative bg-black bg-opacity-60 px-12 overflow-hidden">
-        <img
-          src={dottedBg2}
-          alt=""
-          className="absolute bg-black bg-opacity-0 w-[800px] ms-28 opacity-40 -rotate-12 z-0"
-        />
-        <div className="relative z-10 text-white flex  items-center justify-center gap-48">
-          <div className="space-y-3">
-            <h2 className="text-3xl font-semibold">
-              More About
+      <div className="relative bg-black bg-opacity-60 px-12 overflow-hidden" style={{backgroundImage: "url(https://static.takealot.com/images/top-strap-bg.gif)"}}>
+
+        <div className="relative z-10 text-white flex  items-center justify-center gap-10 px-3 lg:px-10">
+          <div className="space-y-3 w-full py-5">
+            <h2 className="text-3xl font-medium tracking-wider">
+            MORE ABOUT
             </h2>
-            <h1 className="text-5xl font-bold mb-4">Our Journey</h1>
-            <p className="text-xs">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-4">OUR JOURNEY</h1>
+            <p className="text-sm">
             Follow our exciting journey from humble beginnings to where we are today and where we are heading.
             </p>
           </div>
-          <div className="">
-            <img src={coverimg} alt="Who We Are" className="h-56" />
+          <div className="w-full hidden lg:block">
+            <img src={coverimg} alt="Who We Are" />
           </div>
         </div>
       </div>
 
-      <div className="mx-20">
+      <div className="px-3 lg:px-20">
       <div className="">
         <div className="grid lg:grid-cols-2 gap-5 mt-10">
             <div>
@@ -46,8 +42,8 @@ const OurJourney = () => {
                     <div className="border border-slate-400 opacity-30 mt-1"></div>
                 </div>
                 <br />
-                <p className="text-black"><Link to='/' className="text-primary">Takealot.com</Link>’s mission is to be the most customer-centric online shopping destination in Africa, and has built a foundation on the simple concept that the customer comes first.</p> <br />
-                <p className="text-slate-500">The success of the business is based on its ability to delight customers with amazing customer service. Takealot.com is dedicated to improving the customer experience, from the moment you arrive on the website or app and place an order to when it arrives at your door.</p>
+                <p className="text-black text-sm font-medium"><Link to='/' className="text-primary">Takealot.com</Link>’s mission is to be the most customer-centric online shopping destination in Africa, and has built a foundation on the simple concept that the customer comes first.</p> <br />
+                <p className="text-slate-500 text-sm">The success of the business is based on its ability to delight customers with amazing customer service. Takealot.com is dedicated to improving the customer experience, from the moment you arrive on the website or app and place an order to when it arrives at your door.</p>
             </div>
 
 

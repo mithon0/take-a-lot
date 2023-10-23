@@ -7,30 +7,26 @@ import { Link } from "react-router-dom";
 const WhoWeAre = () => {
   return (
     <div>
-      <div className="relative bg-black bg-opacity-60  overflow-hidden">
-        <img
-          src={dottedBg2}
-          alt=""
-          className="absolute bg-black bg-opacity-0 w-[800px] ms-28 opacity-40 -rotate-12 z-0"
-        />
+      <div className="relative bg-black bg-opacity-60  overflow-hidden hero" style={{backgroundImage: "url(https://static.takealot.com/images/top-strap-bg.gif)"}}>
+
         <div className="relative z-10 text-white flex  items-center justify-center gap-48">
-          <div className="space-y-3">
-            <h2 className="text-3xl font-semibold">
+          <div className="space-y-3 py-5 px-3">
+            <h2 className="text-3xl font-medium">
               Learn More About
             </h2>
-            <h1 className="text-5xl font-bold mb-4">Who We Are</h1>
-            <p className="text-xs">
+            <h1 className="text-5xl font-bold mb-4 tracking-wider">Who We Are</h1>
+            <p className="text-sm">
               We're takealot.com, and we've built our business on the simple
               principle that our <br /> customers come first.
             </p>
           </div>
-          <div className="mt-8">
+          <div className="mt-8 hidden lg:block">
             <img src={coverimg} alt="Who We Are" className="h-56" />
           </div>
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-10 mt-16 mx-20 items-center">
+      <div className="grid lg:grid-cols-2 gap-10 mt-16 lg:mx-20 px-3 items-center text-sm">
         <div>
           <p className="text-md space-y-2">
             <p>
@@ -54,7 +50,7 @@ const WhoWeAre = () => {
           </p>
         </div>
         <div>
-            <img className="h-[500px]" src={bodyImg} alt="" />
+            <img src={bodyImg} alt="" />
         </div>
       </div>
     </div>

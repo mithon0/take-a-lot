@@ -7,23 +7,19 @@ import envImg from '../../assets/images/Our-environment1.webp'
 const OurEnv = () => {
     return (
         <div>
-      <div className="relative bg-black bg-opacity-60  overflow-hidden">
-        <img
-          src={dottedBg2}
-          alt=""
-          className="absolute bg-black bg-opacity-0 w-[800px] ms-28 opacity-40 -rotate-12 z-0"
-        />
-        <div className="relative z-10 text-white flex  items-center justify-center px-16 gap-10">
-          <div className="space-y-3">
+      <div className="relative bg-black bg-opacity-60  overflow-hidden hero" style={{backgroundImage: "url(https://static.takealot.com/images/top-strap-bg.gif)"}}>
+
+        <div className="relative z-10 text-white flex  items-center justify-center px-5 lg:px-16 gap-10">
+          <div className="space-y-3 py-5 w-full">
             <h2 className="text-3xl font-semibold">
-              Learn More About
+            LEARN MORE ABOUT
             </h2>
-            <h1 className="text-5xl font-bold mb-4">Our Environment</h1>
+            <h1 className="text-5xl font-bold mb-4">OUR ENVIRONMENT</h1>
             <p className="text-xs">
             This is where it all happens, the creative hub where ideas take shape and plans get put into action. Take a peek at a day in the life of takealot.com.
             </p>
           </div>
-          <div className="">
+          <div className="w-full hidden lg:block">
             <img src={envImg} alt="Who We Are" className="" />
           </div>
         </div>

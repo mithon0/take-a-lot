@@ -6,24 +6,20 @@ import valueWallImg from '../../assets/images/Values-Wall-Blue-FINAL-2022-02.web
 const OurValue = () => {
     return (
         <div>
-      <div className="relative bg-black bg-opacity-60  overflow-hidden">
-        <img
-          src={dottedBg2}
-          alt=""
-          className="absolute bg-black bg-opacity-0 w-[800px] ms-28 opacity-40 -rotate-12 z-0"
-        />
-        <div className="relative z-10 text-white flex  items-center justify-center gap-48">
-          <div className="space-y-3">
-            <h2 className="text-3xl font-semibold">
-              More About
+      <div className="relative bg-black bg-opacity-60  overflow-hidden hero" style={{backgroundImage: "url(https://static.takealot.com/images/top-strap-bg.gif)"}}>
+
+        <div className="relative z-10 text-white flex  items-center justify-center ">
+          <div className="space-y-3 w-full py-5">
+            <h2 className="text-3xl font-medium">
+            LEARN MORE ABOUT
             </h2>
-            <h1 className="text-5xl font-bold mb-4">Our Journey</h1>
-            <p className="text-xs">
+            <h1 className="text-5xl font-bold mb-4">OUR VALUES</h1>
+            <p className="text-sm">
             Follow our exciting journey from humble beginnings to where we are today and where we are heading.
             </p>
           </div>
-          <div className="">
-            <img src={valueImg} alt="Who We Are" className="w-[450px]" />
+          <div className="w-full hidden lg:block">
+            <img src={valueImg} alt="Who We Are" />
           </div>
         </div>
       </div>

@@ -7,30 +7,26 @@ import deleveryImg from "../../assets/images/takealot_delivery_colour.webp";
 const DeliveryTeam = () => {
   return (
     <div>
-      <div className="relative bg-black bg-opacity-60 px-12 overflow-hidden">
-        <img
-          src={dottedBg2}
-          alt=""
-          className="absolute bg-black bg-opacity-0 w-[800px] ms-28 opacity-40 -rotate-12 z-0"
-        />
+      <div className="relative bg-black bg-opacity-60 px-12 hero" style={{backgroundImage: "url(https://static.takealot.com/images/top-strap-bg.gif)"}}>
+
         <div className="relative z-10 text-white flex  items-center justify-center gap-48">
-          <div className="space-y-3">
-            <h2 className="text-3xl font-semibold">Learn More About</h2>
-            <h1 className="text-5xl font-bold mb-4">
-              The Takealot delevery Team
+          <div className="space-y-3 w-full py-5">
+            <h2 className="text-xl lg:text-3xl font-medium">Learn More About</h2>
+            <h1 className="text-3xl lg:text-5xl font-bold mb-4">
+              The Takealot <br /> delevery Team
             </h1>
             <p className="text-xs">
               With a dedicated team of professionals, the Takealot Delivery Team
               is the driving force behind our world-class delivery service.
             </p>
           </div>
-          <div className="">
-            <img src={keyboardImg} alt="Who We Are" className="h-56" />
+          <div className="w-full hidden lg:block">
+            <img src={keyboardImg} alt="Who We Are" className="" />
           </div>
         </div>
       </div>
 
-      <div className="mx-20">
+      <div className="px-4 lg:20">
         <div className="">
           <div className="grid lg:grid-cols-2 gap-5 mt-10">
             <div>
