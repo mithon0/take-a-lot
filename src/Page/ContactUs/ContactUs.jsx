@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ReturnPolicyTabs from "../../components/ReturnPolicyTabs/ReturnPolicyTabs";
 
 const ContactUs = () => {
@@ -34,7 +34,7 @@ const ContactUs = () => {
           <h2 className="text-xl mb-2 font-semibold">Need Help?</h2>
           <div className="">
             <p>
-              Visit our Help page for answers to frequently asked delivery,
+              Visit our <Link to='/help-centre' className="text-primary">Help</Link> page for answers to frequently asked delivery,
               order, payment and product questions, or log an enquiry if there’s
               something specific you need assistance with.
             </p>{" "}
@@ -55,14 +55,14 @@ const ContactUs = () => {
             <h2 className="text-xl mb-2 font-semibold">Track My Order</h2>{" "}
             <br />
             <p>
-              Visit our Help page for the most current tracking information we
+              Visit our <Link to='/help-centre' className="text-primary">Help</Link> page for the most current tracking information we
               have for your order using your order number.
             </p>{" "}
             <br />
             <p>
               You can also track your delivery at any time by selecting the
               Order Number from your Order History on your Takealot account
-              profile here.
+              profile <Link to='/orders' className="text-primary">here</Link>.
             </p>
           </div>
         </div>
@@ -113,7 +113,7 @@ const ContactUs = () => {
             Richmond Park (NEW Cape Town <br /> Warehouse Pickup Point)
             Collections
           </h4>
-          Click here to find a Takealot Pickup Point near you.
+          Click <Link to='/takealot-pickup-points' className="text-primary">here</Link> to find a Takealot Pickup Point near you.
         </div>
         <div>
           <h2 className="text-xl mb-2 font-semibold">Cape Town Office</h2>
@@ -127,18 +127,15 @@ const ContactUs = () => {
           <p>
             Do you have a media request for product reviews or press comment? Do
             you have an exciting marketing partnership idea that you’d like to
-            propose to Takealot? Then you can reach our friendly Marketing team
-            here. Alternatively, do you have an inquiry about the Takealot
-            Group? Reach out to us here.
+            propose to Takealot? Then you can reach our friendly <Link to='' className="text-primary"><Link to='/help-centre' className="text-primary">Marketing team
+            here.</Link></Link> Alternatively, do you have an inquiry about the Takealot
+            Group? Reach out to us <Link to='/help-centre' className="text-primary">here</Link>.
           </p> <br />
           <h2 className="text-xl mb-2 font-semibold">
             Marketplace Seller Solutions
           </h2>
           <p>
-            Looking to sell something exciting on takealot.com? Head on over
-            here to find out more and apply. We receive a very high number of
-            requests every day and can only respond to applications via this
-            page. Thanks.
+            Looking to sell something exciting on <Link to='/' className="text-primary">Help</Link>? takealot.com
           </p>
         </div>
       </div>
