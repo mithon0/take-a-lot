@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import ReturnPolicyBanners from '../../components/ReturnPolicyBanners/ReturnPolicyBanners';
-import ReturnPolicyTabs from '../../components/ReturnPolicyTabs/ReturnPolicyTabs';
 
 const ReturnPolicy = () => {
 
