@@ -29,7 +29,7 @@ const ContactUs = () => {
       </div>
       <ReturnPolicyTabs />
 
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10 text-xs">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10 text-xs px-20">
         <div>
           <h2 className="text-xl mb-2 font-semibold">Need Help?</h2>
           <div className="">
