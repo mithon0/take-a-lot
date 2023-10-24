@@ -51,6 +51,7 @@ import DailyDeals from "../Page/ReturnPolicy/DailyDeals/DailyDeals";
 import VouchersAndCouponsConditions from "../Page/ReturnPolicy/VouchersAndCouponsConditions/VouchersAndCouponsConditions";
 import ResponsibleDisclosure from "../Page/ReturnPolicy/ResponsibleDisclosure/ResponsibleDisclosure";
 import PrivacyPolicy from "../Page/ReturnPolicy/PrivacyPolicy/PrivacyPolicy";
+import ContactUs from "../Page/ContactUs/ContactUs";
 
 
 
@@ -87,6 +88,10 @@ export const router = createBrowserRouter([
       {
         path: "/my-account",
         element: <MyAccountPage />
+      },
+      {
+        path: '/contact-us',
+        element: <ContactUs/>
       },
       {
         path: "/help-centre",
