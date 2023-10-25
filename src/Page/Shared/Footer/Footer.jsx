@@ -13,7 +13,7 @@ const Footer = () => {
         <footer className="text-gray-600 mt-20 -z-50">
             <div className="bg-white hidden lg:flex">
                 <div className="max-w-7xl mx-auto">
-                    <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+                    <div className="py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
                             <p className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
 
@@ -114,7 +114,7 @@ const Footer = () => {
 
                     </div>
 
-                    <div className="container mx-auto border-t  ">
+                    <div className="mx-auto border-t">
 
                         <div className="mt-4">
                             <div className="space-x-1  text-xs mb-3  " style={{ color: "#0b79bf" }}>
