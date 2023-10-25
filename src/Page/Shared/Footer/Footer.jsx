@@ -99,7 +99,7 @@ const Footer = () => {
                                         <li> <Link to='/return-policy-help/privacy-policy'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Privacy Policy</p></Link></li>
                                         <li> <Link to='/sell-on-takealot'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Sell on Takealot</p></Link></li>
                                         <li> <a href="speakup-process-policy.pdf" download="speakup-process-policy.pdf" to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Speak Up Process</p></a></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Deliver for Takealot</p></Link></li>
+                                        <li> <Link to='takealot-deliver'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Deliver for Takealot</p></Link></li>
                                         <li> <Link to='/return-policy-help/terms-and-conditions'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Terms & Conditions</p></Link></li>
                                         <li> <a href="human-rights-statement.pdf" download="human-rights-statement.pdf" to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Human Rights Statement</p></a></li>
 

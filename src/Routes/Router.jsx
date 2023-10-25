@@ -54,6 +54,7 @@ import PrivacyPolicy from "../Page/ReturnPolicy/PrivacyPolicy/PrivacyPolicy";
 import ContactUs from "../Page/ContactUs/ContactUs";
 import Competitions from "../Page/Competitions/Competitions";
 import ErrorPage from "../Page/ErrorPage/ErrorPage";
+import DeleverForTakealot from "../Page/DeleverForTakealot/DeleverForTakealot";
 
 
 
@@ -99,6 +100,10 @@ export const router = createBrowserRouter([
       {
         path: 'competitions',
         element: <Competitions/>
+      },
+      {
+        path: 'takealot-deliver',
+        element: <DeleverForTakealot/>
       },
       {
         path: "/help-centre",
