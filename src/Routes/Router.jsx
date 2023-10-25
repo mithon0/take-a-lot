@@ -52,6 +52,7 @@ import VouchersAndCouponsConditions from "../Page/ReturnPolicy/VouchersAndCoupon
 import ResponsibleDisclosure from "../Page/ReturnPolicy/ResponsibleDisclosure/ResponsibleDisclosure";
 import PrivacyPolicy from "../Page/ReturnPolicy/PrivacyPolicy/PrivacyPolicy";
 import ContactUs from "../Page/ContactUs/ContactUs";
+import ErrorPage from "../Page/ErrorPage/ErrorPage";
 
 
 
@@ -60,6 +61,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<ErrorPage />,
     children: [
       {
         path: '/',
