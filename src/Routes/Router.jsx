@@ -52,11 +52,8 @@ import VouchersAndCouponsConditions from "../Page/ReturnPolicy/VouchersAndCoupon
 import ResponsibleDisclosure from "../Page/ReturnPolicy/ResponsibleDisclosure/ResponsibleDisclosure";
 import PrivacyPolicy from "../Page/ReturnPolicy/PrivacyPolicy/PrivacyPolicy";
 import ContactUs from "../Page/ContactUs/ContactUs";
-<<<<<<< HEAD
 import Competitions from "../Page/Competitions/Competitions";
-=======
 import ErrorPage from "../Page/ErrorPage/ErrorPage";
->>>>>>> 796a2632f8a86cad845aab3447644a22cbb73f84
 
 
 
