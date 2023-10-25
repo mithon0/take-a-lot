@@ -122,7 +122,7 @@ const Competitions = () => {
 
             {/* banner section */}
       <div
-        className="hero bg-black bg-opacity-60  overflow-hidden about-container text-sm"
+        className="hero bg-black bg-opacity-60 h-[250px] overflow-hidden about-container text-sm"
         style={{
           backgroundImage:
             "url(https://static.takealot.com/images/top-strap-bg.gif)",
@@ -130,9 +130,9 @@ const Competitions = () => {
       >
         <div className="relative z-10 text-white flex  items-center px-8 lg:px-16 gap-10">
           <div className="space-y-4 w-full text-left">
-            <h2 className="text-4xl font-medium uppercase">Learn More about</h2>
-            <h1 className="text-5xl font-bold mb-4 uppercase">Competitions</h1>
-            <p className="text-sm">
+            <h2 className="lg:text-4xl font-medium uppercase">Learn More about</h2>
+            <h1 className="lg:text-5xl font-bold mb-4 uppercase">Competitions</h1>
+            <p className="lg:text-sm">
               Being a part of our family means that you'll have access to a ton
               of fun & fabulous competitions throughout the year! Who doesn't
               love a freebie, right?
