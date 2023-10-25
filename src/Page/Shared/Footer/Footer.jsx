@@ -37,7 +37,7 @@ const Footer = () => {
                                 <Link to='https://www.instagram.com/khejur.bd/' target='_blank' className="w-8 h-8 items-center  hover:text-red-500  justify-center inline-flex rounded-full font-bold text-lg scale-100 hover:scale-110 hover:ease-out duration-500 " style={{ border: "1px solid" }}><BsInstagram></BsInstagram> </Link>
                             </div>
                         </div>
-                        <div className="flex-grow flex flex-wrap md:pr-20 -mb-10   order-first">
+                        <div className="flex-grow flex flex-wrap -mb-10   order-first">
                             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
 
                                 <ul>
@@ -61,13 +61,13 @@ const Footer = () => {
                                 <nav className="list-none mb-10">
                                     <ul>
                                         <li> <p className="font-bold  mb-5 ">Help</p> </li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Returns</p></Link></li>
+                                        <li> <Link to='/help-centre/returns'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Returns</p></Link></li>
                                         <li> <Link to='/contact-us'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Contact Us</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800 ">Help Centre</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Submit an Idea</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Suggest a Product</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Shipping & Delivery</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Takealot Pickup Points</p></Link></li>
+                                        <li> <Link to='/help-centre'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800 ">Help Centre</p></Link></li>
+                                        <li> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUjBQcCeLiUuBwAAKylyX8uGz2W33ALxp8rA9baXs6SMVstg/viewform" target="_blank"> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Submit an Idea</p></a></li>
+                                        <li> <a href="https://docs.google.com/forms/d/e/1FAIpQLScY6PG1gJAdlkgVz7cRLAN9aq7q14DotTIF0TonuLKPRNAXdQ/viewform" target="_blank"> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Suggest a Product</p></a></li>
+                                        <li> <Link to='/help-centre/delivery'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Shipping & Delivery</p></Link></li>
+                                        <li> <Link to='/takealot-pickup-points'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Takealot Pickup Points</p></Link></li>
 
                                     </ul>
                                 </nav>
@@ -77,11 +77,11 @@ const Footer = () => {
                                 <nav className="list-none mb-10">
                                     <ul>
                                         <li> <p className="font-bold  mb-5 ">Account</p> </li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Returns</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Invoices</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Track Order</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800 ">My Account</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Personal Details</p></Link></li>
+                                        <li> <Link to='/account/returns'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Returns</p></Link></li>
+                                        <li> <Link to='/account/invoices'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Invoices</p></Link></li>
+                                        <li> <Link to='/account/orders'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Track Order</p></Link></li>
+                                        <li> <Link to='/account'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800 ">My Account</p></Link></li>
+                                        <li> <Link to='/account/personal-details'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Personal Details</p></Link></li>
 
                                     </ul>
                                 </nav>
@@ -92,16 +92,16 @@ const Footer = () => {
                                 <nav className="list-none mb-10">
                                     <ul>
                                         <li> <p className="font-bold  mb-5 ">Company</p> </li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Careers</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800 ">About Us</p></Link></li>
+                                        <li> <Link to='/about/careers'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Careers</p></Link></li>
+                                        <li> <Link to='/about'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800 ">About Us</p></Link></li>
                                         <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Competitions</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Press & News</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Privacy Policy</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Sell on Takealot</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Speak Up Process</p></Link></li>
+                                        <li> <Link to='/about/company-news'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Press & News</p></Link></li>
+                                        <li> <Link to='/return-policy-help/privacy-policy'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Privacy Policy</p></Link></li>
+                                        <li> <Link to='/sell-on-takealot'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Sell on Takealot</p></Link></li>
+                                        <li> <a href="speakup-process-policy.pdf" download="speakup-process-policy.pdf" to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Speak Up Process</p></a></li>
                                         <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Deliver for Takealot</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Terms & Conditions</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Human Rights Statement</p></Link></li>
+                                        <li> <Link to='/return-policy-help/terms-and-conditions'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Terms & Conditions</p></Link></li>
+                                        <li> <a href="human-rights-statement.pdf" download="human-rights-statement.pdf" to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Human Rights Statement</p></a></li>
 
                                     </ul>
                                 </nav>
