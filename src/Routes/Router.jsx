@@ -52,6 +52,7 @@ import VouchersAndCouponsConditions from "../Page/ReturnPolicy/VouchersAndCoupon
 import ResponsibleDisclosure from "../Page/ReturnPolicy/ResponsibleDisclosure/ResponsibleDisclosure";
 import PrivacyPolicy from "../Page/ReturnPolicy/PrivacyPolicy/PrivacyPolicy";
 import ContactUs from "../Page/ContactUs/ContactUs";
+import Competitions from "../Page/Competitions/Competitions";
 
 
 
@@ -94,6 +95,10 @@ export const router = createBrowserRouter([
         element: <ContactUs/>
       },
       {
+        path: 'competitions',
+        element: <Competitions/>
+      },
+      {
         path: "/help-centre",
         element: <HelpCenterLayout />,
         children: [
@@ -132,7 +137,7 @@ export const router = createBrowserRouter([
           {
             path:"data-privacy",
             element:<DataPrivacyHelp />
-          }
+          },
         ]
       },
       {

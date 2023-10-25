@@ -94,7 +94,7 @@ const Footer = () => {
                                         <li> <p className="font-bold  mb-5 ">Company</p> </li>
                                         <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Careers</p></Link></li>
                                         <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800 ">About Us</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Competitions</p></Link></li>
+                                        <li> <Link to='/competitions'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Competitions</p></Link></li>
                                         <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Press & News</p></Link></li>
                                         <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Privacy Policy</p></Link></li>
                                         <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Sell on Takealot</p></Link></li>
