@@ -62,7 +62,7 @@ const Footer = () => {
                                     <ul>
                                         <li> <p className="font-bold  mb-5 ">Help</p> </li>
                                         <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Returns</p></Link></li>
-                                        <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Contact Us</p></Link></li>
+                                        <li> <Link to='/contact-us'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Contact Us</p></Link></li>
                                         <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800 ">Help Centre</p></Link></li>
                                         <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Submit an Idea</p></Link></li>
                                         <li> <Link to='/'> <p className="text-xs lg:text-sm hover:underline hover:text-blue-800">Suggest a Product</p></Link></li>
