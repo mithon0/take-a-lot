@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const VouchersAndCouponsConditions = () => {
     return (
+
 <section className='content-container lg:px-10 px-2 text-sm'>
 
 <div className='space-y-3 text-xs my-3'>

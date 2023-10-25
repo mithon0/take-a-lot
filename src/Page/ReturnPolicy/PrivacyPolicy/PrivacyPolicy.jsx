@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
     return (
+
 <section className='content-container lg:px-10 px-2 text-sm'>
 
 <div className='space-y-3 text-xs my-3'>
@@ -197,6 +198,7 @@ notify you about changes to our Platforms, services and products, terms and cond
 <p className='my-10'>This version of the Privacy Policy replaces any preceding privacy policy provisions on our website. We may occasionally update this Privacy Policy. When you use our Platforms the version of the Privacy Policy posted on this page applies to you.</p>
 </div>
 </section>
+
     );
 };
 

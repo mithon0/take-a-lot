@@ -96,7 +96,7 @@ const OurCareers = () => {
                       <div className="mt-3 flex flex-col space-y-2">
                         <p className="font-bold">R 220</p>
                         <p className="items-center gap-1 text-sm">
-                          <HiStar className="inline-flex  gap-2  items-centerh-4 w-4 text-yellow-400" />{" "}
+                          <HiStar className="inline-flex  gap-2 items-center h-4 w-4 text-yellow-400" />{" "}
                           <span>4.3</span>
                         </p>
                           <div className="text-center w-full">
