@@ -55,6 +55,7 @@ import ContactUs from "../Page/ContactUs/ContactUs";
 import Competitions from "../Page/Competitions/Competitions";
 import ErrorPage from "../Page/ErrorPage/ErrorPage";
 import DeleverForTakealot from "../Page/DeleverForTakealot/DeleverForTakealot";
+import DriverPrivacyPolicy from "../Page/DriverPrivacyPolicy/DriverPrivacyPolicy";
 
 
 
@@ -104,6 +105,10 @@ export const router = createBrowserRouter([
       {
         path: 'takealot-deliver',
         element: <DeleverForTakealot/>
+      },
+      {
+        path: 'driver-privacy-policy',
+        element: <DriverPrivacyPolicy/>
       },
       {
         path: "/help-centre",

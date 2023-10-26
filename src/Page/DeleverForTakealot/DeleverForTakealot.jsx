@@ -129,7 +129,7 @@ const DeleverForTakealot = () => {
       >
         <div className="relative z-10 text-white flex  items-center px-8 lg:px-16 gap-10">
           <div className="space-y-4 w-full text-left">
-            <h1 className="lg:text-5xl text-3xl font-bold mb-4 uppercase">
+            <h1 className="lg:text-5xl text-3xli font-bold mb-4 uppercase">
               JOIN THE TAKEALOT.COM DELIVERY TEAM TODAY!
             </h1>
           </div>
@@ -195,7 +195,7 @@ const DeleverForTakealot = () => {
           <h4 className="font-semibold">For any queries with regards to your application contact <Link className="text-primary">drivers@takealot.com</Link></h4>
           <p className="mt-2">You’ll have the option of working part-time or full-time – and we’ll even provide the training! View privacy policy <Link className="text-primary">here</Link>.</p>
           <p>Takealot is an Equal Opportunity Employer. Applicants from the previously disadvantaged groups and people with disabilities will be given preference.  </p>
-          <Link to=''><button className="text-teal-500 px-6 py-2 rounded-md border border-teal-500 mt-5">Apply Now</button></Link>
+          <Link to='/driver-privacy-policy'><button className="text-teal-500 px-6 py-2 rounded-md border border-teal-500 mt-5">Apply Now</button></Link>
           </div>
         </div>
       </div>

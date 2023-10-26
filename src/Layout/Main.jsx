@@ -7,7 +7,7 @@ import FeeEstimator from "../Page/FeeEstimator/FeeEstimator";
 
 const Main = () => {
     const location = useLocation();
-    const helpCenterPath = location.pathname.includes("help-centre") || location.pathname.includes("fee-estimator");
+    const helpCenterPath = location.pathname.includes("help-centre") || location.pathname.includes("fee-estimator") || location.pathname.includes("driver-privacy-policy");
     // const noHeaderFooter = location.pathname.includes("fee-estimator");
     return (
         <div>
@@ -17,7 +17,6 @@ const Main = () => {
             <div className="max-w-7xl mx-auto">
             <Outlet></Outlet>
             </div>
-            {helpCenterPath || <Footer></Footer>}
             
             
         </div>
