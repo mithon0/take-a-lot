@@ -7,11 +7,11 @@ const DriverPrivacyPolicy = () => {
   return (
     <div className="mb-10">
       {/* nav section */}
-      <nav className="lg:flex lg:items-center bg-white py-4 shadow-md">
-        <div className="lg:flex gap-5">
-          <ol>Terms & Conditions</ol>
-          <ol>Driver Privacy Policy</ol>
-        </div>
+      <nav className="lg:flex lg:items-center bg-white py-4 shadow-md w-full px-3">
+        <ul className="lg:flex gap-5">
+          <Link to='/'><li>Terms & Conditions</li></Link>
+          <Link to='/'><li>Driver Privacy Policy</li></Link>
+        </ul>
         <div className="lg:ms-[250px]">
           <img
             className="w-40"
