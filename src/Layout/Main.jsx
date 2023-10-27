@@ -17,6 +17,8 @@ const Main = () => {
             <div className="max-w-7xl mx-auto">
             <Outlet></Outlet>
             </div>
+
+            {helpCenterPath || <Footer></Footer>}
             
             
         </div>

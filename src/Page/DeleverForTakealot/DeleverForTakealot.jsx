@@ -121,15 +121,15 @@ const DeleverForTakealot = () => {
 
       {/* banner section */}
       <div
-        className="hero bg-black bg-opacity-60 h-[250px] overflow-hidden about-container text-sm"
+        className="hero bg-black bg-opacity-60 h-[150px] lg:h-[250px] overflow-hidden about-container text-sm"
         style={{
           backgroundImage:
             "url(https://static.takealot.com/images/top-strap-bg.gif)",
         }}
       >
-        <div className="relative z-10 text-white flex  items-center px-8 lg:px-16 gap-10">
+        <div className="relative z-10 text-white flex  items-center px-4 lg:px-16 gap-10">
           <div className="space-y-4 w-full text-left">
-            <h1 className="lg:text-5xl text-3xli font-bold mb-4 uppercase">
+            <h1 className="lg:text-5xl text-3xl font-bold mb-4 uppercase">
               JOIN THE TAKEALOT.COM DELIVERY TEAM TODAY!
             </h1>
           </div>
@@ -137,7 +137,7 @@ const DeleverForTakealot = () => {
         </div>
       </div>
 
-      <div className="mt-10 px-20">
+      <div className="mt-10 px-5 lg:px-20">
         <img
           src="https://media.takealot.com/covers_blog/driver_recruitment_banner_delivery_man.png?_=1685969305"
           alt=""
@@ -145,12 +145,12 @@ const DeleverForTakealot = () => {
 
         <div>
           <div>
-            <h2 className="text-xl font-bold text-primary mt-4">
+            <h2 className="text-xl font-bold text-primary my-4">
               BECOME A DRIVER PARTNER AND JOIN THE TAKEALOT.COM DELIVERY TEAM
               TODAY!
             </h2>
             <h4 className="font-semibold">What you need:</h4>
-            <div className="">
+            <ul className="pl-8 list-disc text-sm">
               <li className="mb-2 mt-3">
                 Own smartphone required with android V7 or higher for the
                 delivery app & GPS.
@@ -167,11 +167,11 @@ const DeleverForTakealot = () => {
               <li className="mb-2">Vehicle Registration form (RC1)</li>
               <li className="mb-2">Valid Roadworthy Certificate</li>
               <li className="mb-2">Clear criminal record</li>
-            </div>
+            </ul>
           </div>
 
           <h4 className="font-semibold">Benefits of working as an Independent Contractor for Mr D / Takealot:</h4>
-          <div className="">
+          <ul className="pl-8 list-disc text-sm">
             <li className="mb-2 mt-3">We operate from Monday to Sunday</li>
             <li className="mb-2">
               Premium rates offered from Friday to Sunday
@@ -188,12 +188,12 @@ const DeleverForTakealot = () => {
             <li className="mb-2">
               Access to free road emergency response service
             </li>
-          </div>
+          </ul>
 
-          <div>
+          <div className="text-sm my-4">
           <h4 className="font-semibold">Fill out the easy application form and we’ll connect you with your closest branch.</h4>
-          <h4 className="font-semibold">For any queries with regards to your application contact <Link className="text-primary">drivers@takealot.com</Link></h4>
-          <p className="mt-2">You’ll have the option of working part-time or full-time – and we’ll even provide the training! View privacy policy <Link className="text-primary">here</Link>.</p>
+          <h4 className="font-semibold">For any queries with regards to your application contact <a href="mailto:drivers@takealot.com" className="text-primary">drivers@takealot.com</a></h4>
+          <p className="mt-2">You’ll have the option of working part-time or full-time – and we’ll even provide the training! View privacy policy <Link className="text-primary font-medium" to="/return-policy-help/privacy-policy">here</Link>.</p>
           <p>Takealot is an Equal Opportunity Employer. Applicants from the previously disadvantaged groups and people with disabilities will be given preference.  </p>
           <Link to='/driver-privacy-policy'><button className="text-teal-500 px-6 py-2 rounded-md border border-teal-500 mt-5">Apply Now</button></Link>
           </div>

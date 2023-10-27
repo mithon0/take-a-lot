@@ -9,8 +9,12 @@ const DriverPrivacyPolicy = () => {
       {/* nav section */}
       <nav className="lg:flex lg:items-center bg-white py-4 shadow-md w-full px-3">
         <ul className="lg:flex gap-5">
-          <Link to='/'><li>Terms & Conditions</li></Link>
-          <Link to='/'><li>Driver Privacy Policy</li></Link>
+          <a href='Final Driver Facing Privacy Policy.docx.pdf' download="Final Driver Facing Privacy Policy.docx.pdf">
+            <li>Terms & Conditions</li>
+          </a>
+          <a href='TDT IC Driver Operational Guidelines & Role Expectations - Driver v2.2.pdf' download="TDT IC Driver Operational Guidelines & Role Expectations - Driver v2.2.pdf">
+            <li>Driver Privacy Policy</li>
+          </a>
         </ul>
         <div className="lg:ms-[250px]">
           <img
@@ -21,20 +25,20 @@ const DriverPrivacyPolicy = () => {
         </div>
       </nav>
       {/* Lets go drive */}
-      <section className="lg:mx-24 mx-8 mt-10 border pb-10">
-        <div className="lg:flex items-center justify-between border py-2 px-3 bg-slate-100 ">
+      <section className="lg:mx-24 mt-10 border pb-10 max-w-7xl mx-auto">
+        <div className="flex items-center justify-between border py-2 px-3 bg-slate-100 w-full">
           <div>
-            <h2 className="text-2xl font-semibold">Lets get driving</h2>
+            <h2 className="text-2xl font-medium text-[#4D4D4F]">Lets get driving....</h2>
           </div>
           <div>
-            <FaCar className="text-4xl" />
+            <FaCar className="text-4xl text-[#ADADAD]" />
           </div>
         </div>
-        <div className="lg:px-10 px-2 mt-5">
-          <div className="text-center border-slate-300 border lg:px-10 py-3 bg-slate-100">
-            <FaMoneyCheckAlt className="text-3xl ms-[450px]" />
+        <div className="lg:px-10 px-2 mt-5 w-full">
+          <div className="text-center border-slate-300 border lg:px-10 py-3 bg-slate-100 w-full flex items-center justify-center">
+            <FaMoneyCheckAlt className="text-4xl text-[#4D4D4F]" />
           </div>
-          <div className="bg-slate-200 lg:px-5 lg:py-10 border border-slate-300">
+          <div className="bg-slate-200 lg:px-5 lg:py-10 p-4 border border-slate-300">
             <p>Please ensure you have the following documents on hand:</p>
             <div className="px-5 mt-3 mb-3">
               <li>ID book, ID card or passport</li>
