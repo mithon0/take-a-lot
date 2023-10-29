@@ -15,32 +15,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { HiStar } from "react-icons/hi2";
 import { IoIosArrowDown } from "react-icons/io";
+import ErrorPage from "../ErrorPage/ErrorPage";
 const OurCareers = () => {
   const [allProducts] = useProducts();
 
   return (
     <div>
 
-<div className="]" style={{ backgroundImage: `url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/5120x2880-dark-blue-solid-color-background.jpg/2560px-5120x2880-dark-blue-solid-color-background.jpg')`, backgroundRepeat: 'no-repeat', maxWidth: screen, width: '1300px', height: '' }}>
-  
-    <div className="md:hero flex lg:gap-10 gap-5 py-10 px-4 lg:min-h-screen lg:min-h-screen">
-      <div className="lg:-ms-[800px] md:-ms-[800px] ">
-        <img className="lg:w-10 w-5 " src="https://shopfront.takealot.com/13eff8fb49302e59b7e8b9c7a03563835e301383/static/media/src/images/logo-balloon.svg-024fcd3692c201ff6ec4.svg" alt="" />
-      </div>
-      <div className="text-white relative space-y-2">
-        <h1 className="lg:text-5xl font-semibold">Oops! <br /> Page not found</h1>
-        <p className="">The link you were looking for no longer exists.</p>
-        <p>Head back to the Homepage or takealook at our deals and trending products below.</p>
-        <div className="flex gap-5">
-          <div>
-            <Link to='/'><button className="bg-white text-blue-500  lg:px-6 px-2 rounded py-2 hover:bg-opacity-80">Back To Homepage</button></Link>
-          </div>
-          <div className="bg-green-500 text-white lg:px-6 px-2 rounded py-2 hover:bg-opacity-80">View Daily Deals</div>
-        </div>
-      </div>
-    </div>
-
-</div>
+<ErrorPage />
 
 
       {/* Trending products section */}
@@ -96,7 +78,7 @@ const OurCareers = () => {
                       <div className="mt-3 flex flex-col space-y-2">
                         <p className="font-bold">R 220</p>
                         <p className="items-center gap-1 text-sm">
-                          <HiStar className="inline-flex  gap-2  items-centerh-4 w-4 text-yellow-400" />{" "}
+                          <HiStar className="inline-flex  gap-2 items-center h-4 w-4 text-yellow-400" />{" "}
                           <span>4.3</span>
                         </p>
                           <div className="text-center w-full">
@@ -143,7 +125,7 @@ const OurCareers = () => {
 
                       <div className="mt-3 flex flex-col space-y-2">
                         <p className="font-bold">R 220</p>
-                        <p className="items-center inline-flex  gap-2  items-center h-4 text-sm">
+                        <p className="items-center inline-flex  gap-2  h-4 text-sm">
                           <HiStar className="h-4 w-4 text-yellow-400" />{" "}
                           <span>4.3</span>                        
                         </p>

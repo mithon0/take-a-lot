@@ -80,6 +80,7 @@ const ResponsibleDisclosure = () => {
 
 </div>
 </section>
+
     );
 };
 

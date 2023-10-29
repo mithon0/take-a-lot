@@ -51,6 +51,11 @@ import DailyDeals from "../Page/ReturnPolicy/DailyDeals/DailyDeals";
 import VouchersAndCouponsConditions from "../Page/ReturnPolicy/VouchersAndCouponsConditions/VouchersAndCouponsConditions";
 import ResponsibleDisclosure from "../Page/ReturnPolicy/ResponsibleDisclosure/ResponsibleDisclosure";
 import PrivacyPolicy from "../Page/ReturnPolicy/PrivacyPolicy/PrivacyPolicy";
+import ContactUs from "../Page/ContactUs/ContactUs";
+import Competitions from "../Page/Competitions/Competitions";
+import ErrorPage from "../Page/ErrorPage/ErrorPage";
+import DeleverForTakealot from "../Page/DeleverForTakealot/DeleverForTakealot";
+import DriverPrivacyPolicy from "../Page/DriverPrivacyPolicy/DriverPrivacyPolicy";
 
 
 
@@ -59,6 +64,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<ErrorPage />,
     children: [
       {
         path: '/',
@@ -87,6 +93,22 @@ export const router = createBrowserRouter([
       {
         path: "/my-account",
         element: <MyAccountPage />
+      },
+      {
+        path: '/contact-us',
+        element: <ContactUs/>
+      },
+      {
+        path: 'competitions',
+        element: <Competitions/>
+      },
+      {
+        path: 'takealot-deliver',
+        element: <DeleverForTakealot/>
+      },
+      {
+        path: 'driver-privacy-policy',
+        element: <DriverPrivacyPolicy/>
       },
       {
         path: "/help-centre",
@@ -127,7 +149,7 @@ export const router = createBrowserRouter([
           {
             path:"data-privacy",
             element:<DataPrivacyHelp />
-          }
+          },
         ]
       },
       {
